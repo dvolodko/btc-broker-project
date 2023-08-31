@@ -13,23 +13,32 @@
 
 @mixin mq($range) {
   $mobile: 480px;
-  $tablet: 768px;
+  $tablet-768: 768px;
+  $tablet-1024: 1024px;
   $desktop: 1200px;
 
   @if $range == mobile-only {
-    @media screen and (max-width: ($tablet - 0.02)) {
+    @media screen and (max-width: ($tablet-768 - 0.02)) {
       @content;
     }
   } @else if $range == mobile {
     @media screen and (min-width: $mobile) {
       @content;
     }
-  } @else if $range == tablet-only {
-    @media screen and (min-width: $tablet) and (max-width: #{$desktop - 0.02}) {
+  } @else if $range == tablet-768-only {
+    @media screen and (min-width: $tablet-768) and (max-width: #{$tablet-1024 - 0.02}) {
       @content;
     }
-  } @else if $range == tablet {
-    @media screen and (min-width: $tablet) {
+  } @else if $range == tablet-768 {
+    @media screen and (min-width: $tablet-768) {
+      @content;
+    }
+  } @else if $range == tablet-1024-only {
+    @media screen and (min-width: $tablet-1024) and (max-width: #{$desktop - 0.02}) {
+      @content;
+    }
+  } @else if $range == tablet-1024 {
+    @media screen and (min-width: $tablet-1024) {
       @content;
     }
   } @else if $range == desktop {

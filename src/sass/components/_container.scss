@@ -1,0 +1,22 @@
+.container {
+  padding-left: 12px;
+  padding-right: 12px;
+
+  @include mq(mobile) {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq(tablet-768) {
+    width: 768px;
+  }
+
+  @include mq(tablet-1024) {
+    width: 1024px;
+  }
+
+  @include mq(desktop) {
+    width: 1180px;
+  }
+}

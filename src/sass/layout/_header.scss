@@ -1,0 +1,42 @@
+.header-container {
+  @include flex(flex, space-between, center);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.button-hamburger {
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+}
+
+.button-hamburger .line {
+  transition: y $mainTransitionDuration $mainTransitionTimingFunction
+      $mainTransitionDuration,
+    rotate $mainTransitionDuration $mainTransitionTimingFunction,
+    opacity 0ms $mainTransitionDuration;
+  transform-origin: center;
+}
+
+.button-hamburger[aria-expanded='true'] .line {
+  transition: y $mainTransitionDuration $mainTransitionTimingFunction,
+    rotate $mainTransitionDuration $mainTransitionTimingFunction
+      $mainTransitionDuration,
+    opacity 0ms $mainTransitionDuration;
+}
+
+.button-hamburger[aria-expanded='true'] :is(.top, .bottom) {
+  y: 45;
+}
+
+.button-hamburger[aria-expanded='true'] .top {
+  rotate: 45deg;
+}
+
+.button-hamburger[aria-expanded='true'] .middle {
+  opacity: 0;
+}
+
+.button-hamburger[aria-expanded='true'] .bottom {
+  rotate: -45deg;
+}

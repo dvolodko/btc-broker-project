@@ -1,3 +1,47 @@
-// .hero-container {
-//   background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000');
-// }
+.hero-section {
+  background-image: url('/src/images/iphone-hero-390.png'),
+    url('/src/images/svg/bg-ellipse-blue-hero-390.svg'),
+    url('/src/images/svg/bg-ellipse-yellow-hero-390.svg');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: calc(50% + 120px) calc(50% + 24px),
+    calc(50% + 160px) calc(50% + 24px), calc(50% + 16px) calc(50% + 184px);
+  background-size: 352px, 640px, auto auto;
+  padding-bottom: 160px;
+  margin-bottom: -160px;
+}
+
+.hero-container {
+  @include flex(flex, center, flex-start);
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 116px;
+}
+
+.hero-header {
+  font-family: $secondaryFontFamily;
+  color: $primaryColor950;
+  text-wrap: balance;
+  @include font(800, 3.75rem, 4.25rem, -0.05rem);
+}
+
+.hero-text {
+  font-family: $secondaryFontFamily;
+  color: $neutralColor950;
+  text-wrap: balance;
+  @include font(400, 1.25rem, 2rem, 0);
+  max-width: 18rem;
+  margin-bottom: 20px;
+}
+
+.buttons-app-download {
+  @include flex(flex, center, center);
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bond-ua-app-google-link,
+.bond-ua-app-apple-link {
+  border-radius: 12px;
+  border: 1px solid $primaryColor900;
+  background: $neutralColor0;
+}
