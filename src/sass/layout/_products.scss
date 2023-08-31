@@ -14,8 +14,7 @@
   border: 1px solid $primaryColor900;
   padding: 20px 48px;
   width: 100%;
-  height: 128px;
-  background: $neutralColor0;
+  background-color: $neutralColor0;
   transition: color $mainTransitionDuration $mainTransitionTimingFunction,
     background-color $mainTransitionDuration $mainTransitionTimingFunction;
   &:hover {
@@ -29,14 +28,13 @@
 .bonds-button-icon,
 .depositary-button-icon,
 .repositary-button-icon {
-  margin: auto;
+  margin: 0 auto 8px;
 }
 
 .bonds-button-icon-layer1,
 .depositary-button-icon-layer5 {
   fill: $neutralColor500;
-  transition: color $mainTransitionDuration $mainTransitionTimingFunction,
-    background-color $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .shares-button-icon-layer1,
@@ -44,8 +42,7 @@
 .depositary-button-icon-layer1,
 .repositary-button-icon-layer-accent {
   fill: $accentColor500;
-  transition: color $mainTransitionDuration $mainTransitionTimingFunction,
-    background-color $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .shares-button-icon-layer3,
@@ -53,14 +50,12 @@
 .depositary-button-icon-vector9,
 .repositary-button-icon-layer-neutral {
   fill: $neutralColor600;
-  transition: color $mainTransitionDuration $mainTransitionTimingFunction,
-    background-color $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .repositary-button-icon-vector5 {
   fill: $neutralColor500;
-  transition: color $mainTransitionDuration $mainTransitionTimingFunction,
-    background-color $mainTransitionDuration $mainTransitionTimingFunction;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .shares-button:hover .shares-button-icon-layer1,

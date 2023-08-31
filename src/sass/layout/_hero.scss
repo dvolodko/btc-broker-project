@@ -3,9 +3,10 @@
     url('/src/images/svg/bg-ellipse-blue-hero-390.svg'),
     url('/src/images/svg/bg-ellipse-yellow-hero-390.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: calc(50% + 120px) calc(50% + 24px),
-    calc(50% + 160px) calc(50% + 24px), calc(50% + 16px) calc(50% + 184px);
+  background-position: calc(50% + 120px) calc(50% + 68px),
+    calc(50% + 160px) calc(50% + 68px), calc(50% + 16px) calc(50% + 228px);
   background-size: 352px, 640px, auto auto;
+  padding-top: 88px;
   padding-bottom: 160px;
   margin-bottom: -160px;
 }
@@ -43,5 +44,35 @@
 .bond-ua-app-apple-link {
   border-radius: 12px;
   border: 1px solid $primaryColor900;
-  background: $neutralColor0;
+  background-color: $neutralColor0;
+  transition: background-color $mainTransitionDuration
+    $mainTransitionTimingFunction;
+}
+
+.bond-ua-app-google-link-vector-neutral950 {
+  fill: $primaryColor950;
+  stroke: $neutralColor950;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction,
+    stroke $mainTransitionDuration $mainTransitionTimingFunction;
+}
+
+.bond-ua-app-google-link-vector-primary950,
+.bond-ua-app-apple-link-primary950 {
+  fill: $primaryColor950;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+}
+
+.bond-ua-app-google-link:hover,
+.bond-ua-app-apple-link:hover {
+  background-color: $primaryColor950;
+}
+
+.bond-ua-app-google-link:hover .bond-ua-app-google-link-vector-neutral950 {
+  fill: $neutralColor0;
+  stroke: $neutralColor0;
+}
+
+.bond-ua-app-google-link:hover .bond-ua-app-google-link-vector-primary950,
+.bond-ua-app-apple-link:hover .bond-ua-app-apple-link-primary950 {
+  fill: $neutralColor0;
 }
