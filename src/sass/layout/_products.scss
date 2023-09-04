@@ -21,6 +21,8 @@
     cursor: pointer;
     color: $primaryColor100;
     background-color: $primaryColor950;
+    transition: color $mainTransitionDuration $mainTransitionTimingFunction,
+      background-color $mainTransitionDuration $mainTransitionTimingFunction;
   }
 }
 
@@ -63,6 +65,7 @@
 .depositary-button:hover .depositary-button-icon-layer1,
 .repositary-button:hover .repositary-button-icon-layer-accent {
   fill: $accentColor400;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .shares-button:hover .shares-button-icon-layer3,
@@ -73,4 +76,5 @@
 .repositary-button:hover .repositary-button-icon-layer-neutral,
 .repositary-button:hover .repositary-button-icon-vector5 {
   fill: $primaryColor100;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }

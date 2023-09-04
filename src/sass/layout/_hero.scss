@@ -65,14 +65,19 @@
 .bond-ua-app-google-link:hover,
 .bond-ua-app-apple-link:hover {
   background-color: $primaryColor950;
+  transition: background-color $mainTransitionDuration
+    $mainTransitionTimingFunction;
 }
 
 .bond-ua-app-google-link:hover .bond-ua-app-google-link-vector-neutral950 {
   fill: $neutralColor0;
   stroke: $neutralColor0;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction,
+    stroke $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .bond-ua-app-google-link:hover .bond-ua-app-google-link-vector-primary950,
 .bond-ua-app-apple-link:hover .bond-ua-app-apple-link-primary950 {
   fill: $neutralColor0;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }

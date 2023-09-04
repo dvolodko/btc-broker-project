@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  z-index: 4;
   width: 100%;
   background-color: $neutralColor0;
 }
@@ -46,29 +47,4 @@
 
 .button-hamburger[aria-expanded='true'] .bottom {
   rotate: -45deg;
-}
-
-.mobile-menu-container {
-  position: absolute;
-  right: 0;
-  top: 91px;
-  height: 90vh;
-  width: 288px;
-  background-color: $neutralColor0;
-  border: 1px solid $primaryColor950;
-  border-radius: 12px 0 0 12px;
-}
-
-.mobile-menu-container::before {
-  content: '';
-  position: absolute;
-  right: 16px;
-  top: -13px;
-  width: 24px;
-  height: 24px;
-  background-color: $neutralColor0;
-  border: 1px solid $primaryColor950;
-  transform: rotate(-45deg);
-  border-top-right-radius: 8px;
-  border-color: $primaryColor950 $primaryColor950 transparent transparent;
 }
