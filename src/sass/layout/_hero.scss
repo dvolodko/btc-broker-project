@@ -3,18 +3,18 @@
     url('/src/images/svg/bg-ellipse-blue-hero-390.svg'),
     url('/src/images/svg/bg-ellipse-yellow-hero-390.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: calc(50% + 120px) calc(50% + 68px),
-    calc(50% + 160px) calc(50% + 68px), calc(50% + 16px) calc(50% + 228px);
+  background-position: calc(50% + 120px) calc(50% + 36px),
+    calc(50% + 160px) calc(50% + 36px), calc(50% + 16px) calc(50% + 204px);
   background-size: 352px, 640px, auto auto;
   padding-top: 88px;
-  padding-bottom: 160px;
-  margin-bottom: -160px;
+  padding-bottom: 224px;
+  margin-bottom: -224px;
 }
 
 .hero-container {
   @include flex(flex, center, flex-start);
   flex-direction: column;
-  gap: 20px;
+  gap: $gapS;
   padding-bottom: 116px;
 }
 
@@ -26,18 +26,15 @@
 }
 
 .hero-text {
-  font-family: $secondaryFontFamily;
-  color: $neutralColor950;
-  text-wrap: balance;
-  @include font(400, 1.25rem, 2rem, 0);
   max-width: 18rem;
+  text-wrap: balance;
   margin-bottom: 20px;
 }
 
 .buttons-app-download {
   @include flex(flex, center, center);
   flex-direction: column;
-  gap: 20px;
+  gap: $gapS;
 }
 
 .bond-ua-app-google-link,

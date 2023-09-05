@@ -1,8 +1,21 @@
+.products-section {
+  background-image: url('/src/images/svg/bg-shape-products-390.svg');
+  background-repeat: no-repeat;
+  background-position: calc(50% + 304px) calc(50% - 24px);
+}
+
 .products-container {
   @include flex(flex, center, center);
   flex-direction: column;
-  gap: 20px;
-  padding-top: 80px;
+  gap: $gapL;
+  padding: 80px 12px 80px;
+}
+
+.products-buttons-container {
+  @include flex(flex, center, center);
+  flex-direction: column;
+  gap: $gapS;
+  width: 100%;
 }
 
 .products-button {
@@ -77,4 +90,18 @@
 .repositary-button:hover .repositary-button-icon-vector5 {
   fill: $primaryColor100;
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+}
+
+.products-description-container {
+  @include flex(flex, center, flex-start);
+  flex-direction: column;
+  gap: $gapXS;
+}
+
+.products-description-header {
+  margin-bottom: 8px;
+}
+
+.products-description-text {
+  margin-bottom: 40px;
 }

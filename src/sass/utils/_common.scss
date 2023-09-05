@@ -1,7 +1,35 @@
-@import "/node_modules/modern-normalize/modern-normalize.css";
+@import '/node_modules/modern-normalize/modern-normalize.css';
 
 body {
-	color: $neutralColor600;
-	font-family: $mainFontFamily;
-	@include font(400, 1rem, 1.5rem, 0);
+  color: $neutralColor600;
+  font-family: $mainFontFamily;
+  @include font(400, 1rem, 1.5rem, 0);
+}
+
+.superheader {
+  font-family: $secondaryFontFamily;
+  color: $primaryColor400;
+  @include font(800, 1rem, 1.5rem, 0);
+  text-transform: uppercase;
+}
+
+.section-header {
+  font-family: $secondaryFontFamily;
+  color: $primaryColor950;
+  @include font(800, 1.75rem, 2rem, 0);
+}
+
+.subheader {
+  font-family: $secondaryFontFamily;
+  color: $neutralColor950;
+  @include font(400, 1.25rem, 2rem, 0);
+}
+
+.main-button {
+  text-align: center;
+  width: 100%;
+  padding: 12px 28px;
+  color: $neutralColor0;
+  background-color: $primaryColor700;
+  border-radius: 12px;
 }
