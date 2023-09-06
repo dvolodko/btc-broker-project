@@ -5,17 +5,16 @@
 }
 
 .products-container {
-  @include flex(flex, center, center);
+  @include flex(flex, center, stretch);
   flex-direction: column;
   gap: $gapL;
   padding: 80px 12px 80px;
 }
 
 .products-buttons-container {
-  @include flex(flex, center, center);
+  @include flex(flex, center, stretch);
   flex-direction: column;
   gap: $gapS;
-  width: 100%;
 }
 
 .products-button {
@@ -26,7 +25,6 @@
   border-radius: 12px;
   border: 1px solid $primaryColor900;
   padding: 20px 48px;
-  width: 100%;
   background-color: $neutralColor0;
   transition: color $mainTransitionDuration $mainTransitionTimingFunction,
     background-color $mainTransitionDuration $mainTransitionTimingFunction;
@@ -93,9 +91,9 @@
 }
 
 .products-description-container {
-  @include flex(flex, center, flex-start);
+  @include flex(flex, center, stretch);
   flex-direction: column;
-  gap: $gapXS;
+  gap: $gapS;
 }
 
 .products-description-header {

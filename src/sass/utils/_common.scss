@@ -24,12 +24,3 @@ body {
   color: $neutralColor950;
   @include font(400, 1.25rem, 2rem, 0);
 }
-
-.main-button {
-  text-align: center;
-  width: 100%;
-  padding: 12px 28px;
-  color: $neutralColor0;
-  background-color: $primaryColor700;
-  border-radius: 12px;
-}
