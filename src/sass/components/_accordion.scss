@@ -37,14 +37,34 @@
 }
 
 .accordion-trigger {
+  @include flex(flex, center, center);
   background: transparent;
   border: 0;
   font: inherit;
   color: inherit;
 }
 
+.accordion-icon-wrapper {
+  @include flex(flex, center, center);
+  width: 24px;
+  height: 24px;
+  margin-right: 14px;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: background-color $mainTransitionDuration
+    $mainTransitionTimingFunction;
+}
+
 .accordion-icon {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
+}
+
+.accordion-icon-wrapper.active {
+  background-color: $primaryColor700;
+}
+
+.accordion-icon.active {
 }
 
 // .accordion-trigger::before,
