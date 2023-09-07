@@ -4,11 +4,15 @@
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows $mainTransitionDuration
-    $mainTransitionTimingFunction;
+      $mainTransitionTimingFunction,
+    margin $mainTransitionDuration $mainTransitionTimingFunction;
+  padding-left: 40px;
 }
 
 .accordion-content[aria-hidden='false'] {
   grid-template-rows: 1fr;
+  margin-top: 20px;
+  margin-bottom: 4px;
 }
 
 .accordion-content > div {
@@ -42,6 +46,7 @@
   border: 0;
   font: inherit;
   color: inherit;
+  padding: 0;
 }
 
 .accordion-icon-wrapper {
@@ -55,13 +60,13 @@
     $mainTransitionTimingFunction;
 }
 
+.accordion-trigger[aria-expanded='true'] .accordion-icon-wrapper {
+  background-color: $primaryColor700;
+}
+
 .accordion-icon {
   display: block;
   margin: 0 auto;
-}
-
-.accordion-icon-wrapper.active {
-  background-color: $primaryColor700;
 }
 
 .accordion-trigger .line {
