@@ -3,8 +3,7 @@
 .accordion-content {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows $mainTransitionDuration
-    $mainTransitionTimingFunction;
+  transition: grid-template-rows 500ms $mainTransitionTimingFunction;
 }
 
 .accordion-content[aria-hidden='false'] {
@@ -64,27 +63,23 @@
   background-color: $primaryColor700;
 }
 
-.accordion-icon.active {
+.accordion-trigger .line {
+  stroke: black;
+  transform-origin: center;
 }
 
-// .accordion-trigger::before,
-// .accordion-trigger::after {
-//   position: absolute;
-//   right: 1em;
-//   content: '';
-//   display: block;
-//   width: 1em;
-//   height: 5px;
-//   background: currentcolor;
-//   transition: transform 500ms;
-// }
+.accordion-trigger[aria-expanded='true'] .line {
+  transition: rotate $mainTransitionDuration $mainTransitionTimingFunction
+      $mainTransitionDuration,
+    stroke $mainTransitionDuration $mainTransitionTimingFunction;
+}
 
-// .accordion-trigger::after {
-//   rotate: 90deg;
-//   translate: 0 -1.5em;
-// }
+.accordion-trigger[aria-expanded='true'] .vertical {
+  rotate: 90deg;
+  stroke: white;
+}
 
-// .accordion-trigger[aria-expanded='true']::before,
-// .accordion-trigger[aria-expanded='true']::after {
-//   transform: rotate(45deg);
-// }
+.accordion-trigger[aria-expanded='true'] .horizontal {
+  rotate: 180deg;
+  stroke: white;
+}
