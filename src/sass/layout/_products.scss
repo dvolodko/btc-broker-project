@@ -11,13 +11,15 @@
   padding: 80px 12px 80px;
 }
 
-.products-buttons-container {
+.products-buttons-list {
   @include flex(flex, center, stretch);
   flex-direction: column;
   gap: $gapS;
 }
 
 .products-button {
+  display: block;
+  width: 100%;
   font-family: $secondaryFontFamily;
   color: $neutralColor600;
   text-transform: uppercase;

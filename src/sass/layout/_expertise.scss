@@ -1,3 +1,13 @@
+.expertise-section {
+  background-image: url('/src/images/svg/bg-shape-yellow-expertise-390.svg'),
+    url('/src/images/svg/bg-shape-blue-expertise-390.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: calc(50%) calc(50% - 148px), calc(50%) calc(50% - 40px);
+  background-size: 796px, 892px;
+  padding-top: 88px;
+  margin-top: -88px;
+}
+
 .expertise-container {
   @include flex(flex, center, stretch);
   flex-direction: column;
