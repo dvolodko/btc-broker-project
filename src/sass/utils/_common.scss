@@ -11,12 +11,14 @@ body {
   color: $primaryColor400;
   @include font(800, 1rem, 1.5rem, 0);
   text-transform: uppercase;
+  margin-bottom: $S;
 }
 
 .section-header {
   font-family: $secondaryFontFamily;
   color: $primaryColor950;
   @include font(800, 1.75rem, 2rem, 0);
+  margin-bottom: $M;
 }
 
 .subheader {

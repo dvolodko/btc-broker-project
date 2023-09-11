@@ -14,7 +14,7 @@
 .hero-container {
   @include flex(flex, center, flex-start);
   flex-direction: column;
-  gap: $gapS;
+  gap: $S;
   padding-bottom: 116px;
 }
 
@@ -34,12 +34,12 @@
 .buttons-app-download {
   @include flex(flex, center, center);
   flex-direction: column;
-  gap: $gapS;
+  gap: $S;
 }
 
 .bond-ua-app-google-link,
 .bond-ua-app-apple-link {
-  border-radius: 12px;
+  border-radius: $S;
   border: 1px solid $primaryColor900;
   background-color: $neutralColor0;
   transition: background-color $mainTransitionDuration

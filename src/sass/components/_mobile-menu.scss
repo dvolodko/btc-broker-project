@@ -9,10 +9,10 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  padding: 40px 44px 40px 32px;
+  padding: $L 44px $L 32px;
   background-color: $neutralColor0;
   border: 1px solid $primaryColor950;
-  border-radius: 12px;
+  border-radius: $S;
   transform: scaleY(0);
   transform-origin: top;
   transition: opacity $mainTransitionDuration $mainTransitionTimingFunction,
@@ -47,13 +47,13 @@
 .mobile-menu {
   @include flex(flex, space-between, stretch);
   flex-direction: column;
-  gap: $gapL;
+  gap: $L;
 }
 
 .language-select-btn {
   margin-left: auto;
   @include flex(flex, center, center);
-  gap: $gapS;
+  gap: $S;
   border: none;
   background-color: transparent;
 }
@@ -70,20 +70,16 @@
   border: none;
   border-bottom: 1px solid $neutralColor300;
   background-color: transparent;
-  padding: 20px 0;
+  padding: $M 0;
 }
 
 .create-account-btn {
-  text-align: center;
-  padding: 12px 28px;
-  color: $neutralColor0;
   background-color: #3f5bdd;
-  border-radius: 12px;
 }
 
 .mobile-menu-search-input {
   width: 100%;
-  padding: 12px 16px 12px 52px;
+  padding: $S 16px $S 52px;
   border: 1px solid $neutralColor500;
   border-radius: 4px;
   background: transparent url('/src/images/svg/search-icon.svg') no-repeat left

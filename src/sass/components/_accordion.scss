@@ -3,17 +3,15 @@
 .accordion-content {
   display: grid;
   grid-template-rows: 0fr;
-  // margin-top: 0;
-  // margin-bottom: 0;
   transition: grid-template-rows $mainTransitionDuration
       $mainTransitionTimingFunction,
-    margin $mainTransitionDuration $mainTransitionTimingFunction 2500ms;
-  padding-left: 40px;
+    margin $mainTransitionDuration $mainTransitionTimingFunction;
+  padding-left: $L;
 }
 
 .accordion-content[aria-hidden='false'] {
   grid-template-rows: 1fr;
-  margin-top: 20px;
+  margin-top: $M;
   margin-bottom: 4px;
 }
 
@@ -26,13 +24,13 @@
 .accordion {
   @include flex(flex, center, stretch);
   flex-direction: column;
-  gap: $gapM;
+  gap: $M;
 }
 
 .accordion-panel {
-  padding: 16px 20px;
+  padding: 16px $M;
   border: 1px solid $primaryColor900;
-  border-radius: 12px;
+  border-radius: $S;
   background-color: $neutralColor0;
 }
 
@@ -57,7 +55,7 @@
   width: 24px;
   height: 24px;
   margin-right: 14px;
-  border-radius: 12px;
+  border-radius: $S;
   background-color: transparent;
   transition: background-color $mainTransitionDuration
     $mainTransitionTimingFunction;

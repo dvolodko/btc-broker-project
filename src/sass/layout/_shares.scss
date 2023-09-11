@@ -12,31 +12,25 @@
 .shares-container {
   @include flex(flex, center, stretch);
   flex-direction: column;
-  gap: $gapL;
+  gap: $L;
   padding-top: 476px;
-  padding-bottom: 80px;
-}
-
-.shares-description-superheader {
-  margin-bottom: 12px;
-}
-
-.shares-description-header {
-  margin-bottom: 40px;
+  padding-bottom: $XL;
 }
 
 .shares-description-subheader {
-  margin-bottom: 20px;
+  margin-bottom: $M;
 }
 
 .shares-description-list {
-  margin-bottom: 40px;
+  @include flex(flex, center, flex-start);
+  flex-direction: column;
+  gap: $S;
+  margin-bottom: $L;
 }
 
 .shares-description-item {
   @include flex(flex, center, flex-start);
-  gap: $gapXS;
-  margin-bottom: 12px;
+  gap: $XS;
 }
 
 .icon-done-check #Group {

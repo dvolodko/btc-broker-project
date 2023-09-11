@@ -8,8 +8,8 @@
 .header-container {
   position: relative;
   @include flex(flex, space-between, center);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: $M;
+  padding-bottom: $M;
 }
 
 .button-hamburger {

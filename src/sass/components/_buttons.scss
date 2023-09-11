@@ -1,8 +1,11 @@
-.main-button {
+.button-primary {
   display: block;
   text-align: center;
-  padding: 12px 28px;
+  padding: $S 28px;
   color: $neutralColor0;
   background-color: $primaryColor700;
-  border-radius: 12px;
+  border-radius: $S;
+}
+
+.button-secondary {
 }

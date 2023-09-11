@@ -11,19 +11,15 @@
 .expertise-container {
   @include flex(flex, center, stretch);
   flex-direction: column;
-  gap: $gapL;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  gap: $L;
+  padding-top: $L;
+  padding-bottom: $L;
 }
 
 .expertise-illustration {
   transform: scale(1.06);
 }
 
-.expertise-description-superheader {
-  margin-bottom: 12px;
-}
-
 .expertise-description-header {
-  margin-bottom: 40px;
+  margin-bottom: $L;
 }

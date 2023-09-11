@@ -7,14 +7,15 @@
 .products-container {
   @include flex(flex, center, stretch);
   flex-direction: column;
-  gap: $gapL;
-  padding: 80px 12px 80px;
+  gap: $L;
+  padding-top: $XL;
+  padding-bottom: $XL;
 }
 
 .products-buttons-list {
   @include flex(flex, center, stretch);
   flex-direction: column;
-  gap: $gapS;
+  gap: $S;
 }
 
 .products-button {
@@ -24,9 +25,9 @@
   color: $neutralColor600;
   text-transform: uppercase;
   @include font(800, 1rem, 1.5rem, 0);
-  border-radius: 12px;
+  border-radius: $S;
   border: 1px solid $primaryColor900;
-  padding: 20px 48px;
+  padding: $M 48px;
   background-color: $neutralColor0;
   transition: color $mainTransitionDuration $mainTransitionTimingFunction,
     background-color $mainTransitionDuration $mainTransitionTimingFunction;
@@ -43,7 +44,7 @@
 .bonds-button-icon,
 .depositary-button-icon,
 .repositary-button-icon {
-  margin: 0 auto 8px;
+  margin: 0 auto $XS;
 }
 
 .bonds-button-icon-layer1,
@@ -74,32 +75,35 @@
 }
 
 .shares-button:hover .shares-button-icon-layer1,
+.shares-button:focus .shares-button-icon-layer1,
 .bonds-button:hover .bonds-button-icon-layer2,
+.bonds-button:focus .bonds-button-icon-layer2,
 .depositary-button:hover .depositary-button-icon-layer1,
-.repositary-button:hover .repositary-button-icon-layer-accent {
+.depositary-button:focus .depositary-button-icon-layer1,
+.repositary-button:hover .repositary-button-icon-layer-accent,
+.repositary-button:focus.repositary-button-icon-layer-accent {
   fill: $accentColor400;
-  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .shares-button:hover .shares-button-icon-layer3,
+.shares-button:focus .shares-button-icon-layer3,
 .bonds-button:hover .bonds-button-icon-vector1,
+.bonds-button:focus .bonds-button-icon-vector1,
 .bonds-button:hover .bonds-button-icon-layer1,
+.bonds-button:focus .bonds-button-icon-layer1,
 .depositary-button:hover .depositary-button-icon-vector9,
+.depositary-button:focus .depositary-button-icon-vector9,
 .depositary-button:hover .depositary-button-icon-layer5,
+.depositary-button:focus .depositary-button-icon-layer5,
 .repositary-button:hover .repositary-button-icon-layer-neutral,
-.repositary-button:hover .repositary-button-icon-vector5 {
+.repositary-button:focus .repositary-button-icon-layer-neutral,
+.repositary-button:hover .repositary-button-icon-vector5,
+.repositary-button:focus .repositary-button-icon-vector5 {
   fill: $primaryColor100;
-  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.products-description-container {
-  @include flex(flex, center, stretch);
-  flex-direction: column;
-  gap: $gapS;
-}
-
-.products-description-header {
-  margin-bottom: 8px;
+.products-description-subheader {
+  margin-bottom: $S;
 }
 
 .products-description-text {
