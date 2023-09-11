@@ -3,9 +3,11 @@
 .accordion-content {
   display: grid;
   grid-template-rows: 0fr;
+  // margin-top: 0;
+  // margin-bottom: 0;
   transition: grid-template-rows $mainTransitionDuration
       $mainTransitionTimingFunction,
-    margin $mainTransitionDuration $mainTransitionTimingFunction;
+    margin $mainTransitionDuration $mainTransitionTimingFunction 250ms;
   padding-left: 40px;
 }
 
