@@ -1,0 +1,82 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="icon-done-check" viewBox="0 0 32 32">
+      <path fill="#ffd700" style="fill: var(--color6, #ffd700)" d="M32 24c0 0.943-0.375 1.847-1.041 2.514s-1.571 1.041-2.514 1.041h-24.889c-0.943 0-1.847-0.375-2.514-1.041s-1.041-1.571-1.041-2.514v-8h32v8z"></path>
+    </symbol>
+    <symbol id="icon-accordion" viewBox="0 0 32 32">
+      <path fill="#ffd700" style="fill: var(--color6, #ffd700)" d="M32 24c0 0.943-0.375 1.847-1.041 2.514s-1.571 1.041-2.514 1.041h-24.889c-0.943 0-1.847-0.375-2.514-1.041s-1.041-1.571-1.041-2.514v-8h32v8z"></path>
+    </symbol>
+    <symbol id="icon-repo-button" viewBox="0 0 32 32">
+      <path fill="#ffd700" style="fill: var(--color6, #ffd700)" d="M32 24c0 0.943-0.375 1.847-1.041 2.514s-1.571 1.041-2.514 1.041h-24.889c-0.943 0-1.847-0.375-2.514-1.041s-1.041-1.571-1.041-2.514v-8h32v8z"></path>
+    </symbol>
+    <symbol id="icon-depositary-button" viewBox="0 0 32 32">
+      <path fill="#ffd700" style="fill: var(--color6, #ffd700)" d="M32 24c0 0.943-0.375 1.847-1.041 2.514s-1.571 1.041-2.514 1.041h-24.889c-0.943 0-1.847-0.375-2.514-1.041s-1.041-1.571-1.041-2.514v-8h32v8z"></path>
+    </symbol>
+    <symbol id="icon-bonds-button" viewBox="0 0 32 32">
+      <path fill="#ffd700" style="fill: var(--color6, #ffd700)" d="M32 24c0 0.943-0.375 1.847-1.041 2.514s-1.571 1.041-2.514 1.041h-24.889c-0.943 0-1.847-0.375-2.514-1.041s-1.041-1.571-1.041-2.514v-8h32v8z"></path>
+    </symbol>
+    <symbol id="icon-shares-button" viewBox="0 0 37 32">
+      <path fill="#ffd700" style="fill: var(--color6, #ffd700)" d="M32 24c0 0.943-0.375 1.847-1.041 2.514s-1.571 1.041-2.514 1.041h-24.889c-0.943 0-1.847-0.375-2.514-1.041s-1.041-1.571-1.041-2.514v-8h32v8z"></path>
+    </symbol>
+    <symbol id="icon-world" viewBox="0 0 24 24">
+      <path 
+        d="M12 3C16.982 3 21 7.018 21 12C21 16.982 16.982 21 12 21"
+        stroke="#282828"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M12 21C7.018 21 3 16.982 3 12C3 7.018 7.018 3 12 3"
+        stroke="#282828"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M10.168 4.06C7.27799 8.885 7.27799 15.116 10.168 19.941C11.014 21.354 12.987 21.354 13.833 19.941C16.723 15.116 16.723 8.885 13.833 4.06C12.986 2.647 11.014 2.647 10.168 4.06Z"
+        stroke="#282828"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M3 12H21"
+        stroke="#282828"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </symbol>
+    <symbol id="icon-bond-ua-app-apple" viewBox="0 0 107 32">
+      <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M4 16h24"></path>
+    </symbol>
+    <symbol id="icon-bond-ua-app-google" viewBox="0 0 107 32">
+      <path fill="#ea4335" style="fill: var(--color1, #ea4335)" d="M15.714 14.942l-8.35 8.652c0.094 0.329 0.262 0.632 0.493 0.886s0.516 0.453 0.836 0.582 0.665 0.182 1.010 0.158c0.344-0.024 0.679-0.126 0.977-0.297l9.396-5.292-4.362-4.689z"></path>
+      <path fill="#fbbc04" style="fill: var(--color2, #fbbc04)" d="M24.158 13.471l-4.063-2.302-4.573 3.969 4.592 4.48 4.032-2.277c0.357-0.185 0.656-0.463 0.865-0.804s0.319-0.732 0.319-1.131-0.11-0.79-0.319-1.131c-0.209-0.341-0.508-0.619-0.865-0.804h0.012z"></path>
+      <path fill="#4285f4" style="fill: var(--color3, #4285f4)" d="M7.364 7.175c-0.050 0.185-0.076 0.375-0.075 0.566v15.286c0 0.191 0.026 0.381 0.075 0.566l8.636-8.431-8.636-7.988z"></path>
+      <path fill="#34a853" style="fill: var(--color4, #34a853)" d="M15.776 15.385l4.318-4.215-9.383-5.317c-0.353-0.204-0.754-0.313-1.164-0.314-0.494-0.001-0.975 0.158-1.369 0.452s-0.68 0.708-0.815 1.178l8.412 8.215z"></path>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+      <path
+        id="Vector 1"
+        d="M10.2661 16L13.7334 11.9516L10.2661 8.00002"
+        stroke="#282828"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </symbol>
+    <symbol id="icon-flag-ukraine" viewBox="0 0 24 24">
+      <path
+        d="M21.3333 3.33325H2.66667C1.95942 3.33325 1.28115 3.6142 0.781049 4.1143C0.280952 4.6144 0 5.29267 0 5.99992L0 11.9999H24V5.99992C24 5.29267 23.719 4.6144 23.219 4.1143C22.7189 3.6142 22.0406 3.33325 21.3333 3.33325Z"
+        fill="#0057B8"
+      />
+      <path
+        d="M24 18C24 18.7072 23.719 19.3855 23.219 19.8856C22.7189 20.3857 22.0406 20.6667 21.3333 20.6667H2.66667C1.95942 20.6667 1.28115 20.3857 0.781049 19.8856C0.280952 19.3855 0 18.7072 0 18V12H24V18Z"
+        fill="#FFD700"
+      />
+    </symbol>
+  </defs>
+</svg>
