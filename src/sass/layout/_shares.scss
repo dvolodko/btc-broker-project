@@ -1,13 +1,13 @@
-// .shares-section {
-//   background-image: url('/src/images/macbook-shares-390.png'),
-//     url('/src/images/svg/bg-shapes-blue-shares-390.svg');
-//   background-repeat: no-repeat, no-repeat;
-//   background-position: calc(0% - 3px) calc(0% + 208px),
-//     calc(50%) calc(50% - 148px);
-//   background-size: 616px, 1012px;
-//   padding-top: 128px;
-//   margin-top: -128px;
-// }
+.shares-section {
+  background-image: url('/src/images/macbook-shares-390.png'),
+    url('/src/images/svg/bg-shapes-blue-shares-390.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: calc(0% - 3px) calc(0% + 208px),
+    calc(50%) calc(50% - 148px);
+  background-size: 616px, 1012px;
+  padding-top: 128px;
+  margin-top: -128px;
+}
 
 .shares-container {
   @include flex(flex, center, stretch);

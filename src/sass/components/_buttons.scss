@@ -8,4 +8,9 @@
 }
 
 .button-secondary {
+  @include flex(flex, flex-start, center);
+  font-family: $secondaryFontFamily;
+  gap: $XS;
+  @include font(800, 1rem, 1.5rem, 0);
+  text-transform: uppercase;
 }
