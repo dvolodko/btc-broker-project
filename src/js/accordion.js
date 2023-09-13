@@ -1,9 +1,11 @@
-const accordion = document.querySelector('.accordion');
+const accordion = document.querySelectorAll('.accordion');
 
-accordion.addEventListener('click', e => {
-  const activePanel = e.target.closest('.accordion-panel');
-  if (!activePanel) return;
-  toggleAccordion(activePanel);
+accordion.forEach(accordionElement => {
+  accordionElement.addEventListener('click', e => {
+    const activePanel = e.target.closest('.accordion-panel');
+    if (!activePanel) return;
+    toggleAccordion(activePanel);
+  });
 });
 
 function toggleAccordion(panelToActivate) {

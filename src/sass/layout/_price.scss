@@ -1,3 +1,17 @@
+.price-section {
+  background-image: url('/src/images/svg/bg-shape-yellow-price-390.svg'),
+    url('/src/images/svg/bg-shape-blue-price-390.svg'),
+    url('/src/images/svg/bg-shape-yellow-price-390-secondary.svg');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: calc(50% + 56px) calc(50% - 576px),
+    calc(50% - 24px) calc(50% + 800px), calc(50% + 56px) calc(50% + 744px);
+  background-size: auto, auto, auto auto;
+  padding-top: 80px;
+  margin-top: -80px;
+  padding-bottom: 320px;
+  margin-bottom: -320px;
+}
+
 .price-container {
   @include flex(flex, center, stretch);
   flex-direction: column;
@@ -16,6 +30,16 @@
   flex-direction: column;
   height: 596px;
   border-radius: $S;
+}
+
+.price-card-with-label {
+  position: relative;
+}
+
+.best-choice-label {
+  position: absolute;
+  top: 0;
+  right: 12px;
 }
 
 // Стилі для 1, 3 картки, тощо
@@ -47,6 +71,7 @@
 // Стилі для 2, 4 картки, тощо
 
 .price-card:nth-child(even) {
+  background-color: $neutralColor0;
   border: 1px solid $primaryColor950;
 }
 

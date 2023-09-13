@@ -41,7 +41,7 @@
 }
 
 .accordion-trigger {
-  @include flex(flex, center, center);
+  @include flex(flex, center, baseline);
   background: transparent;
   border: 0;
   font: inherit;
