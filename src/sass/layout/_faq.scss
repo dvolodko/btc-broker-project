@@ -1,3 +1,12 @@
+.faq-section {
+  background-image: url('/src/images/svg/bg-shape-yellow-faq-390.svg'),
+    url('/src/images/svg/bg-shape-blue-faq-390.svg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: calc(50% + 56px) calc(50% + 304px),
+    calc(50% + 48px) calc(50% + 520px);
+  background-size: auto, auto;
+}
+
 .faq-container {
   padding-top: $XXL;
   padding-bottom: $XXL;
@@ -5,4 +14,14 @@
 
 .faq-section-header {
   margin-bottom: $L;
+}
+
+.faq-accordion {
+  margin-bottom: $L;
+}
+
+.faq-button {
+  justify-content: center;
+  color: $primaryColor700;
+  margin: 0 auto;
 }
