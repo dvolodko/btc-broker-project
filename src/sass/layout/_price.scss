@@ -136,6 +136,16 @@
 
 // Інші стилі секції
 
+.price-description-container {
+  @include flex(flex, center, center);
+  flex-direction: column;
+}
+
+.price-description-wrapper {
+  @include flex(flex, center, stretch);
+  flex-direction: column;
+}
+
 .price-description-subheader {
   margin-bottom: $L;
 }

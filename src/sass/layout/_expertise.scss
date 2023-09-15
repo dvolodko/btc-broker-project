@@ -9,7 +9,7 @@
 }
 
 .expertise-container {
-  @include flex(flex, center, stretch);
+  @include flex(flex, center, center);
   flex-direction: column;
   gap: $L;
   padding-top: $L;
