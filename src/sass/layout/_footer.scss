@@ -101,6 +101,10 @@
   margin-bottom: $L;
 }
 
+.footer-menu-submenu-item:not(:last-child) {
+  margin-bottom: $XS;
+}
+
 .footer-copyright {
   background-color: $primaryColor900;
   padding: $M $S;
