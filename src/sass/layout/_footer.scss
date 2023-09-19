@@ -82,18 +82,17 @@
 .footer-menu-icon {
   stroke: $primaryColor100;
   rotate: 90deg;
+  transition: rotate $mainTransitionDuration $mainTransitionTimingFunction;
+
+  .footer-menu-item.active & {
+    rotate: -90deg;
+  }
 }
 
 .footer-menu-submenu-wrapper {
   overflow: hidden;
   max-height: 0;
   transition: max-height $mainTransitionDuration $mainTransitionTimingFunction;
-}
-
-.footer-menu-submenu-wrapper .active {
-  @include flex(flex, center, flex-start);
-  flex-direction: column;
-  gap: $XS;
 }
 
 .footer-menu-submenu-list {
@@ -103,6 +102,21 @@
 
 .footer-menu-submenu-item:not(:last-child) {
   margin-bottom: $XS;
+}
+
+.footer-social {
+  padding-top: $L;
+}
+
+.footer-social-list {
+  @include flex(flex, center, center);
+  gap: $M;
+}
+
+.footer-social-icon {
+  fill: $neutralColor300;
+  width: 40px;
+  height: 40px;
 }
 
 .footer-copyright {
