@@ -9,7 +9,9 @@ collapsibleMenu.forEach(collapsibleSubMenu => {
 });
 
 function toggleCollapsibleMenu(menuToActivate) {
-  const activeMenu = menuToActivate.querySelector('.footer-menu-submenu-list');
+  const activeMenu = menuToActivate.querySelector(
+    '.footer-menu-submenu-wrapper'
+  );
 
   menuToActivate.classList.toggle('active');
 

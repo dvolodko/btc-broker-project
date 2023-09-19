@@ -61,7 +61,15 @@
   @include font(700, 1.25rem, 1.5rem, 0);
 }
 
+.footer-menu {
+  @include flex(flex, center, stretch);
+  flex-direction: column;
+  gap: $M;
+}
+
 .footer-menu-trigger {
+  @include flex(flex, flex-start, center);
+  gap: 10px;
   width: 100%;
   text-align: left;
   border: none;
@@ -71,16 +79,26 @@
   color: inherit;
 }
 
-.footer-menu-submenu-list {
+.footer-menu-icon {
+  stroke: $primaryColor100;
+  rotate: 90deg;
+}
+
+.footer-menu-submenu-wrapper {
   overflow: hidden;
   max-height: 0;
   transition: max-height $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.footer-menu-submenu-list .active {
+.footer-menu-submenu-wrapper .active {
   @include flex(flex, center, flex-start);
   flex-direction: column;
   gap: $XS;
+}
+
+.footer-menu-submenu-list {
+  margin-top: $M;
+  margin-bottom: $L;
 }
 
 .footer-copyright {

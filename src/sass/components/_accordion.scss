@@ -4,15 +4,12 @@
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows $mainTransitionDuration
-      $mainTransitionTimingFunction,
-    margin $mainTransitionDuration $mainTransitionTimingFunction;
+    $mainTransitionTimingFunction;
   padding-left: $L;
 }
 
 .accordion-content[aria-hidden='false'] {
   grid-template-rows: 1fr;
-  margin-top: $M;
-  margin-bottom: 4px;
 }
 
 .accordion-content > div {
@@ -91,4 +88,9 @@
 .accordion-trigger[aria-expanded='true'] .horizontal {
   rotate: 180deg;
   stroke: $neutralColor0;
+}
+
+.accordion-content-text {
+  margin-top: $M;
+  margin-bottom: 4px;
 }
