@@ -9,6 +9,7 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  overflow-y: auto;
   padding: $L 44px $L 32px;
   background-color: $neutralColor0;
   border: 1px solid $primaryColor950;
@@ -50,12 +51,41 @@
   gap: $L;
 }
 
+.mobile-menu-top-icons {
+  @include flex(flex, space-between, center);
+}
+
+.mobile-menu-back-btn {
+  border: none;
+  background-color: transparent;
+  transform: translateX(128px);
+  opacity: 0;
+  transition: transform $mainTransitionDuration $mainTransitionTimingFunction,
+    opacity $mainTransitionDuration $mainTransitionTimingFunction;
+}
+
+.mobile-menu-back-btn.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.mobile-menu-back-icon {
+  stroke: $neutralColor950;
+}
+
 .language-select-btn {
-  margin-left: auto;
   @include flex(flex, center, center);
   gap: $S;
   border: none;
   background-color: transparent;
+}
+
+.mobile-nav-menu {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.mobile-nav-menu.active {
 }
 
 .mobile-nav-menu-list {
@@ -77,8 +107,24 @@
   stroke: $neutralColor950;
 }
 
-.create-account-btn {
-  background-color: #3f5bdd;
+.mobile-menu-submenu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $neutralColor0;
+  transform: translateX(288px);
+  transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
+
+  .mobile-nav-menu-item.active & {
+    transform: translateX(0px);
+  }
+}
+
+.mobile-menu-bottom-elements {
+  @include flex(flex, center, stretch);
+  flex-direction: column;
+  gap: $L;
 }
 
 .mobile-menu-search-input {
@@ -92,4 +138,8 @@
 
 .mobile-menu-search-input:active {
   outline: 1px solid $neutralColor500;
+}
+
+.create-account-btn {
+  background-color: #3f5bdd;
 }

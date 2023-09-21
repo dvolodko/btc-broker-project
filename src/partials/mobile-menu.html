@@ -1,13 +1,20 @@
 <div class="mobile-menu-container">
   <div class="mobile-menu">
-    <button class="language-select-btn" type="button">
-      <svg width="24" height="24" fill="none">
-        <use href="/src/images/svg/symbol-defs.svg#icon-world"></use>
-      </svg>
-      <svg width="24" height="24" fill="none">
-        <use href="/src/images/svg/symbol-defs.svg#icon-flag-ukraine"></use>
-      </svg>
-    </button>
+    <div class="mobile-menu-top-icons">
+      <button class="mobile-menu-back-btn">
+        <svg class="mobile-menu-back-icon" width="24" height="24" fill="none">
+          <use href="/src/images/svg/symbol-defs.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <button class="language-select-btn" type="button">
+        <svg width="24" height="24" fill="none">
+          <use href="/src/images/svg/symbol-defs.svg#icon-world"></use>
+        </svg>
+        <svg width="24" height="24" fill="none">
+          <use href="/src/images/svg/symbol-defs.svg#icon-flag-ukraine"></use>
+        </svg>
+      </button>
+    </div>
     <nav class="mobile-nav-menu">
       <ul class="mobile-nav-menu-list">
         <li class="mobile-nav-menu-item">
@@ -24,6 +31,35 @@
               ></use>
             </svg>
           </button>
+          <div class="mobile-menu-submenu-container">
+            <ul class="mobile-nav-submenu-list">
+              <li class="mobile-nav-submenu-item">
+                <h3>Приватним особам</h3>
+                <ul>
+                  <li><a href="#">Депозитарні послуги</a></li>
+                  <li><a href="#">Інвестиційні послуги</a></li>
+                  <li><a href="#">Консультування</a></li>
+                </ul>
+              </li>
+              <li class="mobile-nav-submenu-item">
+                <h3>Корпоративним</h3>
+                <ul>
+                  <li><a href="#">КУА та Фондам</a></li>
+                  <li><a href="#">Страховим компаніям</a></li>
+                  <li><a href="#">Акціонерним товариствам</a></li>
+                  <li><a href="#">Юридичним особам</a></li>
+                </ul>
+              </li>
+              <li class="mobile-nav-submenu-item">
+                <h3>Умови надання послуг</h3>
+                <ul>
+                  <li><a href="#">Тарифи на послуги</a></li>
+                  <li><a href="#">Договори та внутрішні документи</a></li>
+                  <li><a href="#">Регламенти та положення</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="mobile-nav-menu-item">
           <button type="button" class="mobile-nav-menu-btn">
@@ -39,12 +75,34 @@
               ></use>
             </svg>
           </button>
+          <div class="mobile-menu-submenu-container">
+            <ul class="mobile-nav-submenu-list">
+              <li class="mobile-nav-submenu-item">
+                <h3>Інформація</h3>
+                <ul>
+                  <li><a href="#">Звітність</a></li>
+                  <li><a href="#">Ліцензії</a></li>
+                  <li><a href="#">Реквізити</a></li>
+                </ul>
+              </li>
+              <li class="mobile-nav-submenu-item">
+                <h3>Команда</h3>
+                <ul>
+                  <li><a href="#">Персонал</a></li>
+                  <li><a href="#">Партнери</a></li>
+                  <li><a href="#">Агенти</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </li>
-        <li class="mobile-nav-menu-item">
+        <li class="mobile-nav-menu-item-contacts">
           <button type="button" class="mobile-nav-menu-btn">Контакти</button>
         </li>
       </ul>
     </nav>
+  </div>
+  <div class="mobile-menu-bottom-elements">
     <form action="#" name="searchfield-mobile-menu">
       <label>
         <input
@@ -55,6 +113,6 @@
         />
       </label>
     </form>
+    <a href="#" class="button-primary create-account-btn">Відкрити рахунок</a>
   </div>
-  <a href="#" class="button-primary create-account-btn">Відкрити рахунок</a>
 </div>

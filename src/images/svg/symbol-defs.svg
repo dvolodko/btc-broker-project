@@ -44,8 +44,29 @@
     </symbol>
     <symbol id="icon-arrow-right" viewBox="0 0 24 24">
       <path
-        id="Vector 1"
         d="M10.2661 16L13.7334 11.9516L10.2661 8.00002"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </symbol>
+    <symbol id="icon-arrow-down" viewBox="0 0 24 24">
+      <path
+        d="M8 10.2664L12.0484 13.7337L16 10.2664" 
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </symbol>
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+      <path
+        d="M10.2664 16L13.7337 11.9516L10.2664 8.00003"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+      <path
+        id="Vector 1"
+        d="M13.7336 16L10.2663 11.9516L13.7336 8.00003"
         stroke-width="2"
         stroke-linecap="round"
       />

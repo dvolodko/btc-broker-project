@@ -81,11 +81,11 @@
 
 .footer-menu-icon {
   stroke: $primaryColor100;
-  rotate: 90deg;
+  rotate: 0;
   transition: rotate $mainTransitionDuration $mainTransitionTimingFunction;
 
   .footer-menu-item.active & {
-    rotate: -90deg;
+    rotate: -180deg;
   }
 }
 
