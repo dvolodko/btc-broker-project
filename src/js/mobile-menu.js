@@ -46,13 +46,11 @@ function openSlideSubmenu(e) {
   if (!activeSubmenu) return;
   activeSubmenu.classList.add('active');
   mobileMenuBackBtn.classList.add('active');
-  mobileNavMenu.classList.add('active');
 }
 
 function closeSlideSubmenu() {
   activeSubmenu.classList.remove('active');
   mobileMenuBackBtn.classList.remove('active');
-  mobileNavMenu.classList.remove('active');
 }
 
 hamburgerBtn.addEventListener('click', () => {

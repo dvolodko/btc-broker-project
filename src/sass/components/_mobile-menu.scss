@@ -9,7 +9,7 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  overflow-y: auto;
+  // overflow-y: auto;
   padding: $L 44px $L 32px;
   background-color: $neutralColor0;
   border: 1px solid $primaryColor950;
@@ -49,6 +49,8 @@
   @include flex(flex, space-between, stretch);
   flex-direction: column;
   gap: $L;
+  overflow-y: auto;
+  margin-bottom: $L;
 }
 
 .mobile-menu-top-icons {
@@ -85,9 +87,6 @@
   overflow-x: hidden;
 }
 
-.mobile-nav-menu.active {
-}
-
 .mobile-nav-menu-list {
   @include flex(flex, center, stretch);
   flex-direction: column;
@@ -119,6 +118,31 @@
   .mobile-nav-menu-item.active & {
     transform: translateX(0px);
   }
+}
+
+.mobile-nav-submenu-item:not(:last-child) {
+  padding-bottom: $M;
+  border-bottom: 1px solid $neutralColor300;
+}
+
+.mobile-nav-submenu-item:not(:first-child) {
+  padding-top: $M;
+}
+
+.mobile-nav-submenu-title {
+  font-family: $secondaryFontFamily;
+  @include font(700, 1.25rem, 1.5rem, 0);
+  color: $primaryColor950;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: $primaryColor700;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  margin-bottom: $XS;
+}
+
+.mobile-nav-submenu-link:not(:last-child) {
+  margin-bottom: $XS;
 }
 
 .mobile-menu-bottom-elements {
