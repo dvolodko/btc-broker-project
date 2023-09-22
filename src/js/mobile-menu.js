@@ -5,6 +5,7 @@ const mobileMenuBackBtn = mobileMenu.querySelector('.mobile-menu-back-btn');
 const mobileNavMenu = mobileMenu.querySelector('.mobile-nav-menu');
 const slideMenu = mobileMenu.querySelector('.mobile-nav-menu-list');
 const body = document.querySelector('body');
+let activeSubmenu;
 
 function classListToggler(element, className) {
   element.classList.toggle(className);
@@ -41,18 +42,15 @@ function onEscPress(e) {
 }
 
 function openSlideSubmenu(e) {
-  const activeMenu = e.target.closest('.mobile-nav-menu-item');
-  if (!activeMenu) return;
-  activeMenu.classList.add('active');
+  activeSubmenu = e.target.closest('.mobile-nav-menu-item');
+  if (!activeSubmenu) return;
+  activeSubmenu.classList.add('active');
   mobileMenuBackBtn.classList.add('active');
   mobileNavMenu.classList.add('active');
 }
 
 function closeSlideSubmenu() {
-  activeSubmenu = slideMenu.querySelectorAll('.active');
-  activeSubmenu.forEach(element => {
-    element.classList.remove('active');
-  });
+  activeSubmenu.classList.remove('active');
   mobileMenuBackBtn.classList.remove('active');
   mobileNavMenu.classList.remove('active');
 }
