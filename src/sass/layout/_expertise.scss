@@ -6,6 +6,18 @@
   background-size: 796px, 892px;
   padding-top: 88px;
   margin-top: -88px;
+  @include mq(tablet-768) {
+    background-image: url('/src/images/svg/bg-shape-yellow-expertise-390.svg'),
+      url('/src/images/svg/bg-shape-blue-expertise-390.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: calc(50% + 600px) calc(50%),
+      calc(50% - 16px) calc(50% + 112px);
+    background-size: 796px, 1728px;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 128px;
+    margin-bottom: -128px;
+  }
 }
 
 .expertise-container {
@@ -14,10 +26,25 @@
   gap: $L;
   padding-top: $L;
   padding-bottom: $L;
+  @include mq(tablet-768) {
+    flex-direction: row;
+    gap: $M;
+    align-items: flex-start;
+    padding-top: $XL;
+    padding-bottom: $XL;
+  }
 }
 
 .expertise-illustration {
   transform: scale(1.06);
+  @include mq(tablet-768) {
+    width: 320px;
+    transform: scale(1.2) translate(-16px, 88px);
+  }
+}
+
+.expertise-description-container {
+  opacity: 0.6;
 }
 
 .expertise-description-header {

@@ -121,7 +121,8 @@
 
 .footer-copyright {
   background-color: $primaryColor900;
-  padding: $M $S;
+  padding-top: $M;
+  padding-bottom: $M;
   @include font(400, 0.75rem, 1rem, 0);
   color: $primaryColor400;
   text-wrap: balance;

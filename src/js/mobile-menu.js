@@ -49,6 +49,7 @@ function openSlideSubmenu(e) {
 }
 
 function closeSlideSubmenu() {
+  if (!activeSubmenu) return;
   activeSubmenu.classList.remove('active');
   mobileMenuBackBtn.classList.remove('active');
 }

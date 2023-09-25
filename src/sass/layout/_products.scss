@@ -2,6 +2,9 @@
   background-image: url('/src/images/svg/bg-shape-products-390.svg');
   background-repeat: no-repeat;
   background-position: calc(50% + 304px) calc(50% - 24px);
+  @include mq(tablet-768) {
+    background: none;
+  }
 }
 
 .products-container {
@@ -10,12 +13,26 @@
   gap: $L;
   padding-top: $XL;
   padding-bottom: $XL;
+  @include mq(tablet-768) {
+    gap: $XL;
+    padding-bottom: $L;
+  }
 }
 
 .products-buttons-list {
   @include flex(flex, center, stretch);
   flex-direction: column;
   gap: $S;
+  @include mq(tablet-768) {
+    flex-direction: row;
+    gap: $M;
+  }
+}
+
+.products-buttons-item {
+  @include mq(tablet-768) {
+    flex-basis: calc((100% - 3 * $M) / 4);
+  }
 }
 
 .products-button {
@@ -27,7 +44,7 @@
   @include font(800, 1rem, 1.5rem, 0);
   border-radius: $S;
   border: 1px solid $primaryColor900;
-  padding: $M 48px;
+  padding: $M 0;
   background-color: $neutralColor0;
   transition: color $mainTransitionDuration $mainTransitionTimingFunction,
     background-color $mainTransitionDuration $mainTransitionTimingFunction;
@@ -37,6 +54,9 @@
     background-color: $primaryColor950;
     transition: color $mainTransitionDuration $mainTransitionTimingFunction,
       background-color $mainTransitionDuration $mainTransitionTimingFunction;
+  }
+  @include mq(tablet-768) {
+    padding: $L 0;
   }
 }
 
@@ -102,10 +122,22 @@
   fill: $primaryColor100;
 }
 
+.products-description-container {
+  @include mq(tablet-768) {
+    max-width: 662px;
+  }
+}
+
 .products-description-subheader {
   margin-bottom: $S;
 }
 
 .products-description-text {
   margin-bottom: 40px;
+}
+
+.products-description-button {
+  @include mq(tablet-768) {
+    width: 280px;
+  }
 }
