@@ -2,7 +2,7 @@
   background-image: url('/src/images/svg/bg-shape-products-390.svg');
   background-repeat: no-repeat;
   background-position: calc(50% + 304px) calc(50% - 24px);
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     background: none;
   }
 }
@@ -13,7 +13,7 @@
   gap: $L;
   padding-top: $XL;
   padding-bottom: $XL;
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     gap: $XL;
     padding-bottom: $L;
   }
@@ -23,14 +23,14 @@
   @include flex(flex, center, stretch);
   flex-direction: column;
   gap: $S;
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     flex-direction: row;
     gap: $M;
   }
 }
 
 .products-buttons-item {
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     flex-basis: calc((100% - 3 * $M) / 4);
   }
 }
@@ -55,7 +55,7 @@
     transition: color $mainTransitionDuration $mainTransitionTimingFunction,
       background-color $mainTransitionDuration $mainTransitionTimingFunction;
   }
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     padding: $L 0;
   }
 }
@@ -77,7 +77,7 @@
 .bonds-button-icon-layer2,
 .depositary-button-icon-layer1,
 .repositary-button-icon-layer-accent {
-  fill: $accentColor500;
+  fill: $primaryColor400;
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
@@ -102,7 +102,7 @@
 .depositary-button:focus .depositary-button-icon-layer1,
 .repositary-button:hover .repositary-button-icon-layer-accent,
 .repositary-button:focus.repositary-button-icon-layer-accent {
-  fill: $accentColor400;
+  fill: $primaryColor700;
 }
 
 .shares-button:hover .shares-button-icon-layer3,
@@ -123,7 +123,7 @@
 }
 
 .products-description-container {
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     max-width: 662px;
   }
 }
@@ -134,10 +134,4 @@
 
 .products-description-text {
   margin-bottom: 40px;
-}
-
-.products-description-button {
-  @include mq(tablet-768) {
-    width: 280px;
-  }
 }

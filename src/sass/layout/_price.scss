@@ -10,6 +10,18 @@
   margin-top: -80px;
   padding-bottom: 320px;
   margin-bottom: -320px;
+  @include mq(tablet-S) {
+    background-image: url('/src/images/svg/bg-shape-blue-price-768.svg'),
+      url('/src/images/svg/bg-shape-yellow-price-768-secondary.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: calc(50% + 80px) calc(50% + 320px),
+      calc(50% + 232px) calc(50% + 248px);
+    background-size: auto, auto;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 160px;
+    margin-bottom: -160px;
+  }
 }
 
 .price-container {
@@ -17,19 +29,31 @@
   flex-direction: column;
   gap: $L;
   padding-top: $L;
+  @include mq(tablet-S) {
+    padding-top: $XL;
+    padding-bottom: $XL;
+  }
 }
 
 .price-cards-list {
   @include flex(flex, center, stretch);
   flex-direction: column;
   gap: $M;
+  @include mq(tablet-S) {
+    flex-direction: row;
+    flex-basis: calc((100% - 1 * $M) / 2);
+  }
 }
 
 .price-card {
   @include flex(flex, flex-start, stretch);
   flex-direction: column;
-  height: 596px;
+  min-height: 596px;
   border-radius: $S;
+  @include mq(tablet-S) {
+    flex-basis: calc((100% - 1 * $M) / 2);
+    min-height: 0;
+  }
 }
 
 .price-card-with-label {
@@ -139,6 +163,10 @@
 .price-description-container {
   @include flex(flex, center, center);
   flex-direction: column;
+  @include mq(tablet-S) {
+    flex-direction: row;
+    gap: $M;
+  }
 }
 
 .price-description-wrapper {
@@ -146,10 +174,14 @@
   flex-direction: column;
 }
 
-.price-description-subheader {
+.price-description-text {
+  color: $neutralColor950;
   margin-bottom: $L;
 }
 
 .price-description-button {
   margin-bottom: $L;
+  @include mq(tablet-S) {
+    margin-bottom: 0;
+  }
 }

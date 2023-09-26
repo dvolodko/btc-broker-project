@@ -8,11 +8,11 @@
     margin-right: auto;
   }
 
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     width: 768px;
   }
 
-  @include mq(tablet-1024) {
+  @include mq(tablet-L) {
     width: 1024px;
   }
 

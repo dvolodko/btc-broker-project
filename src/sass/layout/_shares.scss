@@ -7,18 +7,39 @@
   background-size: 616px, 1012px;
   padding-top: 128px;
   margin-top: -128px;
+  @include mq(tablet-S) {
+    background-image: url('/src/images/macbook-shares.webp'),
+      url('/src/images/svg/bg-shapes-blue-shares-768.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: calc(50% + 440px) calc(50% - 227px),
+      calc(50% + 44px) calc(50% + 16px);
+    background-size: 752px, auto;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 480px;
+    margin-bottom: -480px;
+  }
 }
 
 .shares-container {
   @include flex(flex, center, stretch);
   flex-direction: column;
-  gap: $L;
   padding-top: 476px;
   padding-bottom: $XL;
+  @include mq(tablet-S) {
+    padding-top: $L;
+    padding-bottom: $L;
+  }
 }
 
 .shares-description-subheader {
   margin-bottom: $M;
+}
+
+.shares-description-container {
+  @include mq(tablet-S) {
+    max-width: 416px;
+  }
 }
 
 .shares-description-list {

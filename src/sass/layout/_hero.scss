@@ -9,7 +9,7 @@
   padding-top: 88px;
   padding-bottom: 224px;
   margin-bottom: -224px;
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     background-image: url('/src/images/iphone-hero-side-768.webp'),
       url('/src/images/iphone-hero-front-768.webp'),
       url('/src/images/svg/bg-ellipse-blue-hero-390.svg'),
@@ -24,7 +24,7 @@
 
 .hero-container {
   @include flex(flex, flex-start, center);
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     padding-top: $L;
     padding-bottom: $L;
   }
@@ -35,7 +35,7 @@
   flex-direction: column;
   gap: $M;
   padding-bottom: 116px;
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     flex-basis: calc((100% - 1 * $M) / 2);
     padding-bottom: 0;
   }
@@ -52,7 +52,7 @@
   max-width: 18rem;
   text-wrap: balance;
   margin-bottom: 20px;
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     max-width: 100%;
   }
 }
@@ -61,7 +61,7 @@
   @include flex(flex, center, center);
   flex-direction: column;
   gap: $S;
-  @include mq(tablet-768) {
+  @include mq(tablet-S) {
     flex-direction: row;
     gap: $M;
   }

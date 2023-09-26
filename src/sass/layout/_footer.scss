@@ -14,11 +14,18 @@
   gap: $L;
   padding-bottom: $L;
   border-bottom: 1px solid $primaryColor900;
+  @include mq(tablet-S) {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
 
 .address {
   @include font(400, 0.875rem, 1.5rem, 0);
   font-style: normal;
+  @include mq(tablet-S) {
+    @include font(400, 1rem, 1.5rem, 0);
+  }
 }
 
 .address-list {
@@ -28,7 +35,7 @@
 }
 
 .address-item {
-  @include flex(flex, center, flex-start);
+  @include flex(flex, center, center);
   gap: $M;
 }
 
@@ -53,18 +60,27 @@
   gap: $M;
   padding-top: $L;
   padding-bottom: $L;
+  @include mq(tablet-S) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .footer-btc-broker-title {
   text-transform: uppercase;
   font-family: $secondaryFontFamily;
   @include font(700, 1.25rem, 1.5rem, 0);
+  text-wrap: nowrap;
 }
 
 .footer-menu {
   @include flex(flex, center, stretch);
   flex-direction: column;
   gap: $M;
+  margin-bottom: $L;
+  @include mq(tablet-S) {
+    display: none;
+  }
 }
 
 .footer-menu-trigger {
@@ -104,8 +120,26 @@
   margin-bottom: $XS;
 }
 
-.footer-social {
-  padding-top: $L;
+.footer-menu-expanded {
+  display: none;
+  @include mq(tablet-S) {
+    @include flex(flex, center, flex-start);
+    gap: $M;
+    padding-top: $M;
+  }
+}
+
+.footer-menu-item-expanded {
+  @include mq(tablet-S) {
+    flex-basis: calc((100% - 2 * $M) / 3);
+  }
+}
+
+.footer-menu-submenu-list-expanded {
+  @include mq(tablet-S) {
+    padding-top: $M;
+    padding-bottom: $L;
+  }
 }
 
 .footer-social-list {
@@ -114,7 +148,7 @@
 }
 
 .footer-social-icon {
-  fill: $neutralColor300;
+  fill: $primaryColor100;
   width: 40px;
   height: 40px;
 }

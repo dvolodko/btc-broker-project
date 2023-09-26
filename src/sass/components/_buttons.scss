@@ -5,6 +5,9 @@
   color: $neutralColor0;
   background-color: $primaryColor700;
   border-radius: $S;
+  @include mq(tablet-S) {
+    width: 280px;
+  }
 }
 
 .button-secondary {

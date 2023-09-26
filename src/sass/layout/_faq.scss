@@ -5,11 +5,24 @@
   background-position: calc(50% + 56px) calc(50% + 304px),
     calc(50% + 48px) calc(50% + 520px);
   background-size: auto, auto;
+  @include mq(tablet-S) {
+    background-image: url('/src/images/svg/bg-shape-yellow-faq-768.svg'),
+      url('/src/images/svg/bg-shape-blue-faq-768.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: calc(50% + 224px) calc(50% + 208px),
+      calc(50% - 48px) calc(50% + 288px);
+    background-size: auto, auto;
+  }
 }
 
 .faq-container {
   padding-top: $XXL;
   padding-bottom: $XXL;
+  @include mq(tablet-S) {
+    padding-top: $L;
+    padding-left: 76px;
+    padding-right: 76px;
+  }
 }
 
 .faq-section-header {
@@ -18,6 +31,11 @@
 
 .faq-accordion {
   margin-bottom: $L;
+}
+
+.accordion-content-text-link {
+  color: $primaryColor700;
+  text-decoration: underline;
 }
 
 .faq-button {
