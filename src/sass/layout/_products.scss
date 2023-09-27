@@ -17,6 +17,11 @@
     gap: $XL;
     padding-bottom: $L;
   }
+  @include mq(tablet-L) {
+    flex-direction: row;
+    gap: $M;
+    padding-top: $L;
+  }
 }
 
 .products-buttons-list {
@@ -25,13 +30,21 @@
   gap: $S;
   @include mq(tablet-S) {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: $M;
+  }
+  @include mq(tablet-L) {
+    flex-basis: calc((100% - 1 * $M) / 2);
   }
 }
 
 .products-buttons-item {
   @include mq(tablet-S) {
     flex-basis: calc((100% - 3 * $M) / 4);
+  }
+  @include mq(tablet-L) {
+    flex-basis: calc((100% - 1 * $M) / 2);
+    height: calc((100% - 1 * $M) / 2);
   }
 }
 
@@ -58,6 +71,14 @@
   @include mq(tablet-S) {
     padding: $L 0;
   }
+  @include mq(tablet-L) {
+    height: 100%;
+  }
+}
+
+.shares-button {
+  color: $primaryColor100;
+  background-color: $primaryColor950;
 }
 
 .shares-button-icon,
@@ -73,7 +94,7 @@
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.shares-button-icon-layer1,
+// .shares-button-icon-layer1,
 .bonds-button-icon-layer2,
 .depositary-button-icon-layer1,
 .repositary-button-icon-layer-accent {
@@ -81,7 +102,7 @@
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.shares-button-icon-layer3,
+// .shares-button-icon-layer3,
 .bonds-button-icon-vector1,
 .depositary-button-icon-vector9,
 .repositary-button-icon-layer-neutral {
@@ -94,8 +115,16 @@
   transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.shares-button:hover .shares-button-icon-layer1,
-.shares-button:focus .shares-button-icon-layer1,
+.shares-button .shares-button-icon-layer1 {
+  fill: $primaryColor700;
+}
+
+.shares-button .shares-button-icon-layer3 {
+  fill: $primaryColor100;
+}
+
+// .shares-button:hover .shares-button-icon-layer1,
+// .shares-button:focus .shares-button-icon-layer1,
 .bonds-button:hover .bonds-button-icon-layer2,
 .bonds-button:focus .bonds-button-icon-layer2,
 .depositary-button:hover .depositary-button-icon-layer1,
@@ -105,8 +134,8 @@
   fill: $primaryColor700;
 }
 
-.shares-button:hover .shares-button-icon-layer3,
-.shares-button:focus .shares-button-icon-layer3,
+// .shares-button:hover .shares-button-icon-layer3,
+// .shares-button:focus .shares-button-icon-layer3,
 .bonds-button:hover .bonds-button-icon-vector1,
 .bonds-button:focus .bonds-button-icon-vector1,
 .bonds-button:hover .bonds-button-icon-layer1,
@@ -125,6 +154,10 @@
 .products-description-container {
   @include mq(tablet-S) {
     max-width: 662px;
+  }
+  @include mq(tablet-L) {
+    flex-basis: calc((100% - 1 * $M) / 2);
+    padding-left: $M;
   }
 }
 

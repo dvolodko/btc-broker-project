@@ -1,24 +1,32 @@
 .hero-section {
   background-image: url('/src/images/iphone-hero.webp'),
-    url('/src/images/svg/bg-ellipse-blue-hero-390.svg'),
-    url('/src/images/svg/bg-ellipse-yellow-hero-390.svg');
+    url('/src/images/svg/bg-ellipse-yellow-hero-390.svg'),
+    url('/src/images/svg/bg-ellipse-blue-hero-390.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: calc(50% + 120px) calc(50% + 48px),
-    calc(50% + 160px) calc(50% + 36px), calc(50% + 16px) calc(50% + 204px);
-  background-size: 352px, 640px, auto auto;
+    calc(50% + 16px) calc(50% + 204px), calc(50% + 160px) calc(50% + 36px);
+  background-size: 352px, auto auto, 640px;
   padding-top: 88px;
   padding-bottom: 224px;
   margin-bottom: -224px;
   @include mq(tablet-S) {
     background-image: url('/src/images/iphone-hero-side-768.webp'),
       url('/src/images/iphone-hero-front-768.webp'),
-      url('/src/images/svg/bg-ellipse-blue-hero-390.svg'),
-      url('/src/images/svg/bg-shape-yellow-hero-768.svg');
+      url('/src/images/svg/bg-shape-yellow-hero-768.svg'),
+      url('/src/images/svg/bg-ellipse-blue-hero-768.svg');
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-position: calc(50% + 304px) calc(50% - 32px),
-      calc(50% + 128px) calc(50% - 88px), calc(50% + 320px) calc(50% - 32px),
-      calc(50% + 56px) calc(50% + 88px);
-    background-size: 340px, 328px, 560px, 634px;
+      calc(50% + 128px) calc(50% - 88px), calc(50% + 56px) calc(50% + 88px),
+      calc(50% + 336px) calc(50% - 32px);
+    background-size: 340px, 328px, 634px, 528px;
+  }
+  @include mq(tablet-L) {
+    background-position: calc(50% + 392px) calc(50% - 96px),
+      calc(50% + 180px) calc(50% - 144px), calc(50% + 96px) calc(50% + 80px),
+      calc(50% + 416px) calc(50% - 80px);
+    background-size: 444px, 432px, 928px, 776px;
+    padding-bottom: 320px;
+    margin-bottom: -320px;
   }
 }
 
@@ -27,6 +35,10 @@
   @include mq(tablet-S) {
     padding-top: $L;
     padding-bottom: $L;
+  }
+  @include mq(tablet-L) {
+    padding-top: $XL;
+    padding-bottom: $XL;
   }
 }
 
@@ -46,10 +58,13 @@
   color: $primaryColor950;
   text-wrap: balance;
   @include font(800, 3.75rem, 4.25rem, -0.1rem);
+  @include mq(tablet-L) {
+    @include font(800, 5rem, 5.5rem, -0.1rem);
+  }
 }
 
 .hero-text {
-  max-width: 18rem;
+  max-width: 15rem;
   text-wrap: balance;
   margin-bottom: 20px;
   @include mq(tablet-S) {

@@ -20,6 +20,9 @@ body {
   color: $primaryColor950;
   @include font(800, 1.75rem, 2rem, 0);
   margin-bottom: $M;
+  @include mq(tablet-L) {
+    @include font(800, 2.25rem, 2.5rem, 0);
+  }
 }
 
 .subheader {
