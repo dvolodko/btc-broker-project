@@ -32,6 +32,10 @@
   @include flex(flex, center, flex-start);
   flex-direction: column;
   gap: $M;
+  @include mq(tablet-L) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .address-item {
@@ -54,6 +58,15 @@
   text-wrap: balance;
 }
 
+.footer-license-and-menu {
+  @include mq(tablet-L) {
+    @include flex(flex, flex-start, flex-start);
+    gap: $M;
+    padding-top: $L;
+    padding-bottom: $L;
+  }
+}
+
 .footer-license {
   @include flex(flex, center, flex-start);
   flex-direction: column;
@@ -63,6 +76,13 @@
   @include mq(tablet-S) {
     flex-direction: row;
     align-items: center;
+  }
+  @include mq(tablet-L) {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: calc((100% - 1 * $M) / 3);
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -127,6 +147,10 @@
     gap: $M;
     padding-top: $M;
   }
+  @include mq(tablet-L) {
+    padding-top: 0;
+    width: 100%;
+  }
 }
 
 .footer-menu-item-expanded {
@@ -135,10 +159,20 @@
   }
 }
 
+.footer-menu-title-expanded {
+  @include mq(tablet-L) {
+    margin-bottom: $M;
+  }
+}
+
 .footer-menu-submenu-list-expanded {
   @include mq(tablet-S) {
     padding-top: $M;
     padding-bottom: $L;
+  }
+  @include mq(tablet-L) {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 

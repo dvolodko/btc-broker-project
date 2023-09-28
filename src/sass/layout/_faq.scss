@@ -23,6 +23,10 @@
     padding-left: 76px;
     padding-right: 76px;
   }
+  @include mq(tablet-L) {
+    padding-left: 96px;
+    padding-right: 96px;
+  }
 }
 
 .faq-section-header {

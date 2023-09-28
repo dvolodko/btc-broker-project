@@ -22,6 +22,11 @@
     padding-bottom: 160px;
     margin-bottom: -160px;
   }
+  @include mq(tablet-L) {
+    background-position: calc(50% + 304px) calc(50% + 320px),
+      calc(50% + 432px) calc(50% + 200px);
+    background-size: auto, auto;
+  }
 }
 
 .price-container {
@@ -33,6 +38,10 @@
     padding-top: $XL;
     padding-bottom: $XL;
   }
+  @include mq(tablet-L) {
+    flex-direction: row;
+    gap: $M;
+  }
 }
 
 .price-cards-list {
@@ -41,7 +50,9 @@
   gap: $M;
   @include mq(tablet-S) {
     flex-direction: row;
-    flex-basis: calc((100% - 1 * $M) / 2);
+  }
+  @include mq(tablet-L) {
+    flex-basis: calc((100% - 1 * $M) / 1.48);
   }
 }
 
@@ -53,6 +64,9 @@
   @include mq(tablet-S) {
     flex-basis: calc((100% - 1 * $M) / 2);
     min-height: 0;
+  }
+  @include mq(tablet-L) {
+    flex-basis: calc((100% - 1 * $M) / 2);
   }
 }
 
@@ -167,6 +181,13 @@
     flex-direction: row;
     gap: $M;
   }
+  @include mq(tablet-L) {
+    flex-direction: column;
+    flex-basis: calc((100% - 2 * $M) / 3);
+    padding-top: $M;
+    padding-bottom: $M;
+    padding-left: $M;
+  }
 }
 
 .price-description-wrapper {
@@ -177,6 +198,7 @@
 .price-description-text {
   color: $neutralColor950;
   margin-bottom: $L;
+  padding-right: $M;
 }
 
 .price-description-button {

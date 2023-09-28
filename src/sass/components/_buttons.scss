@@ -8,6 +8,9 @@
   @include mq(tablet-S) {
     width: 280px;
   }
+  @include mq(desktop) {
+    width: 192px;
+  }
 }
 
 .button-secondary {

@@ -19,6 +19,20 @@
     padding-bottom: 480px;
     margin-bottom: -480px;
   }
+  @include mq(tablet-L) {
+    background-position: calc(50% + 392px) calc(50% - 227px),
+      calc(50% + 116px) calc(50% - 40px);
+    background-size: 752px, 1664px;
+  }
+  @include mq(desktop) {
+    background-image: url('/src/images/macbook-shares.webp');
+    background-repeat: no-repeat;
+    background-position: calc(50% + 416px) calc(50% - 14px),
+      calc(50% + 44px) calc(50% + 16px);
+    background-size: 816px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 }
 
 .shares-container {
@@ -32,14 +46,21 @@
   }
 }
 
-.shares-description-subheader {
-  margin-bottom: $M;
-}
-
 .shares-description-container {
   @include mq(tablet-S) {
     max-width: 416px;
   }
+  @include mq(tablet-L) {
+    max-width: 490px;
+  }
+  @include mq(desktop) {
+    max-width: 560px;
+  }
+}
+
+.shares-description-subheader {
+  margin-bottom: $M;
+  text-wrap: balance;
 }
 
 .shares-description-list {

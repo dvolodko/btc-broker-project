@@ -22,16 +22,20 @@
     gap: $M;
     padding-top: $L;
   }
+  @include mq(desktop) {
+    align-items: flex-end;
+    padding-top: $XL;
+    padding-bottom: $XL;
+  }
 }
 
 .products-buttons-list {
   @include flex(flex, center, stretch);
   flex-direction: column;
-  gap: $S;
+  gap: $M;
   @include mq(tablet-S) {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: $M;
   }
   @include mq(tablet-L) {
     flex-basis: calc((100% - 1 * $M) / 2);
@@ -167,4 +171,5 @@
 
 .products-description-text {
   margin-bottom: 40px;
+  max-width: 460px;
 }
