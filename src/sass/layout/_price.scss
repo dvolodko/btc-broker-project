@@ -25,7 +25,11 @@
   @include mq(tablet-L) {
     background-position: calc(50% + 304px) calc(50% + 320px),
       calc(50% + 432px) calc(50% + 200px);
-    background-size: auto, auto;
+  }
+  @include mq(desktop) {
+    background-position: calc(50% + 328px) calc(50% + 224px),
+      calc(50% + 448px) calc(50% + 160px);
+    background-size: 2220px, 2220px;
   }
 }
 
@@ -187,6 +191,9 @@
     padding-top: $M;
     padding-bottom: $M;
     padding-left: $M;
+  }
+  @include mq(desktop) {
+    align-items: flex-start;
   }
 }
 

@@ -13,6 +13,11 @@
       calc(50% - 48px) calc(50% + 288px);
     background-size: auto, auto;
   }
+  @include mq(desktop) {
+    background-position: calc(50% + 272px) calc(50% + 104px),
+      calc(50% - 0px) calc(50% + 192px);
+    background-size: auto, auto;
+  }
 }
 
 .faq-container {
@@ -26,6 +31,10 @@
   @include mq(tablet-L) {
     padding-left: 96px;
     padding-right: 96px;
+  }
+  @include mq(desktop) {
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
 

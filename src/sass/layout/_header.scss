@@ -10,12 +10,69 @@
   @include flex(flex, space-between, center);
   padding-top: $M;
   padding-bottom: $M;
+  @include mq(desktop) {
+    justify-content: unset;
+  }
+}
+
+.navigation {
+  @include mq(desktop) {
+    @include flex(flex, space-between, center);
+    margin-right: $XL;
+  }
+}
+
+.header-logo {
+  @include mq(desktop) {
+    margin-right: auto;
+  }
+}
+
+.header-nav-menu-list {
+  display: none;
+  @include mq(desktop) {
+    @include flex(flex, center, center);
+    gap: $L;
+  }
+}
+
+.header-nav-menu-btn {
+  @include flex(flex, center, center);
+  @include font(400, 1rem, 1.5rem, 0);
+  border: none;
+  background-color: transparent;
+}
+
+.header-nav-menu-icon {
+  stroke: $neutralColor950;
+}
+
+.create-account-btn-tablet {
+  display: none;
+  @include mq(tablet-S) {
+    display: block;
+    margin-left: auto;
+    margin-right: $L;
+  }
+  @include mq(desktop) {
+    margin-left: 0;
+  }
+}
+
+.header-language-select-btn {
+  display: none;
+  @include mq(desktop) {
+    display: flex;
+  }
 }
 
 .button-hamburger {
   background: transparent;
   border: 0;
   border-radius: 4px;
+  @include mq(desktop) {
+    display: none;
+  }
 }
 
 .button-hamburger .line {

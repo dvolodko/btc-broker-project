@@ -69,8 +69,6 @@
     cursor: pointer;
     color: $primaryColor100;
     background-color: $primaryColor950;
-    transition: color $mainTransitionDuration $mainTransitionTimingFunction,
-      background-color $mainTransitionDuration $mainTransitionTimingFunction;
   }
   @include mq(tablet-S) {
     padding: $L 0;

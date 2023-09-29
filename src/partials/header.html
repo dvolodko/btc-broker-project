@@ -1,16 +1,58 @@
 <header class="header">
   <div class="container header-container">
     <nav class="navigation">
-      <a href="/src/index.html"
+      <a href="/src/index.html" class="header-logo"
         ><img
           src="/src/images/btc-broker-logo-dark.png"
           alt="BTC Broker logo"
           width="220"
       /></a>
+      <ul class="header-nav-menu-list">
+        <li class="header-nav-menu-item">
+          <button type="button" class="header-nav-menu-btn">
+            Послуги та тарифи
+            <svg
+              class="header-nav-menu-icon"
+              width="24"
+              height="24"
+              fill="none"
+            >
+              <use href="/src/images/svg/symbol-defs.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="header-nav-menu-item">
+          <button type="button" class="header-nav-menu-btn">
+            Про нас
+            <svg
+              class="header-nav-menu-icon"
+              width="24"
+              height="24"
+              fill="none"
+            >
+              <use href="/src/images/svg/symbol-defs.svg#icon-arrow-down"></use>
+            </svg>
+          </button>
+        </li>
+        <li class="header-nav-menu-item">
+          <button type="button" class="header-nav-menu-btn">Контакти</button>
+        </li>
+      </ul>
     </nav>
     <a href="#" class="button-primary create-account-btn-tablet"
       >Відкрити рахунок</a
     >
+    <button
+      class="language-select-btn header-language-select-btn"
+      type="button"
+    >
+      <svg width="24" height="24" fill="none">
+        <use href="/src/images/svg/symbol-defs.svg#icon-world"></use>
+      </svg>
+      <svg width="24" height="24" fill="none">
+        <use href="/src/images/svg/symbol-defs.svg#icon-flag-ukraine"></use>
+      </svg>
+    </button>
     <button
       class="button-hamburger"
       aria-controls="primary-navigation"

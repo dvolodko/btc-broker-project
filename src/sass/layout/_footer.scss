@@ -18,6 +18,10 @@
     flex-direction: row;
     justify-content: flex-start;
   }
+  @include mq(desktop) {
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .address {
@@ -25,6 +29,9 @@
   font-style: normal;
   @include mq(tablet-S) {
     @include font(400, 1rem, 1.5rem, 0);
+  }
+  @include mq(desktop) {
+    flex-basis: calc(75%);
   }
 }
 
@@ -41,6 +48,16 @@
 .address-item {
   @include flex(flex, center, center);
   gap: $M;
+}
+
+.address-item-contacts {
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+.address-item-address {
+  flex-grow: 2;
+  justify-content: flex-start;
 }
 
 .footer-address-icon-wrapper {
