@@ -1,4 +1,4 @@
-.mobile-menu-overlay,
+.overlay,
 .modal {
   visibility: hidden;
   opacity: 0;
@@ -7,7 +7,7 @@
     visibility $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.mobile-menu-overlay.active,
+.overlay.active,
 .modal.active {
   visibility: visible;
   opacity: 1;
@@ -20,7 +20,7 @@
   overflow: hidden;
 }
 
-.mobile-menu-overlay {
+.overlay {
   position: fixed;
   z-index: 3;
   top: 0px;

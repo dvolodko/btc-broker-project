@@ -1,14 +1,14 @@
 <header class="header">
   <div class="container header-container">
+    <a href="/src/index.html" class="header-logo"
+      ><img
+        src="/src/images/btc-broker-logo-dark.png"
+        alt="BTC Broker logo"
+        width="220"
+    /></a>
     <nav class="navigation">
-      <a href="/src/index.html" class="header-logo"
-        ><img
-          src="/src/images/btc-broker-logo-dark.png"
-          alt="BTC Broker logo"
-          width="220"
-      /></a>
       <ul class="header-nav-menu-list">
-        <li class="header-nav-menu-item">
+        <li class="header-nav-menu-item-services">
           <button type="button" class="header-nav-menu-btn">
             Послуги та тарифи
             <svg
@@ -20,8 +20,57 @@
               <use href="/src/images/svg/symbol-defs.svg#icon-arrow-down"></use>
             </svg>
           </button>
+          <div class="header-menu-container-services">
+            <ul class="header-menu">
+              <li class="header-menu-item">
+                <h3 class="header-menu-submenu-title">Приватним особам</h3>
+                <ul>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Депозитарні послуги</a>
+                  </li>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Інвестиційні послуги</a>
+                  </li>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Консультування</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-menu-item">
+                <h3 class="header-menu-submenu-title">Корпоративним</h3>
+                <ul>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">КУА та Фондам</a>
+                  </li>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Страховим компаніям</a>
+                  </li>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Акціонерним товариствам</a>
+                  </li>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Юридичним особам</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-menu-item">
+                <h3 class="header-menu-submenu-title">Умови надання послуг</h3>
+                <ul>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Тарифи на послуги</a>
+                  </li>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Договори та внутрішні документи</a>
+                  </li>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Регламенти та положення</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </li>
-        <li class="header-nav-menu-item">
+        <li class="header-nav-menu-item-about-us">
           <button type="button" class="header-nav-menu-btn">
             Про нас
             <svg
@@ -33,6 +82,38 @@
               <use href="/src/images/svg/symbol-defs.svg#icon-arrow-down"></use>
             </svg>
           </button>
+          <div class="header-menu-container-about-us">
+            <ul class="header-menu">
+              <li class="header-menu-item">
+                <h3 class="header-menu-submenu-title">Інформація</h3>
+                <ul>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Звітність</a>
+                  </li>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Ліцензії</a>
+                  </li>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Реквізити</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-menu-item">
+                <h3 class="header-menu-submenu-title">Команда</h3>
+                <ul>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Персонал</a>
+                  </li>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Партнери</a>
+                  </li>
+                  <li class="header-menu-submenu-link">
+                    <a href="#">Агенти</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="header-nav-menu-item">
           <button type="button" class="header-nav-menu-btn">Контакти</button>
@@ -42,6 +123,11 @@
     <a href="#" class="button-primary create-account-btn-tablet"
       >Відкрити рахунок</a
     >
+    <button class="header-search-btn" type="button">
+      <svg class="header-search-icon" width="24" height="24" fill="none">
+        <use href="/src/images/svg/symbol-defs.svg#icon-search"></use>
+      </svg>
+    </button>
     <button
       class="language-select-btn header-language-select-btn"
       type="button"

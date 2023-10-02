@@ -1,4 +1,4 @@
-const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+const mobileMenuOverlay = document.querySelector('.overlay');
 const hamburgerBtn = document.querySelector('.button-hamburger');
 const mobileMenu = document.querySelector('.mobile-menu-container');
 const mobileMenuBackBtn = mobileMenu.querySelector('.mobile-menu-back-btn');
