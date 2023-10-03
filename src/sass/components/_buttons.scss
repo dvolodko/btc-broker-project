@@ -4,7 +4,22 @@
   padding: $S 28px;
   color: $neutralColor0;
   background-color: $primaryColor700;
+  border: none;
   border-radius: $S;
+  transition: background-color $mainTransitionDuration
+      $mainTransitionTimingFunction,
+    color $mainTransitionDuration $mainTransitionTimingFunction;
+  &:hover,
+  &:focus {
+    background-color: $primaryColor400;
+  }
+  &:active {
+    background-color: $primaryColor950;
+  }
+  &:disabled {
+    color: $neutralColor500;
+    background-color: $primaryColor100;
+  }
   @include mq(tablet-S) {
     width: 280px;
   }
@@ -19,4 +34,25 @@
   gap: $XS;
   @include font(800, 1rem, 1.5rem, 0);
   text-transform: uppercase;
+  color: $primaryColor700;
+  transition: color $mainTransitionDuration $mainTransitionTimingFunction;
+  & .button-secondary-icon {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform $mainTransitionDuration $mainTransitionTimingFunction;
+  }
+  &:hover,
+  &:focus {
+    color: $primaryColor400;
+    & .button-secondary-icon {
+      transform: scaleX(1.28);
+    }
+  }
+  &:active {
+    color: $primaryColor950;
+  }
+  &:disabled {
+    color: $neutralColor500;
+    color: $primaryColor100;
+  }
 }

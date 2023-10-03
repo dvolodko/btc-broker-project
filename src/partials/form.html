@@ -1,0 +1,52 @@
+<section class="form-section">
+  <div class="container form-container">
+    <h3 class="superheader">Перший крок</h3>
+    <h2 class="section-header form-header">Реєстрація клієнта</h2>
+    <h4 class="subheader form-subheader">
+      Для початку співпраці нам потрібні наступні дані
+    </h4>
+    <form name="register_form" autocomplete="on" enctype="multipart/form-data">
+      <label>
+        Ім'я
+        <input
+          type="text"
+          name="name"
+          placeholder="Тарас"
+          minlength="2"
+          maxlength="25"
+          autofocus
+        />
+      </label>
+      <label>
+        Прізвище
+        <input
+          type="text"
+          name="surname"
+          placeholder="Шевченко"
+          minlength="2"
+          maxlength="25"
+        />
+      </label>
+      <button type="submit" class="button-primary">Відправити дані</button>
+      <fieldset>
+        <legend>Особисті дані</legend>
+        <label for="surname">Прізвище</label
+        ><input
+          type="text"
+          id="surname"
+          name="lastname"
+          placeholder="Шевченко"
+        />
+        <label for="name">Ім'я</label
+        ><input type="text" id="name" name="firstname" placeholder="Тарас" />
+        <label for="patronymic">По батькові</label
+        ><input
+          type="text"
+          id="patronymic"
+          name="patronymic"
+          placeholder="Григорович"
+        />
+      </fieldset>
+    </form>
+  </div>
+</section>

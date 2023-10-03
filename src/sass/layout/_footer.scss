@@ -202,6 +202,11 @@
   fill: $primaryColor100;
   width: 40px;
   height: 40px;
+  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+  &:hover,
+  &:focus {
+    fill: $primaryColor400;
+  }
 }
 
 .footer-copyright {
