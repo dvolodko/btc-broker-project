@@ -7,28 +7,8 @@
   padding-bottom: $L;
 }
 
-.form {
+.form-survey {
   @include flex(flex, center, stretch);
   flex-direction: column;
   gap: $S;
-}
-
-.form-group {
-  @include flex(flex, center, stretch);
-  flex-direction: column;
-  padding-top: $S;
-}
-
-.form-group:not(:last-child) {
-  padding-bottom: $L;
-  border-bottom: 1px solid $neutralColor300;
-}
-
-.form-input {
-  padding: $XS;
-}
-
-.radio-wrapper {
-  @include flex(flex, flex-start, center);
-  gap: $M;
 }
