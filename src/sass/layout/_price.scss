@@ -130,10 +130,6 @@
   color: $neutralColor950;
 }
 
-// .price-card:nth-child(even) .price-card-button {
-//   color: $primaryColor700;
-// }
-
 // Загальні стилі для всіх карток
 
 .price-card-superheader {
@@ -170,6 +166,10 @@
 .price-card-benefits-item {
   @include flex(flex, center, flex-start);
   gap: $XS;
+}
+
+.price-card-benefits-icon {
+  stroke: $accentColor500;
 }
 
 .price-card-footer {
