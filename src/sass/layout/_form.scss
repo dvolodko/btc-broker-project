@@ -4,7 +4,19 @@
 
 .form-container {
   padding-top: $L;
-  padding-bottom: $L;
+  padding-bottom: $XXL;
+  @include mq(tablet-S) {
+    padding-left: 76px;
+    padding-right: 76px;
+  }
+  @include mq(tablet-L) {
+    padding-left: 192px;
+    padding-right: 192px;
+  }
+  @include mq(desktop) {
+    padding-left: 270px;
+    padding-right: 270px;
+  }
 }
 
 .form-subheader {
@@ -15,4 +27,8 @@
   @include flex(flex, center, stretch);
   flex-direction: column;
   gap: $S;
+  padding: 16px $M;
+  border: 1px solid $primaryColor900;
+  border-radius: $S;
+  background-color: $neutralColor0;
 }

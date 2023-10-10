@@ -13,7 +13,7 @@
   font-family: $secondaryFontFamily;
   @include font(700, 1.25rem, 1.5rem, 0);
   color: $neutralColor950;
-  margin-bottom: $XS;
+  margin-bottom: $M;
 }
 
 .form-label,
@@ -105,8 +105,8 @@
 
 .form-input-radio {
   accent-color: $primaryColor700;
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   &:checked + label {
     color: $primaryColor700;
     text-decoration-line: underline;
@@ -119,8 +119,8 @@
 
 .form-input-checkbox {
   accent-color: $primaryColor700;
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   &:checked + label {
     color: $primaryColor700;
     text-decoration-line: underline;
