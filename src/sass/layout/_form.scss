@@ -7,6 +7,10 @@
   padding-bottom: $L;
 }
 
+.form-subheader {
+  margin-bottom: $M;
+}
+
 .form-survey {
   @include flex(flex, center, stretch);
   flex-direction: column;

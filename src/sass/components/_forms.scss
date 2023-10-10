@@ -9,20 +9,29 @@
   border-bottom: 1px solid $neutralColor300;
 }
 
-.form-label {
+.form-group-title {
+  font-family: $secondaryFontFamily;
+  @include font(700, 1.25rem, 1.5rem, 0);
   color: $neutralColor950;
+  margin-bottom: $XS;
 }
 
-.form-label.required::after {
-  content: '*';
-  margin-left: 4px;
-  color: $systemColorError;
-}
-
+.form-label,
 .radio-title {
   color: $neutralColor950;
+  margin-bottom: 4px;
 }
 
+.form-label-radio {
+  color: $neutralColor950;
+}
+
+.form-label-checkbox {
+  color: $neutralColor950;
+  flex: 2;
+}
+
+.form-label.required::after,
 .radio-title.required::after {
   content: '*';
   margin-left: 4px;
@@ -52,7 +61,7 @@
 }
 
 .form-input:not(:last-child) {
-  margin-bottom: $M;
+  margin-bottom: $L;
 }
 
 .form-input::placeholder {
@@ -60,22 +69,7 @@
   transition: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.form-input:not(:placeholder-shown):required:valid {
-  border-color: $primaryColor400;
-  background-image: url('/src/images/svg/icon-done-check-blue.svg');
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: right 16px center;
-}
-
-.form-input:not(:placeholder-shown):required:invalid {
-  border-color: $systemColorError;
-  background-image: url('/src/images/svg/icon-warning.svg');
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: right 16px center;
-}
-
+.form-input:not(:placeholder-shown):required:valid,
 .form-input:not(:placeholder-shown):valid {
   border-color: $primaryColor400;
   background-image: url('/src/images/svg/icon-done-check-blue.svg');
@@ -84,6 +78,7 @@
   background-position: right 16px center;
 }
 
+.form-input:not(:placeholder-shown):required:invalid,
 .form-input:not(:placeholder-shown):invalid {
   border-color: $systemColorError;
   background-image: url('/src/images/svg/icon-warning.svg');
@@ -95,14 +90,47 @@
 .radio-wrapper {
   @include flex(flex, flex-start, center);
   gap: $M;
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
 }
 
-.form-input[type='radio'] {
-  width: 20px;
-  height: 20px;
+.checkbox-wrapper {
+  @include flex(flex, flex-start, center);
+  gap: $M;
+  &:not(:last-child) {
+    margin-bottom: $L;
+  }
 }
 
-.form-input[type='checkbox'] {
-  width: 22px;
-  height: 22px;
+.form-input-radio {
+  accent-color: $primaryColor700;
+  width: 18px;
+  height: 18px;
+  &:checked + label {
+    color: $primaryColor700;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: $primaryColor700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+}
+
+.form-input-checkbox {
+  accent-color: $primaryColor700;
+  width: 18px;
+  height: 18px;
+  &:checked + label {
+    color: $primaryColor700;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: $primaryColor700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+}
+
+.form-group-radio {
+  margin-bottom: $L;
 }
