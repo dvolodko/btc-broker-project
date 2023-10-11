@@ -195,14 +195,13 @@
 				<select class="form-input" name="country" id="country">
 					<include src="./partials/countries.html"></include>
 				</select>
-				<label for="postal-code" class="form-label required">Індекс</label
+				<label for="postal-code" class="form-label">Індекс</label
 				><input
 					type="text"
 					id="postal-code"
 					name="postal-code"
 					class="form-input"
 					maxlength="5"
-					required
 					autocomplete="postal-code"
 					pattern="[0-9]{5}"
 					placeholder="04020"
@@ -264,7 +263,7 @@
 					id="building"
 					name="building"
 					class="form-input"
-					minlength="2"
+					minlength="1"
 					maxlength="25"
 					required
 					placeholder="8"
@@ -276,7 +275,7 @@
 					id="appartment"
 					name="appartment"
 					class="form-input"
-					minlength="2"
+					minlength="1"
 					maxlength="25"
 					placeholder="Квартира"
 					title="Введіть номер квартири (опціонально)"
@@ -806,7 +805,7 @@
 					/>
 				</div>
 			</div>
-			<div class="form-group" role="group" aria-labelledby="evaluation-survey">
+			<!-- <div class="form-group" role="group" aria-labelledby="evaluation-survey">
 				<h2 class="form-group-title" id="evaluation-survey">
 					Анкета-оцінювання
 				</h2>
@@ -946,7 +945,7 @@
 						>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="form-group" role="group" aria-labelledby="services">
 				<h2 class="form-group-title" id="services">
 					Оберіть послуги, які Ви бажаєте отримати від БТС Брокер
