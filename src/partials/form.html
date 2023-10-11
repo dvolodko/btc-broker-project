@@ -1,951 +1,972 @@
 <section class="form-section">
-  <div class="container form-container">
-    <h3 class="superheader">Перший крок</h3>
-    <h2 class="section-header form-header">Реєстрація клієнта</h2>
-    <h4 class="subheader form-subheader">
-      Для того щоб стати клієнтом БТС Брокер, надайте будь ласка наступну
-      інформацію
-    </h4>
-    <form
-      class="form form-survey"
-      name="register_form"
-      autocomplete="on"
-      method="post"
-      enctype="multipart/form-data"
-    >
-      <div class="form-group" role="group" aria-labelledby="personal-data">
-        <h2 class="form-group-title" id="personal-data">Особисті дані</h2>
-        <label for="lastname" class="form-label required">Прізвище</label>
-        <input
-          type="text"
-          id="lastname"
-          name="lastname"
-          class="form-input"
-          minlength="2"
-          maxlength="25"
-          required
-          autocomplete="family-name"
-          pattern="[а-яА-ЯіїґєІЄҐЇ'`\- ]{2,25}"
-          placeholder="Шевченко"
-          title="Введіть прізвище українською"
-        />
-        <label for="firstname" class="form-label required">Ім'я</label
-        ><input
-          type="text"
-          id="firstname"
-          name="firstname"
-          class="form-input"
-          minlength="2"
-          maxlength="25"
-          required
-          autocomplete="given-name"
-          pattern="[а-яА-ЯіїґєІЄҐЇ'`\- ]{2,25}"
-          placeholder="Тарас"
-          title="Введіть ім'я українською"
-        />
-        <label for="patronymic" class="form-label required">По батькові</label>
-        <input
-          type="text"
-          id="patronymic"
-          name="patronymic"
-          class="form-input"
-          minlength="2"
-          maxlength="25"
-          required
-          pattern="[а-яА-ЯіїґєІЄҐЇ'`\- ]{2,25}"
-          placeholder="Григорович"
-          title="Введіть по батькові українською"
-        />
-      </div>
-      <div class="form-group" role="group">
-        <label for="email" class="form-label required">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          class="form-input"
-          minlength="2"
-          maxlength="50"
-          required
-          autocomplete="email"
-          placeholder="name@example.com"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-          title="Введіть дійсний email"
-        />
-        <label for="phone" class="form-label required">Телефон</label>
-        <input
-          id="phone"
-          type="tel"
-          name="phone"
-          class="form-input"
-          minlength="10"
-          maxlength="20"
-          required
-          autocomplete="tel"
-          pattern="\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|
+	<div class="container form-container">
+		<h3 class="superheader">Перший крок</h3>
+		<h2 class="section-header form-header">Реєстрація клієнта</h2>
+		<h4 class="subheader form-subheader">
+			Для того щоб стати клієнтом БТС Брокер, надайте будь ласка наступну
+			інформацію
+		</h4>
+		<form
+			class="form form-survey"
+			name="register_form"
+			autocomplete="on"
+			method="post"
+			enctype="multipart/form-data"
+		>
+			<div class="form-group" role="group" aria-labelledby="personal-data">
+				<h2 class="form-group-title" id="personal-data">Особисті дані</h2>
+				<label for="lastname" class="form-label required">Прізвище</label>
+				<input
+					type="text"
+					id="lastname"
+					name="lastname"
+					class="form-input"
+					minlength="2"
+					maxlength="25"
+					required
+					autocomplete="family-name"
+					pattern="[а-яА-ЯіїґєІЄҐЇ'`\- ]{2,25}"
+					placeholder="Шевченко"
+					title="Введіть прізвище українською"
+				/>
+				<label for="firstname" class="form-label required">Ім'я</label
+				><input
+					type="text"
+					id="firstname"
+					name="firstname"
+					class="form-input"
+					minlength="2"
+					maxlength="25"
+					required
+					autocomplete="given-name"
+					pattern="[а-яА-ЯіїґєІЄҐЇ'`\- ]{2,25}"
+					placeholder="Тарас"
+					title="Введіть ім'я українською"
+				/>
+				<label for="patronymic" class="form-label required">По батькові</label>
+				<input
+					type="text"
+					id="patronymic"
+					name="patronymic"
+					class="form-input"
+					minlength="2"
+					maxlength="25"
+					required
+					pattern="[а-яА-ЯіїґєІЄҐЇ'`\- ]{2,25}"
+					placeholder="Григорович"
+					title="Введіть по батькові українською"
+				/>
+			</div>
+			<div class="form-group" role="group">
+				<label for="email" class="form-label required">Email</label>
+				<input
+					id="email"
+					type="email"
+					name="email"
+					class="form-input"
+					minlength="2"
+					maxlength="50"
+					required
+					autocomplete="email"
+					placeholder="name@example.com"
+					pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+					title="Введіть дійсний email"
+				/>
+				<label for="phone" class="form-label required">Телефон</label>
+				<input
+					id="phone"
+					type="tel"
+					name="phone"
+					class="form-input"
+					minlength="10"
+					maxlength="20"
+					required
+					autocomplete="tel"
+					pattern="\+(9[976]\d|8[987530]\d|6[987]\d|5[90]\d|42\d|3[875]\d|
 2[98654321]\d|9[8543210]|8[6421]|6[6543210]|5[87654321]|
 4[987654310]|3[9643210]|2[70]|7|1)\d{1,14}$"
-          placeholder="+380947102606"
-          title="Введіть номер телефону в міжнародному форматі без пробілів"
-        />
-      </div>
-      <div class="form-group" role="group">
-        <label for="birth-date" class="form-label required"
-          >Дата народження</label
-        >
-        <input
-          id="birth-date"
-          type="text"
-          name="birth-date"
-          class="form-input"
-          required
-          placeholder="yyyy-mm-dd"
-          pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
-          title="Введіть дату народження"
-        />
-        <label for="birth-place" class="form-label required"
-          >Місце народження</label
-        >
-        <input
-          id="birth-place"
-          type="text"
-          name="birth-place"
-          class="form-input"
-          maxlength="40"
-          required
-          placeholder="Країна, область, місто/населений пункт"
-          title="Введіть місце народження українською"
-        />
-      </div>
-      <div class="form-group" role="group" aria-labelledby="isFOP">
-        <p id="isFOP" class="radio-title required">Ви зареєстровані як ФОП?</p>
-        <div class="radio-wrapper">
-          <input
-            id="isFOPtrue"
-            type="radio"
-            name="isFOP"
-            class="form-input-radio"
-            required
-            value="true"
-            title="Виберіть варіант який найкраще описує Вас"
-          />
-          <label for="isFOPtrue" class="form-label-radio">Так</label>
-        </div>
-        <div class="radio-wrapper">
-          <input
-            id="isFOPfalse"
-            type="radio"
-            name="isFOP"
-            class="form-input-radio"
-            required
-            value="false"
-            title="Виберіть варіант який найкраще описує Вас"
-          />
-          <label for="isFOPfalse" class="form-label-radio">Ні</label>
-        </div>
-      </div>
-      <div class="form-group" role="group" aria-labelledby="isPEP">
-        <p id="isPEP" class="radio-title required">
-          Чи належите Ви до політично значущих осіб, членів їх сімей або
-          пов’язаних з ними осіб?
-        </p>
-        <div class="radio-wrapper">
-          <input
-            id="isPEPtrue"
-            type="radio"
-            name="isPEP"
-            class="form-input-radio"
-            required
-            value="true"
-            title="Виберіть варіант який найкраще описує Вас"
-          />
-          <label for="isPEPtrue" class="form-label-radio">Так</label>
-        </div>
-        <div class="radio-wrapper">
-          <input
-            id="isPEPfalse"
-            type="radio"
-            name="isPEP"
-            class="form-input-radio"
-            required
-            value="false"
-            title="Виберіть варіант який найкраще описує Вас"
-          />
-          <label for="isPEPfalse" class="form-label-radio">Ні</label>
-        </div>
-      </div>
-      <div class="form-group" role="group" aria-labelledby="address">
-        <h2 class="form-group-title" id="address">Адреса проживання</h2>
-        <label for="country" class="form-label required">Країна</label>
-        <select class="form-input" name="country" id="country">
-          <include src="./partials/countries.html"></include>
-        </select>
-        <label for="postal-code" class="form-label required">Індекс</label
-        ><input
-          type="text"
-          id="postal-code"
-          name="postal-code"
-          class="form-input"
-          maxlength="5"
-          required
-          autocomplete="postal-code"
-          pattern="[0-9]{5}"
-          placeholder="04020"
-          title="5 цифр індексу"
-        />
-        <label for="region" class="form-label required">Область</label>
-        <input
-          type="text"
-          id="region"
-          name="region"
-          class="form-input"
-          minlength="2"
-          maxlength="25"
-          required
-          autocomplete="address-level1"
-          placeholder="Київська"
-          title="Введіть область українською"
-        />
-        <label for="area" class="form-label">Район</label>
-        <input
-          type="text"
-          id="area"
-          name="area"
-          class="form-input"
-          minlength="2"
-          maxlength="50"
-          placeholder="Район"
-          title="Введіть район українською (опціонально)"
-        />
-        <label for="city" class="form-label required">Місто</label
-        ><input
-          type="text"
-          id="city"
-          name="city"
-          class="form-input"
-          minlength="2"
-          maxlength="25"
-          required
-          autocomplete="address-level2"
-          placeholder="Київ"
-          title="Введіть місто проживання українською"
-        />
-        <label for="street" class="form-label required">Вулиця</label>
-        <input
-          type="text"
-          id="street"
-          name="street"
-          class="form-input"
-          minlength="2"
-          maxlength="25"
-          required
-          autocomplete="address-level3"
-          placeholder="Іллінська"
-          title="Введіть вулицю проживання українською"
-        />
-        <label for="building" class="form-label required">Будинок</label
-        ><input
-          type="text"
-          id="building"
-          name="building"
-          class="form-input"
-          minlength="2"
-          maxlength="25"
-          required
-          placeholder="8"
-          title="Введіть номер будинку проживання"
-        />
-        <label for="appartment" class="form-label">Квартира</label>
-        <input
-          type="text"
-          id="appartment"
-          name="appartment"
-          class="form-input"
-          minlength="2"
-          maxlength="25"
-          placeholder="Квартира"
-          title="Введіть номер квартири (опціонально)"
-        />
-      </div>
-      <div class="form-group" role="group">
-        <label for="taxID" class="form-label required"
-          >Реєстраційний номер облікової картки платника податків України
-          (ІПН)</label
-        >
-        <input
-          id="taxID"
-          type="text"
-          name="IPN"
-          class="form-input"
-          minlength="10"
-          maxlength="10"
-          required
-          placeholder="0123456789"
-          pattern="^\d{10}$"
-          title="Введіть номер 10 цифр РНОКПП (ІПН)"
-        />
-        <label for="IPN-file" class="form-label required"
-          >Завантажити фото ІПН</label
-        >
-        <input
-          id="IPN-file"
-          type="file"
-          name="IPN-file"
-          class="form-input"
-          required
-          accept="image/*,.pdf"
-          title="Натисніть на кнопку, щоб завантажити фото Вашого ІПН"
-        />
-        <div class="checkbox-wrapper">
-          <input
-            id="nonIPN"
-            type="checkbox"
-            name="nonIPN"
-            class="form-input-checkbox"
-            value="true"
-            title="Поставте позначку у разі відмови від ІПН"
-          />
-          <label for="nonIPN" class="form-label-checkbox"
-            >Або поставте позначку у разі відмови від прийняття реєстраційного
-            номеру облікової картки платника податків України</label
-          >
-        </div>
-      </div>
-      <div class="form-group" role="group" aria-labelledby="citizenship">
-        <h2 class="form-group-title" id="citizenship">Громадянство</h2>
-        <label for="citizenship-country" class="form-label required"
-          >Країна</label
-        >
-        <select class="form-input" name="country" id="citizenship-country">
-          <include src="./partials/countries.html"></include>
-        </select>
-        <div class="form-group-radio">
-          <p class="radio-title required">Документ, що посвідчує особу</p>
-          <div class="radio-wrapper">
-            <input
-              id="is-passport-type-id-card"
-              type="radio"
-              name="passport-type"
-              class="form-input-radio"
-              required
-              value="ID card"
-              title="Виберіть тип документу поміж запропонованих варіантів"
-            />
-            <label for="is-passport-type-id-card" class="form-label-radio"
-              >ID картка</label
-            >
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="is-passport-type-passport"
-              type="radio"
-              name="passport-type"
-              class="form-input-radio"
-              required
-              value="passport"
-              title="Виберіть тип документу поміж запропонованих варіантів"
-            />
-            <label for="is-passport-type-passport" class="form-label-radio"
-              >Загальний паспорт (книжечка)</label
-            >
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="is-passport-type-foreign-passport"
-              type="radio"
-              name="passport-type"
-              class="form-input-radio"
-              required
-              value="foreign passport"
-              title="Виберіть тип документу поміж запропонованих варіантів"
-            />
-            <label
-              for="is-passport-type-foreign-passport"
-              class="form-label-radio"
-              >Закордонний паспорт</label
-            >
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="is-passport-type-other"
-              type="radio"
-              name="passport-type"
-              class="form-input-radio"
-              required
-              value="other"
-              title="Виберіть тип документу поміж запропонованих варіантів"
-            />
-            <label for="is-passport-type-other" class="form-label-radio"
-              >Інше</label
-            >
-          </div>
-        </div>
-        <label for="passport-number" class="form-label required">Номер</label>
-        <input
-          type="text"
-          id="passport-number"
-          name="passport-number"
-          class="form-input"
-          minlength="9"
-          maxlength="9"
-          required
-          pattern="^\d{9}$"
-          placeholder="012345678"
-          title="Введіть номер ID картки. 9 цифр"
-        />
-        <label for="passport-issued" class="form-label required"
-          >Ким видано</label
-        >
-        <input
-          type="text"
-          id="passport-issued"
-          name="passport-issued"
-          class="form-input"
-          minlength="2"
-          maxlength="100"
-          required
-          placeholder="0123"
-          title="Вкажіть орган що видав документ"
-        />
-        <label for="passport-date" class="form-label required"
-          >Дата видачі</label
-        >
-        <input
-          type="text"
-          id="passport-date"
-          name="passport-date"
-          class="form-input"
-          required
-          pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
-          placeholder="yyyy-mm-dd"
-          title="Введіть дату видачі документу"
-        />
-        <label for="passport-date-expired" class="form-label"
-          >Термін дії (за наявності)</label
-        ><input
-          type="text"
-          id="passport-date-expired"
-          name="passport-date-expired"
-          class="form-input"
-          pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
-          placeholder="yyyy-mm-dd"
-          title="Введіть термін дії документу"
-        />
-        <label for="passport-file" class="form-label required"
-          >Завантажити фото паспорту</label
-        >
-        <input
-          id="passport-file"
-          type="file"
-          name="passport-file"
-          class="form-input"
-          required
-          multiple
-          accept="image/*,.pdf"
-          title="Натисніть на кнопку, щоб завантажити фото Вашого документу"
-        />
-      </div>
-      <div class="form-group" role="group">
-        <label for="IBAN" class="form-label required"
-          >Номер банківського рахунку IBAN (рахунку в українському банку)</label
-        >
-        <input
-          id="IBAN"
-          type="text"
-          name="IBAN"
-          class="form-input"
-          minlength="29"
-          maxlength="29"
-          required
-          autocomplete="on"
-          placeholder="UA012345678901234567890123456"
-          pattern="^UA\d{27}$"
-          title="Введіть 27 цифр IBAN починаючі літерами UA"
-        />
-      </div>
-      <div class="form-group" role="group" aria-labelledby="financial-status">
-        <h2 class="form-group-title" id="financial-status">
-          Інформація щодо фінансового стану фізичної особи та змісту діяльності:
-        </h2>
-        <label for="personal-assets" class="form-label required"
-          >Власні кошти, грн</label
-        >
-        <input
-          type="text"
-          id="personal-assets"
-          name="personal-assets"
-          class="form-input"
-          minlength="1"
-          maxlength="10"
-          required
-          pattern="^\d{0,10}$"
-          placeholder="1000000"
-          title="Введіть сумарну кількість коштів, якими ви наразі володієте"
-        />
-        <label for="entrepreneurship-income" class="form-label required"
-          >Дохід від підприємницької діяльності (за останні 6 місяців,
-          грн)</label
-        >
-        <input
-          type="text"
-          id="entrepreneurship-income"
-          name="entrepreneurship-income"
-          class="form-input"
-          minlength="1"
-          maxlength="10"
-          required
-          pattern="^\d{0,10}$"
-          placeholder="1000000"
-          title="Введіть кількість коштів, які Ви заробили підприємницькою діяльністю за останні 6 місяців"
-        />
-        <div class="form-group-radio">
-          <p class="radio-title required">
-            Місячна заробітна плата (за останні 6 місяців, грн)
-          </p>
-          <div class="radio-wrapper">
-            <input
-              id="is-half-annual-salary-zero"
-              type="radio"
-              name="half-annual-salary"
-              class="form-input-radio"
-              required
-              value="zero"
-              title="Виберіть варіант який найкраще описує вашу зарплатню за 6 місяців"
-            />
-            <label for="is-half-annual-salary-zero" class="form-label-radio"
-              >Немає</label
-            >
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="is-half-annual-salary-less-than-60000"
-              type="radio"
-              name="half-annual-salary"
-              class="form-input-radio"
-              required
-              value="less-than-60000"
-              title="Виберіть варіант який найкраще описує вашу зарплатню за 6 місяців"
-            />
-            <label
-              for="is-half-annual-salary-less-than-60000"
-              class="form-label-radio"
-              >До 60 000</label
-            >
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="is-half-annual-salary-more-than-60000"
-              type="radio"
-              name="half-annual-salary"
-              class="form-input-radio"
-              required
-              value="more-than-60000"
-              title="Виберіть варіант який найкраще описує вашу зарплатню за 6 місяців"
-            />
-            <label
-              for="is-half-annual-salary-more-than-60000"
-              class="form-label-radio"
-              >Від 60 000 до 200 000</label
-            >
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="is-half-annual-salary-more-than-200000"
-              type="radio"
-              name="half-annual-salary"
-              class="form-input-radio"
-              required
-              value="more-than-200000"
-              title="Виберіть варіант який найкраще описує вашу зарплатню за 6 місяців"
-            />
-            <label
-              for="is-half-annual-salary-more-than-200000"
-              class="form-label-radio"
-              >Більше 200 000</label
-            >
-          </div>
-        </div>
-        <label for="half-annual-gifts-income" class="form-label required"
-          >Дохід від дарування (за останні 6 місяців, грн)</label
-        >
-        <input
-          type="text"
-          id="half-annual-gifts-income"
-          name="half-annual-gifts-income"
-          class="form-input"
-          minlength="1"
-          maxlength="10"
-          required
-          pattern="^\d{0,10}$"
-          placeholder="1000000"
-          title="Введіть кількість коштів, які Ви отримали в якості подарунків за останні 6 місяців"
-        />
-        <div class="form-group-radio">
-          <p class="radio-title required">
-            Дохід у вигляді відсотків, нарахованих на банківські депозитні
-            рахунки (за останні 6 місяців, грн)
-          </p>
-          <div class="radio-wrapper">
-            <input
-              id="is-half-annual-deposit-interest-zero"
-              type="radio"
-              name="half-annual-deposit-interest"
-              class="form-input-radio"
-              required
-              value="zero"
-              title="Виберіть варіант який найкраще описує ваші доходи за відсотками з депозитів за 6 місяців"
-            />
-            <label
-              for="is-half-annual-deposit-interest-zero"
-              class="form-label-radio"
-              >Немає</label
-            >
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="is-half-annual-deposit-interest-less-than-10000"
-              type="radio"
-              name="half-annual-deposit-interest"
-              class="form-input-radio"
-              required
-              value="less-than-10000"
-              title="Виберіть варіант який найкраще описує ваші доходи за відсотками з депозитів за 6 місяців"
-            />
-            <label
-              for="is-half-annual-deposit-interest-less-than-10000"
-              class="form-label-radio"
-              >До 10 000</label
-            >
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="is-half-annual-deposit-interest-more-than-10000"
-              type="radio"
-              name="half-annual-deposit-interest"
-              class="form-input-radio"
-              required
-              value="more-than-10000"
-              title="Виберіть варіант який найкраще описує ваші доходи за відсотками з депозитів за 6 місяців"
-            />
-            <label
-              for="is-half-annual-deposit-interest-more-than-10000"
-              class="form-label-radio"
-              >більше 10 000</label
-            >
-          </div>
-        </div>
-        <label for="half-annual-law-agree-income" class="form-label required"
-          >Дохід від цивільно-правових угод (наприклад купівля – продаж, оренда,
-          підряд, тощо) за останні 6 місяців, грн</label
-        >
-        <input
-          type="text"
-          id="half-annual-law-agree-income"
-          name="half-annual-law-agree-income"
-          class="form-input"
-          minlength="1"
-          maxlength="10"
-          required
-          pattern="^\d{0,10}$"
-          placeholder="1000000"
-          title="Введіть кількість коштів, які Ви отримали в якості доходу від цивільно-правових угод за останні 6 місяців"
-        />
-        <label
-          for="half-annual-court-decision-income"
-          class="form-label required"
-          >Дохід від компенсаційних виплат та виплат за рішенням суду (за
-          останні 6 місяців)</label
-        >
-        <input
-          type="text"
-          id="half-annual-court-decision-income"
-          name="half-annual-court-decision-income"
-          class="form-input"
-          minlength="1"
-          maxlength="10"
-          required
-          pattern="^\d{0,10}$"
-          placeholder="1000000"
-          title="Введіть кількість коштів, які Ви отримали в якості компенсаційних виплат та виплат за рішенням суду за останні 6 місяців"
-        />
-        <label for="borrow-money-amount" class="form-label required"
-          >Розмір запозичених коштів, грн</label
-        >
-        <input
-          type="text"
-          id="borrow-money-amount"
-          name="borrow-money-amount"
-          class="form-input"
-          minlength="1"
-          maxlength="10"
-          required
-          pattern="^\d{0,10}$"
-          placeholder="1000"
-          title="Введіть кількість коштів, які Ви запозичили"
-        />
-        <label for="creditor-names" class="form-label"
-          >Найменування кредитора (кредиторів)</label
-        >
-        <input
-          type="text"
-          id="creditor-names"
-          name="creditor-names"
-          class="form-input"
-          placeholder="Перший національний банк"
-          title="Введіть найменування кредиторів, якщо такі є"
-        />
-        <label for="other-income" class="form-label">Інші джерела</label>
-        <input
-          type="text"
-          id="other-income"
-          name="other-income"
-          class="form-input"
-          minlength="1"
-          maxlength="10"
-          pattern="^\d{0,10}$"
-          placeholder="1000000"
-          title="Введіть кількість коштів, які Ви отримали від інших джерел"
-        />
-      </div>
-      <div class="form-group" role="group" aria-labelledby="citizenship">
-        <h2 class="form-group-title" id="citizenship">
-          Відомості для визначення податкового резидентства
-        </h2>
-        <div class="checkbox-wrapper">
-          <input
-            id="is-US-tax-residence"
-            type="checkbox"
-            name="is-US-tax-residence"
-            class="form-input-checkbox"
-            value="true"
-            title="Поставте позначку якщо Ви податковий резидент Сполучених Штатів Америки"
-          />
-          <label for="is-US-tax-residence" class="form-label-checkbox"
-            >Чи є Ви податковим резидентом США? (Позначте, якщо так)</label
-          >
-        </div>
-        <div class="checkbox-wrapper">
-          <input
-            id="is-nonUkraine-tax-residence"
-            type="checkbox"
-            name="is-nonUkraine-tax-residence"
-            class="form-input-checkbox"
-            value="true"
-            title="Поставте позначку якщо Ви податковий резидент іншої країни"
-          />
-          <label for="is-nonUkraine-tax-residence" class="form-label-checkbox"
-            >Чи є Ви податковим резидентом іншої іноземної країни? (Позначте,
-            якщо так)</label
-          >
-        </div>
-        <label for="tax-residence-country" class="form-label"
-          >Реквізити документів, що підтверджують податкове резидентство іншої
-          країни</label
-        >
-        <select
-          class="form-input"
-          name="tax-residence-country"
-          id="tax-residence-country"
-        >
-          <include src="./partials/countries.html"></include>
-        </select>
-        <p>Підтверджуючій документ</p>
-        <label for="tax-document-name" class="form-label">Назва</label>
-        <input
-          type="text"
-          id="tax-document-name"
-          name="tax-document-name"
-          class="form-input"
-          minlength="2"
-          maxlength="25"
-          placeholder="Документ"
-          title="Введіть назву документу"
-        />
-        <label for="tax-document-serial" class="form-label">Серія</label>
-        <input
-          type="text"
-          id="tax-document-serial"
-          name="tax-document-serial"
-          class="form-input"
-          minlength="1"
-          maxlength="25"
-          placeholder="Серія"
-          title="Введіть серію документу"
-        />
-        <label for="tax-document-number" class="form-label">Номер</label>
-        <input
-          type="text"
-          id="tax-document-number"
-          name="tax-document-number"
-          class="form-input"
-          minlength="1"
-          maxlength="25"
-          pattern="^\d{1,25}$"
-          placeholder="012345678"
-          title="Введіть номер документу"
-        />
-      </div>
-      <div class="form-group" role="group" aria-labelledby="evaluation-survey">
-        <h2 class="form-group-title" id="evaluation-survey">
-          Анкета-оцінювання
-        </h2>
-        <div class="form-group-radio">
-          <p class="radio-title required">
-            Протягом останніх чотирьох кварталів укладали та виконували
-            щокварталу не менше 10 правочинів щодо фінансових інструментів?
-          </p>
-          <div class="radio-wrapper">
-            <input
-              id="is10transactions-true"
-              type="radio"
-              name="is10transactions"
-              class="form-input-radio"
-              required
-              value="true"
-              title="Виберіть відповідний варіант"
-            />
-            <label for="is10transactions-true" class="form-label-radio"
-              >Так</label
-            >
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="is10transactions-false"
-              type="radio"
-              name="is10transactions"
-              class="form-input-radio"
-              required
-              value="false"
-              title="Виберіть відповідний варіант"
-            />
-            <label for="is10transactions-false" class="form-label-radio"
-              >Ні</label
-            >
-          </div>
-        </div>
-        <div class="form-group-radio">
-          <p class="radio-title required">
-            Володієте коштами, розміщеними на банківських рахунках, та цінними
-            паперами на суму не менше 0,5 мільйона гривень?
-          </p>
-          <div class="radio-wrapper">
-            <input
-              id="is500thousands-true"
-              type="radio"
-              name="is500thousands"
-              class="form-input-radio"
-              required
-              value="true"
-              title="Виберіть відповідний варіант"
-            />
-            <label for="is500thousands-true" class="form-label-radio"
-              >Так</label
-            >
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="is500thousands-false"
-              type="radio"
-              name="is500thousands"
-              class="form-input-radio"
-              required
-              value="false"
-              title="Виберіть відповідний варіант"
-            />
-            <label for="is500thousands-false" class="form-label-radio"
-              >Ні</label
-            >
-          </div>
-        </div>
-        <div class="form-group-radio">
-          <p class="radio-title required">
-            Маєте досвід проведення операцій на ринку цінних паперів не менше
-            одного року або маєте стаж роботи у фінансовій установі (або
-            іноземній юридичній особі, яка має аналогічний статус відповідно до
-            законодавства іншої держави) за відповідним фахом не менше одного
-            року?
-          </p>
-          <div class="radio-wrapper">
-            <input
-              id="isExperienced-true"
-              type="radio"
-              name="isExperienced"
-              class="form-input-radio"
-              required
-              value="true"
-              title="Виберіть відповідний варіант"
-            />
-            <label for="isExperienced-true" class="form-label-radio">Так</label>
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="isExperienced-false"
-              type="radio"
-              name="isExperienced"
-              class="form-input-radio"
-              required
-              value="false"
-              title="Виберіть відповідний варіант"
-            />
-            <label for="isExperienced-false" class="form-label-radio">Ні</label>
-          </div>
-        </div>
-        <div class="form-group-radio">
-          <p class="radio-title required">
-            Бажаєте, щоб Вас визнали професійним клієнтом щодо конкретної
-            інвестиційної послуги (інвестиційних послуг) та/або стосовно певного
-            правочину (певних правочинів) щодо фінансових інструментів?
-          </p>
-          <div class="radio-wrapper">
-            <input
-              id="is-willing-to-be-pro-true"
-              type="radio"
-              name="is-willing-to-be-pro"
-              class="form-input-radio"
-              required
-              value="true"
-              title="Виберіть відповідний варіант"
-            />
-            <label for="is-willing-to-be-pro-true" class="form-label-radio"
-              >Так</label
-            >
-          </div>
-          <div class="radio-wrapper">
-            <input
-              id="is-willing-to-be-pro-false"
-              type="radio"
-              name="is-willing-to-be-pro"
-              class="form-input-radio"
-              required
-              value="false"
-              title="Виберіть відповідний варіант"
-            />
-            <label for="is-willing-to-be-pro-false" class="form-label-radio"
-              >Ні</label
-            >
-          </div>
-        </div>
-      </div>
-      <div class="form-group" role="group" aria-labelledby="services">
-        <h2 class="form-group-title" id="services">
-          Оберіть послуги, які Ви бажаєте отримати від БТС Брокер
-        </h2>
-        <div class="checkbox-wrapper">
-          <input
-            id="depositary-service"
-            type="checkbox"
-            name="depositary-service"
-            class="form-input-checkbox"
-            checked
-            value="true"
-            title="Оберіть які послуги Вас цікавлять"
-          />
-          <label for="depositary-service" class="form-label-checkbox"
-            >Депозитарні послуги</label
-          >
-        </div>
-      </div>
-      <button type="submit" class="button-primary">Відправити дані</button>
-    </form>
-  </div>
+					placeholder="+380947102606"
+					title="Введіть номер телефону в міжнародному форматі без пробілів"
+				/>
+			</div>
+			<div class="form-group" role="group">
+				<label for="birth-date" class="form-label required"
+					>Дата народження</label
+				>
+				<input
+					id="birth-date"
+					type="text"
+					name="birth-date"
+					class="form-input"
+					required
+					placeholder="yyyy-mm-dd"
+					pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
+					title="Введіть дату народження"
+				/>
+				<label for="birth-place" class="form-label required"
+					>Місце народження</label
+				>
+				<input
+					id="birth-place"
+					type="text"
+					name="birth-place"
+					class="form-input"
+					maxlength="40"
+					required
+					placeholder="Країна, область, місто/населений пункт"
+					title="Введіть місце народження українською"
+				/>
+			</div>
+			<div class="form-group" role="group" aria-labelledby="isFOP">
+				<p id="isFOP" class="radio-title required">Ви зареєстровані як ФОП?</p>
+				<div class="radio-wrapper">
+					<input
+						id="isFOPtrue"
+						type="radio"
+						name="isFOP"
+						class="form-input-radio"
+						required
+						value="true"
+						title="Виберіть варіант який найкраще описує Вас"
+					/>
+					<label for="isFOPtrue" class="form-label-radio">Так</label>
+				</div>
+				<div class="radio-wrapper">
+					<input
+						id="isFOPfalse"
+						type="radio"
+						name="isFOP"
+						class="form-input-radio"
+						required
+						value="false"
+						title="Виберіть варіант який найкраще описує Вас"
+					/>
+					<label for="isFOPfalse" class="form-label-radio">Ні</label>
+				</div>
+			</div>
+			<div class="form-group" role="group" aria-labelledby="isPEP">
+				<p id="isPEP" class="radio-title required">
+					Чи належите Ви до політично значущих осіб, членів їх сімей або
+					пов’язаних з ними осіб?
+				</p>
+				<div class="radio-wrapper">
+					<input
+						id="isPEPtrue"
+						type="radio"
+						name="isPEP"
+						class="form-input-radio"
+						required
+						value="true"
+						title="Виберіть варіант який найкраще описує Вас"
+					/>
+					<label for="isPEPtrue" class="form-label-radio">Так</label>
+				</div>
+				<div class="radio-wrapper">
+					<input
+						id="isPEPfalse"
+						type="radio"
+						name="isPEP"
+						class="form-input-radio"
+						required
+						value="false"
+						title="Виберіть варіант який найкраще описує Вас"
+					/>
+					<label for="isPEPfalse" class="form-label-radio">Ні</label>
+				</div>
+				<div class="hidden-inputs-wrapper">
+					<label for="PEP-info" class="form-label hidden"
+						>Вкажіть які саме публічні функції Ви виконуєте</label
+					>
+					<input
+						type="text"
+						id="PEP-info"
+						name="PEP-info"
+						class="form-input hidden"
+						minlength="2"
+						maxlength="100"
+						placeholder="суддя Верховного суду"
+						title="Вкажіть які саме публічні функції Ви виконуєте"
+					/>
+				</div>
+			</div>
+			<div class="form-group" role="group" aria-labelledby="address">
+				<h2 class="form-group-title" id="address">Адреса проживання</h2>
+				<label for="country" class="form-label required">Країна</label>
+				<select class="form-input" name="country" id="country">
+					<include src="./partials/countries.html"></include>
+				</select>
+				<label for="postal-code" class="form-label required">Індекс</label
+				><input
+					type="text"
+					id="postal-code"
+					name="postal-code"
+					class="form-input"
+					maxlength="5"
+					required
+					autocomplete="postal-code"
+					pattern="[0-9]{5}"
+					placeholder="04020"
+					title="5 цифр індексу"
+				/>
+				<label for="region" class="form-label required">Область</label>
+				<input
+					type="text"
+					id="region"
+					name="region"
+					class="form-input"
+					minlength="2"
+					maxlength="25"
+					required
+					autocomplete="address-level1"
+					placeholder="Київська"
+					title="Введіть область українською"
+				/>
+				<label for="area" class="form-label">Район</label>
+				<input
+					type="text"
+					id="area"
+					name="area"
+					class="form-input"
+					minlength="2"
+					maxlength="50"
+					placeholder="Район"
+					title="Введіть район українською (опціонально)"
+				/>
+				<label for="city" class="form-label required">Місто</label
+				><input
+					type="text"
+					id="city"
+					name="city"
+					class="form-input"
+					minlength="2"
+					maxlength="25"
+					required
+					autocomplete="address-level2"
+					placeholder="Київ"
+					title="Введіть місто проживання українською"
+				/>
+				<label for="street" class="form-label required">Вулиця</label>
+				<input
+					type="text"
+					id="street"
+					name="street"
+					class="form-input"
+					minlength="2"
+					maxlength="25"
+					required
+					autocomplete="address-level3"
+					placeholder="Іллінська"
+					title="Введіть вулицю проживання українською"
+				/>
+				<label for="building" class="form-label required">Будинок</label
+				><input
+					type="text"
+					id="building"
+					name="building"
+					class="form-input"
+					minlength="2"
+					maxlength="25"
+					required
+					placeholder="8"
+					title="Введіть номер будинку проживання"
+				/>
+				<label for="appartment" class="form-label">Квартира</label>
+				<input
+					type="text"
+					id="appartment"
+					name="appartment"
+					class="form-input"
+					minlength="2"
+					maxlength="25"
+					placeholder="Квартира"
+					title="Введіть номер квартири (опціонально)"
+				/>
+			</div>
+			<div class="form-group taxID-disable" role="group">
+				<label for="taxID" class="form-label taxID-label required"
+					>Реєстраційний номер облікової картки платника податків України
+					(ІПН)</label
+				>
+				<input
+					id="taxID"
+					type="text"
+					name="IPN"
+					class="form-input taxID-input"
+					minlength="10"
+					maxlength="10"
+					required
+					placeholder="0123456789"
+					pattern="^\d{10}$"
+					title="Введіть номер 10 цифр РНОКПП (ІПН)"
+				/>
+				<label for="IPN-file" class="form-label IPN-file-label required"
+					>Завантажити фото ІПН</label
+				>
+				<input
+					id="IPN-file"
+					type="file"
+					name="IPN-file"
+					class="form-input IPN-file-input"
+					required
+					accept="image/*,.pdf"
+					title="Натисніть на кнопку, щоб завантажити фото Вашого ІПН"
+				/>
+				<div class="checkbox-wrapper">
+					<input
+						id="nonIPN"
+						type="checkbox"
+						name="nonIPN"
+						class="form-input-checkbox"
+						value="true"
+						title="Поставте позначку у разі відмови від ІПН"
+					/>
+					<label for="nonIPN" class="form-label-checkbox"
+						>Або поставте позначку у разі відмови від прийняття реєстраційного
+						номеру облікової картки платника податків України</label
+					>
+				</div>
+			</div>
+			<div class="form-group" role="group" aria-labelledby="citizenship">
+				<h2 class="form-group-title" id="citizenship">Громадянство</h2>
+				<label for="citizenship-country" class="form-label required"
+					>Країна</label
+				>
+				<select class="form-input" name="country" id="citizenship-country">
+					<include src="./partials/countries.html"></include>
+				</select>
+				<div class="form-group-radio">
+					<p class="radio-title required">Документ, що посвідчує особу</p>
+					<div class="radio-wrapper">
+						<input
+							id="is-passport-type-id-card"
+							type="radio"
+							name="passport-type"
+							class="form-input-radio"
+							required
+							value="ID card"
+							title="Виберіть тип документу поміж запропонованих варіантів"
+						/>
+						<label for="is-passport-type-id-card" class="form-label-radio"
+							>ID картка</label
+						>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="is-passport-type-passport"
+							type="radio"
+							name="passport-type"
+							class="form-input-radio"
+							required
+							value="passport"
+							title="Виберіть тип документу поміж запропонованих варіантів"
+						/>
+						<label for="is-passport-type-passport" class="form-label-radio"
+							>Загальний паспорт (книжечка)</label
+						>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="is-passport-type-foreign-passport"
+							type="radio"
+							name="passport-type"
+							class="form-input-radio"
+							required
+							value="foreign passport"
+							title="Виберіть тип документу поміж запропонованих варіантів"
+						/>
+						<label
+							for="is-passport-type-foreign-passport"
+							class="form-label-radio"
+							>Закордонний паспорт</label
+						>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="is-passport-type-other"
+							type="radio"
+							name="passport-type"
+							class="form-input-radio"
+							required
+							value="other"
+							title="Виберіть тип документу поміж запропонованих варіантів"
+						/>
+						<label for="is-passport-type-other" class="form-label-radio"
+							>Інше</label
+						>
+					</div>
+				</div>
+				<label for="passport-number" class="form-label required">Номер</label>
+				<input
+					type="text"
+					id="passport-number"
+					name="passport-number"
+					class="form-input"
+					minlength="9"
+					maxlength="9"
+					required
+					pattern="^\d{9}$"
+					placeholder="012345678"
+					title="Введіть номер ID картки. 9 цифр"
+				/>
+				<label for="passport-issued" class="form-label required"
+					>Ким видано</label
+				>
+				<input
+					type="text"
+					id="passport-issued"
+					name="passport-issued"
+					class="form-input"
+					minlength="2"
+					maxlength="100"
+					required
+					placeholder="0123"
+					title="Вкажіть орган що видав документ"
+				/>
+				<label for="passport-date" class="form-label required"
+					>Дата видачі</label
+				>
+				<input
+					type="text"
+					id="passport-date"
+					name="passport-date"
+					class="form-input"
+					required
+					pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
+					placeholder="yyyy-mm-dd"
+					title="Введіть дату видачі документу"
+				/>
+				<label for="passport-date-expired" class="form-label"
+					>Термін дії (за наявності)</label
+				><input
+					type="text"
+					id="passport-date-expired"
+					name="passport-date-expired"
+					class="form-input"
+					pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
+					placeholder="yyyy-mm-dd"
+					title="Введіть термін дії документу"
+				/>
+				<label for="passport-file" class="form-label required"
+					>Завантажити фото паспорту</label
+				>
+				<input
+					id="passport-file"
+					type="file"
+					name="passport-file"
+					class="form-input"
+					required
+					multiple
+					accept="image/*,.pdf"
+					title="Натисніть на кнопку, щоб завантажити фото Вашого документу"
+				/>
+			</div>
+			<div class="form-group" role="group">
+				<label for="IBAN" class="form-label required"
+					>Номер банківського рахунку IBAN (рахунку в українському банку)</label
+				>
+				<input
+					id="IBAN"
+					type="text"
+					name="IBAN"
+					class="form-input"
+					minlength="29"
+					maxlength="29"
+					required
+					autocomplete="on"
+					placeholder="UA012345678901234567890123456"
+					pattern="^UA\d{27}$"
+					title="Введіть 27 цифр IBAN починаючі літерами UA"
+				/>
+			</div>
+			<div class="form-group" role="group" aria-labelledby="financial-status">
+				<h2 class="form-group-title" id="financial-status">
+					Інформація щодо фінансового стану фізичної особи та змісту діяльності:
+				</h2>
+				<label for="personal-assets" class="form-label required"
+					>Власні кошти, грн</label
+				>
+				<input
+					type="text"
+					id="personal-assets"
+					name="personal-assets"
+					class="form-input"
+					minlength="1"
+					maxlength="10"
+					required
+					pattern="^\d{0,10}$"
+					placeholder="1000000"
+					title="Введіть сумарну кількість коштів, якими ви наразі володієте"
+				/>
+				<label for="entrepreneurship-income" class="form-label required"
+					>Дохід від підприємницької діяльності (за останні 6 місяців,
+					грн)</label
+				>
+				<input
+					type="text"
+					id="entrepreneurship-income"
+					name="entrepreneurship-income"
+					class="form-input"
+					minlength="1"
+					maxlength="10"
+					required
+					pattern="^\d{0,10}$"
+					placeholder="1000000"
+					title="Введіть кількість коштів, які Ви заробили підприємницькою діяльністю за останні 6 місяців"
+				/>
+				<div class="form-group-radio">
+					<p class="radio-title required">
+						Місячна заробітна плата (за останні 6 місяців, грн)
+					</p>
+					<div class="radio-wrapper">
+						<input
+							id="is-half-annual-salary-zero"
+							type="radio"
+							name="half-annual-salary"
+							class="form-input-radio"
+							required
+							value="zero"
+							title="Виберіть варіант який найкраще описує вашу зарплатню за 6 місяців"
+						/>
+						<label for="is-half-annual-salary-zero" class="form-label-radio"
+							>Немає</label
+						>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="is-half-annual-salary-less-than-60000"
+							type="radio"
+							name="half-annual-salary"
+							class="form-input-radio"
+							required
+							value="less-than-60000"
+							title="Виберіть варіант який найкраще описує вашу зарплатню за 6 місяців"
+						/>
+						<label
+							for="is-half-annual-salary-less-than-60000"
+							class="form-label-radio"
+							>До 60 000</label
+						>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="is-half-annual-salary-more-than-60000"
+							type="radio"
+							name="half-annual-salary"
+							class="form-input-radio"
+							required
+							value="more-than-60000"
+							title="Виберіть варіант який найкраще описує вашу зарплатню за 6 місяців"
+						/>
+						<label
+							for="is-half-annual-salary-more-than-60000"
+							class="form-label-radio"
+							>Від 60 000 до 200 000</label
+						>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="is-half-annual-salary-more-than-200000"
+							type="radio"
+							name="half-annual-salary"
+							class="form-input-radio"
+							required
+							value="more-than-200000"
+							title="Виберіть варіант який найкраще описує вашу зарплатню за 6 місяців"
+						/>
+						<label
+							for="is-half-annual-salary-more-than-200000"
+							class="form-label-radio"
+							>Більше 200 000</label
+						>
+					</div>
+				</div>
+				<label for="half-annual-gifts-income" class="form-label required"
+					>Дохід від дарування (за останні 6 місяців, грн)</label
+				>
+				<input
+					type="text"
+					id="half-annual-gifts-income"
+					name="half-annual-gifts-income"
+					class="form-input"
+					minlength="1"
+					maxlength="10"
+					required
+					pattern="^\d{0,10}$"
+					placeholder="1000000"
+					title="Введіть кількість коштів, які Ви отримали в якості подарунків за останні 6 місяців"
+				/>
+				<div class="form-group-radio">
+					<p class="radio-title required">
+						Дохід у вигляді відсотків, нарахованих на банківські депозитні
+						рахунки (за останні 6 місяців, грн)
+					</p>
+					<div class="radio-wrapper">
+						<input
+							id="is-half-annual-deposit-interest-zero"
+							type="radio"
+							name="half-annual-deposit-interest"
+							class="form-input-radio"
+							required
+							value="zero"
+							title="Виберіть варіант який найкраще описує ваші доходи за відсотками з депозитів за 6 місяців"
+						/>
+						<label
+							for="is-half-annual-deposit-interest-zero"
+							class="form-label-radio"
+							>Немає</label
+						>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="is-half-annual-deposit-interest-less-than-10000"
+							type="radio"
+							name="half-annual-deposit-interest"
+							class="form-input-radio"
+							required
+							value="less-than-10000"
+							title="Виберіть варіант який найкраще описує ваші доходи за відсотками з депозитів за 6 місяців"
+						/>
+						<label
+							for="is-half-annual-deposit-interest-less-than-10000"
+							class="form-label-radio"
+							>До 10 000</label
+						>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="is-half-annual-deposit-interest-more-than-10000"
+							type="radio"
+							name="half-annual-deposit-interest"
+							class="form-input-radio"
+							required
+							value="more-than-10000"
+							title="Виберіть варіант який найкраще описує ваші доходи за відсотками з депозитів за 6 місяців"
+						/>
+						<label
+							for="is-half-annual-deposit-interest-more-than-10000"
+							class="form-label-radio"
+							>більше 10 000</label
+						>
+					</div>
+				</div>
+				<label for="half-annual-law-agree-income" class="form-label required"
+					>Дохід від цивільно-правових угод (наприклад купівля – продаж, оренда,
+					підряд, тощо) за останні 6 місяців, грн</label
+				>
+				<input
+					type="text"
+					id="half-annual-law-agree-income"
+					name="half-annual-law-agree-income"
+					class="form-input"
+					minlength="1"
+					maxlength="10"
+					required
+					pattern="^\d{0,10}$"
+					placeholder="1000000"
+					title="Введіть кількість коштів, які Ви отримали в якості доходу від цивільно-правових угод за останні 6 місяців"
+				/>
+				<label
+					for="half-annual-court-decision-income"
+					class="form-label required"
+					>Дохід від компенсаційних виплат та виплат за рішенням суду (за
+					останні 6 місяців)</label
+				>
+				<input
+					type="text"
+					id="half-annual-court-decision-income"
+					name="half-annual-court-decision-income"
+					class="form-input"
+					minlength="1"
+					maxlength="10"
+					required
+					pattern="^\d{0,10}$"
+					placeholder="1000000"
+					title="Введіть кількість коштів, які Ви отримали в якості компенсаційних виплат та виплат за рішенням суду за останні 6 місяців"
+				/>
+				<label for="borrow-money-amount" class="form-label required"
+					>Розмір запозичених коштів, грн</label
+				>
+				<input
+					type="text"
+					id="borrow-money-amount"
+					name="borrow-money-amount"
+					class="form-input"
+					minlength="1"
+					maxlength="10"
+					required
+					pattern="^\d{0,10}$"
+					placeholder="1000"
+					title="Введіть кількість коштів, які Ви запозичили"
+				/>
+				<label for="creditor-names" class="form-label"
+					>Найменування кредитора (кредиторів)</label
+				>
+				<input
+					type="text"
+					id="creditor-names"
+					name="creditor-names"
+					class="form-input"
+					placeholder="Перший національний банк"
+					title="Введіть найменування кредиторів, якщо такі є"
+				/>
+				<label for="other-income" class="form-label">Інші джерела</label>
+				<input
+					type="text"
+					id="other-income"
+					name="other-income"
+					class="form-input"
+					minlength="1"
+					maxlength="10"
+					pattern="^\d{0,10}$"
+					placeholder="1000000"
+					title="Введіть кількість коштів, які Ви отримали від інших джерел"
+				/>
+			</div>
+			<div class="form-group" role="group" aria-labelledby="tax-residence">
+				<h2 class="form-group-title" id="tax-residence">
+					Відомості для визначення податкового резидентства
+				</h2>
+				<div class="checkbox-wrapper">
+					<input
+						id="is-US-tax-residence"
+						type="checkbox"
+						name="is-US-tax-residence"
+						class="form-input-checkbox"
+						value="true"
+						title="Поставте позначку якщо Ви податковий резидент Сполучених Штатів Америки"
+					/>
+					<label for="is-US-tax-residence" class="form-label-checkbox"
+						>Чи є Ви податковим резидентом США? (Позначте, якщо так)</label
+					>
+				</div>
+				<div class="checkbox-wrapper above-hidden">
+					<input
+						id="is-nonUkraine-tax-residence"
+						type="checkbox"
+						name="is-nonUkraine-tax-residence"
+						class="form-input-checkbox"
+						value="true"
+						title="Поставте позначку якщо Ви податковий резидент іншої країни"
+					/>
+					<label for="is-nonUkraine-tax-residence" class="form-label-checkbox"
+						>Чи є Ви податковим резидентом іншої іноземної країни? (Позначте,
+						якщо так)</label
+					>
+				</div>
+				<div class="hidden-inputs-wrapper">
+					<label for="tax-residence-country" class="form-label hidden"
+						>Реквізити документів, що підтверджують податкове резидентство іншої
+						країни</label
+					>
+					<select
+						class="form-input hidden"
+						name="tax-residence-country"
+						id="tax-residence-country"
+					>
+						<include src="./partials/countries.html"></include>
+					</select>
+					<p>Підтверджуючій документ</p>
+					<label for="tax-document-name" class="form-label hidden">Назва</label>
+					<input
+						type="text"
+						id="tax-document-name"
+						name="tax-document-name"
+						class="form-input hidden"
+						minlength="2"
+						maxlength="25"
+						placeholder="Документ"
+						title="Введіть назву документу"
+					/>
+					<label for="tax-document-serial" class="form-label hidden"
+						>Серія</label
+					>
+					<input
+						type="text"
+						id="tax-document-serial"
+						name="tax-document-serial"
+						class="form-input hidden"
+						minlength="1"
+						maxlength="25"
+						placeholder="Серія"
+						title="Введіть серію документу"
+					/>
+					<label for="tax-document-number" class="form-label hidden"
+						>Номер</label
+					>
+					<input
+						type="text"
+						id="tax-document-number"
+						name="tax-document-number"
+						class="form-input hidden"
+						minlength="1"
+						maxlength="25"
+						pattern="^\d{1,25}$"
+						placeholder="012345678"
+						title="Введіть номер документу"
+					/>
+				</div>
+			</div>
+			<div class="form-group" role="group" aria-labelledby="evaluation-survey">
+				<h2 class="form-group-title" id="evaluation-survey">
+					Анкета-оцінювання
+				</h2>
+				<div class="form-group-radio">
+					<p class="radio-title required">
+						Протягом останніх чотирьох кварталів укладали та виконували
+						щокварталу не менше 10 правочинів щодо фінансових інструментів?
+					</p>
+					<div class="radio-wrapper">
+						<input
+							id="is10transactions-true"
+							type="radio"
+							name="is10transactions"
+							class="form-input-radio"
+							required
+							value="true"
+							title="Виберіть відповідний варіант"
+						/>
+						<label for="is10transactions-true" class="form-label-radio"
+							>Так</label
+						>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="is10transactions-false"
+							type="radio"
+							name="is10transactions"
+							class="form-input-radio"
+							required
+							value="false"
+							title="Виберіть відповідний варіант"
+						/>
+						<label for="is10transactions-false" class="form-label-radio"
+							>Ні</label
+						>
+					</div>
+				</div>
+				<div class="form-group-radio">
+					<p class="radio-title required">
+						Володієте коштами, розміщеними на банківських рахунках, та цінними
+						паперами на суму не менше 0,5 мільйона гривень?
+					</p>
+					<div class="radio-wrapper">
+						<input
+							id="is500thousands-true"
+							type="radio"
+							name="is500thousands"
+							class="form-input-radio"
+							required
+							value="true"
+							title="Виберіть відповідний варіант"
+						/>
+						<label for="is500thousands-true" class="form-label-radio"
+							>Так</label
+						>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="is500thousands-false"
+							type="radio"
+							name="is500thousands"
+							class="form-input-radio"
+							required
+							value="false"
+							title="Виберіть відповідний варіант"
+						/>
+						<label for="is500thousands-false" class="form-label-radio"
+							>Ні</label
+						>
+					</div>
+				</div>
+				<div class="form-group-radio">
+					<p class="radio-title required">
+						Маєте досвід проведення операцій на ринку цінних паперів не менше
+						одного року або маєте стаж роботи у фінансовій установі (або
+						іноземній юридичній особі, яка має аналогічний статус відповідно до
+						законодавства іншої держави) за відповідним фахом не менше одного
+						року?
+					</p>
+					<div class="radio-wrapper">
+						<input
+							id="isExperienced-true"
+							type="radio"
+							name="isExperienced"
+							class="form-input-radio"
+							required
+							value="true"
+							title="Виберіть відповідний варіант"
+						/>
+						<label for="isExperienced-true" class="form-label-radio">Так</label>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="isExperienced-false"
+							type="radio"
+							name="isExperienced"
+							class="form-input-radio"
+							required
+							value="false"
+							title="Виберіть відповідний варіант"
+						/>
+						<label for="isExperienced-false" class="form-label-radio">Ні</label>
+					</div>
+				</div>
+				<div class="form-group-radio">
+					<p class="radio-title required">
+						Бажаєте, щоб Вас визнали професійним клієнтом щодо конкретної
+						інвестиційної послуги (інвестиційних послуг) та/або стосовно певного
+						правочину (певних правочинів) щодо фінансових інструментів?
+					</p>
+					<div class="radio-wrapper">
+						<input
+							id="is-willing-to-be-pro-true"
+							type="radio"
+							name="is-willing-to-be-pro"
+							class="form-input-radio"
+							required
+							value="true"
+							title="Виберіть відповідний варіант"
+						/>
+						<label for="is-willing-to-be-pro-true" class="form-label-radio"
+							>Так</label
+						>
+					</div>
+					<div class="radio-wrapper">
+						<input
+							id="is-willing-to-be-pro-false"
+							type="radio"
+							name="is-willing-to-be-pro"
+							class="form-input-radio"
+							required
+							value="false"
+							title="Виберіть відповідний варіант"
+						/>
+						<label for="is-willing-to-be-pro-false" class="form-label-radio"
+							>Ні</label
+						>
+					</div>
+				</div>
+			</div>
+			<div class="form-group" role="group" aria-labelledby="services">
+				<h2 class="form-group-title" id="services">
+					Оберіть послуги, які Ви бажаєте отримати від БТС Брокер
+				</h2>
+				<div class="checkbox-wrapper">
+					<input
+						id="depositary-service"
+						type="checkbox"
+						name="depositary-service"
+						class="form-input-checkbox"
+						checked
+						value="true"
+						title="Оберіть які послуги Вас цікавлять"
+					/>
+					<label for="depositary-service" class="form-label-checkbox"
+						>Депозитарні послуги</label
+					>
+				</div>
+			</div>
+			<button type="submit" class="button-primary">Відправити дані</button>
+		</form>
+	</div>
 </section>

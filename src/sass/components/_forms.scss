@@ -1,136 +1,149 @@
 .form-group {
-  @include flex(flex, center, stretch);
-  flex-direction: column;
-  padding-top: $S;
+	@include flex(flex, center, stretch);
+	flex-direction: column;
+	padding-top: $S;
 }
 
 .form-group:not(:last-child) {
-  padding-bottom: $L;
-  border-bottom: 1px solid $neutralColor300;
+	padding-bottom: $L;
+	border-bottom: 1px solid $neutralColor300;
 }
 
 .form-group-title {
-  font-family: $secondaryFontFamily;
-  @include font(700, 1.25rem, 1.5rem, 0);
-  color: $neutralColor950;
-  margin-bottom: $M;
+	font-family: $secondaryFontFamily;
+	@include font(700, 1.25rem, 1.5rem, 0);
+	color: $neutralColor950;
+	margin-bottom: $M;
 }
 
 .form-label,
 .radio-title {
-  color: $neutralColor950;
-  margin-bottom: 4px;
+	color: $neutralColor950;
+	margin-bottom: 4px;
 }
 
 .form-label-radio {
-  color: $neutralColor950;
+	color: $neutralColor950;
 }
 
 .form-label-checkbox {
-  color: $neutralColor950;
-  flex: 2;
+	color: $neutralColor950;
+	flex: 2;
 }
 
 .form-label.required::after,
 .radio-title.required::after {
-  content: '*';
-  margin-left: 4px;
-  color: $systemColorError;
+	content: "*";
+	margin-left: 4px;
+	color: $systemColorError;
 }
 
 .form-input {
-  padding: $S 44px $S 16px;
-  border: 1.4px solid $neutralColor300;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 16px;
-  outline: none;
-  transition: border-color $mainTransitionDuration $mainTransitionTimingFunction;
-  &:hover {
-    border-color: $neutralColor500;
-    &::placeholder {
-      color: $neutralColor500;
-    }
-  }
-  &:focus {
-    border-color: $primaryColor400;
-    &::placeholder {
-      color: $primaryColor950;
-    }
-  }
+	padding: $S 44px $S 16px;
+	border: 1.4px solid $neutralColor300;
+	border-radius: 4px;
+	font-family: inherit;
+	font-size: 16px;
+	outline: none;
+	transition: border-color $mainTransitionDuration $mainTransitionTimingFunction;
+	&:hover {
+		border-color: $neutralColor500;
+		&::placeholder {
+			color: $neutralColor500;
+		}
+	}
+	&:focus {
+		border-color: $primaryColor400;
+		&::placeholder {
+			color: $primaryColor950;
+		}
+	}
 }
 
 .form-input:not(:last-child) {
-  margin-bottom: $L;
+	margin-bottom: $L;
 }
 
 .form-input::placeholder {
-  color: $neutralColor300;
-  transition: color $mainTransitionDuration $mainTransitionTimingFunction;
+	color: $neutralColor300;
+	transition: color $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .form-input:not(:placeholder-shown):required:valid,
 .form-input:not(:placeholder-shown):valid {
-  border-color: $primaryColor400;
-  background-image: url('/src/images/svg/icon-done-check-blue.svg');
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: right 16px center;
+	border-color: $primaryColor400;
+	background-image: url("/src/images/svg/icon-done-check-blue.svg");
+	background-repeat: no-repeat;
+	background-size: 24px;
+	background-position: right 16px center;
 }
 
 .form-input:not(:placeholder-shown):required:invalid,
 .form-input:not(:placeholder-shown):invalid {
-  border-color: $systemColorError;
-  background-image: url('/src/images/svg/icon-warning.svg');
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: right 16px center;
+	border-color: $systemColorError;
+	background-image: url("/src/images/svg/icon-warning.svg");
+	background-repeat: no-repeat;
+	background-size: 24px;
+	background-position: right 16px center;
 }
 
 .radio-wrapper {
-  @include flex(flex, flex-start, center);
-  gap: $M;
-  &:not(:last-child) {
-    margin-bottom: 4px;
-  }
+	@include flex(flex, flex-start, center);
+	gap: $M;
+	&:not(:last-child) {
+		margin-bottom: 4px;
+	}
 }
 
 .checkbox-wrapper {
-  @include flex(flex, flex-start, center);
-  gap: $M;
-  &:not(:last-child) {
-    margin-bottom: $L;
-  }
+	@include flex(flex, flex-start, center);
+	gap: $M;
+	&:not(:last-child) {
+		margin-bottom: $L;
+	}
 }
 
 .form-input-radio {
-  accent-color: $primaryColor700;
-  width: 24px;
-  height: 24px;
-  &:checked + label {
-    color: $primaryColor700;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-color: $primaryColor700;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-  }
+	accent-color: $primaryColor700;
+	width: 24px;
+	height: 24px;
+	&:checked + label {
+		color: $primaryColor700;
+	}
 }
 
 .form-input-checkbox {
-  accent-color: $primaryColor700;
-  width: 24px;
-  height: 24px;
-  &:checked + label {
-    color: $primaryColor700;
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-color: $primaryColor700;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-  }
+	accent-color: $primaryColor700;
+	width: 24px;
+	height: 24px;
+	&:checked + label {
+		color: $primaryColor700;
+	}
 }
 
 .form-group-radio {
-  margin-bottom: $L;
+	margin-bottom: $L;
+}
+
+.checkbox-wrapper.above-hidden {
+	margin-bottom: 0;
+}
+
+.hidden-inputs-wrapper {
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height $mainTransitionDuration $mainTransitionTimingFunction;
+}
+
+.form-label.hidden {
+	display: block;
+}
+
+.form-label.hidden:first-child {
+	padding-top: $M;
+}
+
+.form-input.hidden {
+	display: block;
+	width: 100%;
 }
