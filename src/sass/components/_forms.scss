@@ -139,11 +139,21 @@
 	display: block;
 }
 
-.form-label.hidden:first-child {
+.form-label.hidden[for="PEP-info"] {
 	padding-top: $M;
 }
 
 .form-input.hidden {
 	display: block;
 	width: 100%;
+}
+
+.passport-name-wrapper,
+.passport-code-wrapper,
+.passport-date-expired-wrapper {
+	margin-bottom: $L;
+	display: block;
+	&.hidden {
+		display: none;
+	}
 }

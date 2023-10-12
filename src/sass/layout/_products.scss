@@ -1,128 +1,140 @@
 .products-section {
-  background-image: url('/src/images/svg/bg-shape-products-390.svg');
-  background-repeat: no-repeat;
-  background-position: calc(50% + 304px) calc(50% - 24px);
-  @include mq(tablet-S) {
-    background: none;
-  }
+	background-image: url("/src/images/svg/bg-shape-products-390.svg");
+	background-repeat: no-repeat;
+	background-position: calc(50% + 304px) calc(50% - 24px);
+	@include mq(tablet-S) {
+		background: none;
+	}
 }
 
 .products-container {
-  @include flex(flex, center, stretch);
-  flex-direction: column;
-  gap: $L;
-  padding-top: $XL;
-  padding-bottom: $XL;
-  @include mq(tablet-S) {
-    gap: $XL;
-    padding-bottom: $L;
-  }
-  @include mq(tablet-L) {
-    flex-direction: row;
-    gap: $M;
-    padding-top: $L;
-  }
-  @include mq(desktop) {
-    align-items: flex-end;
-    padding-top: $XL;
-    padding-bottom: $XL;
-  }
+	@include flex(flex, center, stretch);
+	flex-direction: column;
+	gap: $L;
+	padding-top: $XL;
+	padding-bottom: $XL;
+	@include mq(tablet-S) {
+		gap: $XL;
+		padding-bottom: $L;
+	}
+	@include mq(tablet-L) {
+		flex-direction: row;
+		gap: $M;
+		padding-top: $L;
+	}
+	@include mq(desktop) {
+		align-items: flex-end;
+		padding-top: $XL;
+		padding-bottom: $XL;
+	}
 }
 
 .products-buttons-list {
-  @include flex(flex, center, stretch);
-  flex-direction: column;
-  gap: $M;
-  @include mq(tablet-S) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  @include mq(tablet-L) {
-    flex-basis: calc((100% - 1 * $M) / 2);
-  }
+	@include flex(flex, center, stretch);
+	flex-direction: column;
+	gap: $M;
+	@include mq(tablet-S) {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	@include mq(tablet-L) {
+		flex-basis: calc((100% - 1 * $M) / 2);
+	}
 }
 
 .products-buttons-item {
-  @include mq(tablet-S) {
-    flex-basis: calc((100% - 3 * $M) / 4);
-  }
-  @include mq(tablet-L) {
-    flex-basis: calc((100% - 1 * $M) / 2);
-    height: calc((100% - 1 * $M) / 2);
-  }
+	@include mq(tablet-S) {
+		flex-basis: calc((100% - 3 * $M) / 4);
+	}
+	@include mq(tablet-L) {
+		flex-basis: calc((100% - 1 * $M) / 2);
+		height: calc((100% - 1 * $M) / 2);
+	}
 }
 
 .products-button {
-  display: block;
-  width: 100%;
-  font-family: $secondaryFontFamily;
-  color: $neutralColor600;
-  text-transform: uppercase;
-  @include font(800, 1rem, 1.5rem, 0);
-  border-radius: $S;
-  border: 1px solid $primaryColor900;
-  padding: $M 0;
-  background-color: $neutralColor0;
-  transition: color $mainTransitionDuration $mainTransitionTimingFunction,
-    background-color $mainTransitionDuration $mainTransitionTimingFunction;
-  &:hover {
-    cursor: pointer;
-    color: $primaryColor100;
-    background-color: $primaryColor950;
-  }
-  @include mq(tablet-S) {
-    padding: $L 0;
-  }
-  @include mq(tablet-L) {
-    height: 100%;
-  }
+	display: block;
+	width: 100%;
+	font-family: $secondaryFontFamily;
+	color: $neutralColor600;
+	text-transform: uppercase;
+	@include font(800, 1rem, 1.5rem, 0);
+	border-radius: $S;
+	border: 1px solid $primaryColor900;
+	padding: $M 0;
+	background-color: $neutralColor0;
+	transition: color $mainTransitionDuration $mainTransitionTimingFunction,
+		background-color $mainTransitionDuration $mainTransitionTimingFunction,
+		box-shadow $mainTransitionDuration $mainTransitionTimingFunction,
+		transform $mainTransitionDuration $mainTransitionTimingFunction;
+	box-shadow: 0.3px 0.5px 0.7px hsl(0deg 0% 63% / 0.29),
+		0.7px 1.3px 1.7px -0.6px hsl(0deg 0% 63% / 0.29),
+		1.3px 2.6px 3.3px -1.2px hsl(0deg 0% 63% / 0.29),
+		2.6px 5.2px 6.5px -1.9px hsl(0deg 0% 63% / 0.29),
+		5px 10px 12.6px -2.5px hsl(0deg 0% 63% / 0.29);
+	&:hover,
+	&:focus {
+		cursor: pointer;
+		color: $primaryColor100;
+		background-color: $primaryColor950;
+		transform: scale(0.994);
+		box-shadow: 0.3px 0.5px 0.7px hsl(0deg 0% 63% / 0.34),
+			0.4px 0.8px 1px -1.2px hsl(0deg 0% 63% / 0.34),
+			1px 2px 2.5px -2.5px hsl(0deg 0% 63% / 0.34);
+	}
+	@include mq(tablet-S) {
+		padding: $L 0;
+	}
+	@include mq(tablet-L) {
+		height: 100%;
+	}
 }
 
 .shares-button {
-  color: $primaryColor100;
-  background-color: $primaryColor950;
+	color: $primaryColor100;
+	background-color: $primaryColor950;
 }
 
 .shares-button-icon,
 .bonds-button-icon,
 .depositary-button-icon,
 .repositary-button-icon {
-  margin: 0 auto $XS;
+	margin: 0 auto $XS;
 }
 
 .bonds-button-icon-layer1,
 .depositary-button-icon-layer5 {
-  fill: $neutralColor500;
-  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+	fill: $neutralColor500;
+	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 // .shares-button-icon-layer1,
 .bonds-button-icon-layer2,
 .depositary-button-icon-layer1,
 .repositary-button-icon-layer-accent {
-  fill: $primaryColor400;
-  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+	fill: $primaryColor400;
+	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 // .shares-button-icon-layer3,
 .bonds-button-icon-vector1,
 .depositary-button-icon-vector9,
 .repositary-button-icon-layer-neutral {
-  fill: $neutralColor600;
-  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+	fill: $neutralColor600;
+	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .repositary-button-icon-vector5 {
-  fill: $neutralColor500;
-  transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+	fill: $neutralColor500;
+	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .shares-button .shares-button-icon-layer1 {
-  fill: $primaryColor700;
+	fill: $primaryColor700;
 }
 
 .shares-button .shares-button-icon-layer3 {
-  fill: $primaryColor100;
+	fill: $primaryColor100;
 }
 
 // .shares-button:hover .shares-button-icon-layer1,
@@ -133,7 +145,7 @@
 .depositary-button:focus .depositary-button-icon-layer1,
 .repositary-button:hover .repositary-button-icon-layer-accent,
 .repositary-button:focus.repositary-button-icon-layer-accent {
-  fill: $primaryColor700;
+	fill: $primaryColor700;
 }
 
 // .shares-button:hover .shares-button-icon-layer3,
@@ -150,24 +162,24 @@
 .repositary-button:focus .repositary-button-icon-layer-neutral,
 .repositary-button:hover .repositary-button-icon-vector5,
 .repositary-button:focus .repositary-button-icon-vector5 {
-  fill: $primaryColor100;
+	fill: $primaryColor100;
 }
 
 .products-description-container {
-  @include mq(tablet-S) {
-    max-width: 662px;
-  }
-  @include mq(tablet-L) {
-    flex-basis: calc((100% - 1 * $M) / 2);
-    padding-left: $M;
-  }
+	@include mq(tablet-S) {
+		max-width: 662px;
+	}
+	@include mq(tablet-L) {
+		flex-basis: calc((100% - 1 * $M) / 2);
+		padding-left: $M;
+	}
 }
 
 .products-description-subheader {
-  margin-bottom: $S;
+	margin-bottom: $S;
 }
 
 .products-description-text {
-  margin-bottom: 40px;
-  max-width: 460px;
+	margin-bottom: 40px;
+	max-width: 460px;
 }

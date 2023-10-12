@@ -69,7 +69,6 @@
 					required
 					autocomplete="email"
 					placeholder="name@example.com"
-					pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
 					title="Введіть дійсний email"
 				/>
 				<label for="phone" class="form-label required">Телефон</label>
@@ -394,57 +393,95 @@
 						>
 					</div>
 				</div>
-				<label for="passport-number" class="form-label required">Номер</label>
-				<input
-					type="text"
-					id="passport-number"
-					name="passport-number"
-					class="form-input"
-					minlength="9"
-					maxlength="9"
-					required
-					pattern="^\d{9}$"
-					placeholder="012345678"
-					title="Введіть номер ID картки. 9 цифр"
-				/>
-				<label for="passport-issued" class="form-label required"
-					>Ким видано</label
-				>
-				<input
-					type="text"
-					id="passport-issued"
-					name="passport-issued"
-					class="form-input"
-					minlength="2"
-					maxlength="100"
-					required
-					placeholder="0123"
-					title="Вкажіть орган що видав документ"
-				/>
-				<label for="passport-date" class="form-label required"
-					>Дата видачі</label
-				>
-				<input
-					type="text"
-					id="passport-date"
-					name="passport-date"
-					class="form-input"
-					required
-					pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
-					placeholder="yyyy-mm-dd"
-					title="Введіть дату видачі документу"
-				/>
-				<label for="passport-date-expired" class="form-label"
-					>Термін дії (за наявності)</label
-				><input
-					type="text"
-					id="passport-date-expired"
-					name="passport-date-expired"
-					class="form-input"
-					pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
-					placeholder="yyyy-mm-dd"
-					title="Введіть термін дії документу"
-				/>
+				<div class="hidden-inputs-wrapper">
+					<div class="passport-name-wrapper">
+						<label for="passport-name" class="form-label required hidden"
+							>Назва документу</label
+						>
+						<input
+							type="text"
+							id="passport-name"
+							name="passport-name"
+							class="form-input hidden"
+							minlength="2"
+							maxlength="50"
+							required
+							placeholder="Посвідка на постійне проживання"
+							title="Введіть назву документу"
+						/>
+					</div>
+					<div class="passport-code-wrapper">
+						<label for="passport-code" class="form-label required hidden"
+							>Серія</label
+						>
+						<input
+							type="text"
+							id="passport-code"
+							name="passport-code"
+							class="form-input hidden"
+							minlength="2"
+							maxlength="16"
+							required
+							placeholder="АА"
+							title="Введіть серію документу"
+						/>
+					</div>
+					<label for="passport-number" class="form-label required hidden"
+						>Номер</label
+					>
+					<input
+						type="text"
+						id="passport-number"
+						name="passport-number"
+						class="form-input hidden"
+						minlength="9"
+						maxlength="9"
+						required
+						pattern="^\d{9}$"
+						placeholder="012345678"
+						title="Введіть номер ID картки. 9 цифр"
+					/>
+					<label for="passport-issued" class="form-label required hidden"
+						>Ким видано</label
+					>
+					<input
+						type="text"
+						id="passport-issued"
+						name="passport-issued"
+						class="form-input hidden"
+						minlength="2"
+						maxlength="100"
+						required
+						placeholder="0123"
+						title="Вкажіть орган що видав документ"
+					/>
+					<label for="passport-date" class="form-label required hidden"
+						>Дата видачі</label
+					>
+					<input
+						type="text"
+						id="passport-date"
+						name="passport-date"
+						class="form-input hidden"
+						required
+						pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
+						placeholder="yyyy-mm-dd"
+						title="Введіть дату видачі документу"
+					/>
+					<div class="passport-date-expired-wrapper">
+						<label for="passport-date-expired" class="form-label hidden"
+							>Термін дії (за наявності)</label
+						><input
+							type="text"
+							id="passport-date-expired"
+							name="passport-date-expired"
+							class="form-input hidden"
+							pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
+							placeholder="yyyy-mm-dd"
+							title="Введіть термін дії документу"
+						/>
+					</div>
+				</div>
 				<label for="passport-file" class="form-label required"
 					>Завантажити фото паспорту</label
 				>
