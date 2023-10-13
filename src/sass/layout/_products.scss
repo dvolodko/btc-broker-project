@@ -60,27 +60,23 @@
 	text-transform: uppercase;
 	@include font(800, 1rem, 1.5rem, 0);
 	border-radius: $S;
-	border: 1px solid $primaryColor900;
+	// border: 1px solid $primaryColor900;
+	border: none;
 	padding: $M 0;
-	background-color: $neutralColor0;
+	// background-color: $neutralColor0;
+	background-color: $neutralColor0Transparency600;
+	box-shadow: $shadowElevationMedium;
 	transition: color $mainTransitionDuration $mainTransitionTimingFunction,
 		background-color $mainTransitionDuration $mainTransitionTimingFunction,
 		box-shadow $mainTransitionDuration $mainTransitionTimingFunction,
 		transform $mainTransitionDuration $mainTransitionTimingFunction;
-	box-shadow: 0.3px 0.5px 0.7px hsl(0deg 0% 63% / 0.29),
-		0.7px 1.3px 1.7px -0.6px hsl(0deg 0% 63% / 0.29),
-		1.3px 2.6px 3.3px -1.2px hsl(0deg 0% 63% / 0.29),
-		2.6px 5.2px 6.5px -1.9px hsl(0deg 0% 63% / 0.29),
-		5px 10px 12.6px -2.5px hsl(0deg 0% 63% / 0.29);
 	&:hover,
 	&:focus {
 		cursor: pointer;
 		color: $primaryColor100;
 		background-color: $primaryColor950;
 		transform: scale(0.994);
-		box-shadow: 0.3px 0.5px 0.7px hsl(0deg 0% 63% / 0.34),
-			0.4px 0.8px 1px -1.2px hsl(0deg 0% 63% / 0.34),
-			1px 2px 2.5px -2.5px hsl(0deg 0% 63% / 0.34);
+		box-shadow: $shadowElevationLow;
 	}
 	@include mq(tablet-S) {
 		padding: $L 0;

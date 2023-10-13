@@ -152,8 +152,10 @@
 .passport-code-wrapper,
 .passport-date-expired-wrapper {
 	margin-bottom: $L;
-	display: block;
+	transition: max-height $mainTransitionDuration $mainTransitionTimingFunction;
 	&.hidden {
-		display: none;
+		margin-bottom: 0;
+		overflow: hidden;
+		max-height: 0;
 	}
 }

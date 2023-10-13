@@ -107,46 +107,71 @@ const citizenshipHiddenInputsWrapper = citizenshipElement.querySelector(
 const passportNameInput = citizenshipElement.querySelector(
 	".passport-name-wrapper",
 );
-const passportCodeInput = citizenshipElement.querySelector(
+const passportCodeInputWrapper = citizenshipElement.querySelector(
 	".passport-code-wrapper",
 );
 const passportDateExpiredInput = citizenshipElement.querySelector(
 	".passport-date-expired-wrapper",
 );
 const passportIssuedInput = document.getElementById("passport-issued");
+const passportNumberInput = document.getElementById("passport-number");
+const passportCodeInput = document.getElementById("passport-code");
 
 citizenshipRadioGroup.addEventListener("click", e => {
 	const checkedRadio = e.target.closest(".form-input-radio:checked");
 	if (!checkedRadio) return;
 	switch (checkedRadio.value) {
 		case "ID card":
-			passportDateExpiredInput.classList.remove("hidden");
-			passportNameInput.classList.add("hidden");
-			passportCodeInput.classList.add("hidden");
-			passportNameInput.children[1].removeAttribute("required");
-			passportCodeInput.children[1].removeAttribute("required");
-			console.log(passportCodeInput.children);
-			passportIssuedInput.setAttribute("minlength", "4");
-			passportIssuedInput.setAttribute("maxlength", "4");
-			passportIssuedInput.setAttribute("pattern", "[0-9]{4}");
+			toShow(passportDateExpiredInput);
+			toHide(passportNameInput);
+			toHide(passportCodeInputWrapper);
+			toChangeAttributes(
+				passportNumberInput,
+				"9",
+				"9",
+				"[0-9]{9}",
+				"012345678",
+			);
+			toChangeAttributes(passportIssuedInput, "4", "4", "[0-9]{4}", "0123");
 			break;
 
 		case "passport":
-			passportCodeInput.classList.remove("hidden");
-			passportNameInput.classList.add("hidden");
-			passportDateExpiredInput.classList.add("hidden");
+			toShow(passportCodeInputWrapper);
+			toHide(passportNameInput);
+			toHide(passportDateExpiredInput);
+			toChangeAttributes(passportCodeInput, "2", "2", "", "АА");
+			toChangeAttributes(passportNumberInput, "6", "6", "[0-9]{6}", "012345");
+			toChangeAttributes(
+				passportIssuedInput,
+				"2",
+				"50",
+				"",
+				"Голосіївським РУ ГМВС України в місті Києві",
+			);
 			break;
 
 		case "foreign passport":
-			passportCodeInput.classList.remove("hidden");
-			passportDateExpiredInput.classList.remove("hidden");
-			passportNameInput.classList.add("hidden");
+			toShow(passportCodeInputWrapper);
+			toShow(passportDateExpiredInput);
+			toHide(passportNameInput);
+			toChangeAttributes(passportCodeInput, "2", "2", "", "АА");
+			toChangeAttributes(passportNumberInput, "6", "6", "[0-9]{6}", "012345");
+			toChangeAttributes(passportIssuedInput, "4", "4", "[0-9]{4}", "0123");
 			break;
 
 		case "other":
-			passportCodeInput.classList.remove("hidden");
-			passportDateExpiredInput.classList.remove("hidden");
-			passportNameInput.classList.remove("hidden");
+			toShow(passportCodeInputWrapper);
+			toShow(passportDateExpiredInput);
+			toShow(passportNameInput);
+			toChangeAttributes(passportCodeInput, "2", "16", "", "AA");
+			toChangeAttributes(
+				passportNumberInput,
+				"2",
+				"16",
+				"[0-9]{2,16}",
+				"012345",
+			);
+			toChangeAttributes(passportIssuedInput, "2", "50", "", "0123");
 			break;
 
 		default:
@@ -155,3 +180,31 @@ citizenshipRadioGroup.addEventListener("click", e => {
 	citizenshipHiddenInputsWrapper.style.maxHeight =
 		citizenshipHiddenInputsWrapper.scrollHeight + "px";
 });
+
+function toShow(inputToShow) {
+	inputToShow.classList.remove("hidden");
+	inputToShow.style.maxHeight = inputToShow.scrollHeight + "px";
+}
+
+function toHide(inputToHide) {
+	inputToHide.classList.add("hidden");
+	inputToHide.children[1].removeAttribute("required");
+	inputToHide.style.maxHeight = null;
+}
+
+function toChangeAttributes(
+	inputToChange,
+	minLength,
+	maxLength,
+	pattern,
+	placeholder,
+) {
+	inputToChange.setAttribute("minlength", minLength);
+	inputToChange.setAttribute("maxlength", maxLength);
+	if (!pattern) {
+		inputToChange.removeAttribute("pattern");
+	} else {
+		inputToChange.setAttribute("pattern", pattern);
+	}
+	inputToChange.setAttribute("placeholder", placeholder);
+}

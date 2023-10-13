@@ -66,12 +66,7 @@
 	flex-direction: column;
 	gap: $S;
 	padding: 16px $M;
-	// border: 1px solid $primaryColor900;
 	border-radius: $S;
-	background-color: rgba($color: #ffffff, $alpha: 0.6);
-	box-shadow: 0.3px 0.5px 0.7px hsl(0deg 0% 63% / 0.29),
-		0.7px 1.3px 1.7px -0.6px hsl(0deg 0% 63% / 0.29),
-		1.3px 2.6px 3.3px -1.2px hsl(0deg 0% 63% / 0.29),
-		2.6px 5.2px 6.5px -1.9px hsl(0deg 0% 63% / 0.29),
-		5px 10px 12.6px -2.5px hsl(0deg 0% 63% / 0.29);
+	background-color: $neutralColor0Transparency600;
+	box-shadow: $shadowElevationMedium;
 }
