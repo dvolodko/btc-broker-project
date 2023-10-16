@@ -3,11 +3,6 @@ import { save, load, remove } from "./storage";
 
 const STORAGE_KEY = "survey-form-state";
 
-const formData = {
-	// email: "",
-	// message: "",
-};
-
 const refs = {
 	form: document.querySelector(".form-survey"),
 };
@@ -15,15 +10,20 @@ const refs = {
 refs.form.addEventListener("submit", onFormSubmit);
 refs.form.addEventListener("input", throttle(onFormInput, 500));
 
-// populateForm();
+populateForm();
+
+initialState();
+
+function initialState() {
+	const savedFormData = load(STORAGE_KEY);
+	if (savedFormData) {
+		return (formData = Object.assign(savedFormData));
+	} else {
+		return (formData = {});
+	}
+}
 
 function onFormInput(e) {
-	// const savedFormData = load(STORAGE_KEY);
-
-	// if (savedFormData) {
-	// 	formData = load(STORAGE_KEY);
-	// }
-
 	formData[e.target.name] = e.target.value;
 	save(STORAGE_KEY, formData);
 }
@@ -43,25 +43,37 @@ function onFormInput(e) {
 // 	}
 // }
 
+// Тимчасове прибирання реквайред з полів
 const requiredArray = document.querySelectorAll("[required]");
 requiredArray.forEach(requiredElement => {
 	requiredElement.removeAttribute("required");
 });
+// ______________________________________
 
 function onFormSubmit(e) {
 	e.preventDefault();
-	const formData = {};
 	for (const inputData of e.target) {
-		formData[inputData.name] = inputData.value;
+		if (inputData.value) {
+			formData[inputData.name] = inputData.value;
+		}
 	}
-	console.log(formData);
+	for (const inputDataToLog in formData) {
+		console.log(inputDataToLog, ": ", formData[inputDataToLog]);
+	}
+	e.currentTarget.reset();
+	remove(STORAGE_KEY);
+	for (key in formData) {
+		delete formData[key];
+	}
 }
 
 function populateForm() {
 	const savedFormData = load(STORAGE_KEY);
 
 	if (savedFormData) {
-		refs.form.email.value = savedFormData.email;
-		refs.form.message.value = savedFormData.message;
+		const keys = Object.keys(savedFormData);
+		for (const key of keys) {
+			refs.form[key].value = savedFormData[key];
+		}
 	}
 }
