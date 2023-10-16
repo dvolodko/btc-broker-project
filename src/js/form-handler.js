@@ -7,6 +7,8 @@ const refs = {
 	form: document.querySelector(".form-survey"),
 };
 
+const formData = {};
+
 refs.form.addEventListener("submit", onFormSubmit);
 refs.form.addEventListener("input", throttle(onFormInput, 500));
 
@@ -17,11 +19,10 @@ initialState();
 function initialState() {
 	const savedFormData = load(STORAGE_KEY);
 	if (savedFormData) {
-		const formData = Object.assign(savedFormData);
-		return formData;
-	} else {
-		const formData = {};
-		return formData;
+		const keys = Object.keys(savedFormData);
+		for (const key of keys) {
+			formData[key] = savedFormData[key];
+		}
 	}
 }
 
