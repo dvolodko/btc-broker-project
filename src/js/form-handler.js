@@ -17,9 +17,11 @@ initialState();
 function initialState() {
 	const savedFormData = load(STORAGE_KEY);
 	if (savedFormData) {
-		return (formData = Object.assign(savedFormData));
+		const formData = Object.assign(savedFormData);
+		return formData;
 	} else {
-		return (formData = {});
+		const formData = {};
+		return formData;
 	}
 }
 
@@ -27,21 +29,6 @@ function onFormInput(e) {
 	formData[e.target.name] = e.target.value;
 	save(STORAGE_KEY, formData);
 }
-
-// function onFormSubmit(e) {
-// 	if (formData.email && formData.message) {
-// 		e.preventDefault();
-// 		console.log(formData);
-// 		e.currentTarget.reset();
-// 		remove(STORAGE_KEY);
-// 		formData = {
-// 			email: "",
-// 			message: "",
-// 		};
-// 	} else {
-// 		console.log("Користувач намагається відправити недозаповнену форму");
-// 	}
-// }
 
 // Тимчасове прибирання реквайред з полів
 const requiredArray = document.querySelectorAll("[required]");
