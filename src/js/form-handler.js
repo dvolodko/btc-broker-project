@@ -31,13 +31,6 @@ function onFormInput(e) {
 	save(STORAGE_KEY, formData);
 }
 
-// Тимчасове прибирання реквайред з полів
-const requiredArray = document.querySelectorAll("[required]");
-requiredArray.forEach(requiredElement => {
-	requiredElement.removeAttribute("required");
-});
-// ______________________________________
-
 function onFormSubmit(e) {
 	e.preventDefault();
 	for (const inputData of e.target) {
