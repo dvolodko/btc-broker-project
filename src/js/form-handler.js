@@ -45,7 +45,6 @@ function onFormSubmit(e) {
 	remove(STORAGE_KEY);
 	for (const key in formData) {
 		delete formData[key];
-		console.log(formData);
 	}
 }
 
