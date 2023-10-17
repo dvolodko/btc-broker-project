@@ -1,33 +1,33 @@
 {
-  "name": "btc-broker-project",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "https://dvolodko.github.io/btc-broker-project/",
-  "scripts": {
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /btc-broker-project/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://dvolodko.github.io/btc-broker-project"
-  },
-  "keywords": [],
-  "author": "Denys Volodko <denys.volodko.v@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21",
-    "modern-normalize": "^1.1.0"
-  },
-  "devDependencies": {
-    "@parcel/packager-raw-url": "^2.9.3",
-    "@parcel/transformer-sass": "^2.6.0",
-    "@parcel/transformer-webmanifest": "^2.9.3",
-    "parcel": "^2.6.0",
-    "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
-  },
-  "browserslist": "> 0.5%, last 2 versions, not dead"
+	"name": "btc-broker-project",
+	"version": "1.0.0",
+	"description": "",
+	"homepage": "https://dvolodko.github.io/btc-broker-project/",
+	"scripts": {
+		"start": "parcel src/*.html",
+		"build": "parcel build src/*.html --public-url /btc-broker-project/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://dvolodko.github.io/btc-broker-project"
+	},
+	"keywords": [],
+	"author": "Denys Volodko <denys.volodko.v@gmail.com>",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/goitacademy/parcel-project-template/issues"
+	},
+	"dependencies": {
+		"lodash": "^4.17.21",
+		"modern-normalize": "^1.1.0"
+	},
+	"devDependencies": {
+		"@parcel/packager-raw-url": "^2.9.3",
+		"@parcel/transformer-sass": "^2.6.0",
+		"@parcel/transformer-webmanifest": "^2.9.3",
+		"parcel": "^2.6.0",
+		"parcel-reporter-clean-dist": "^1.0.4",
+		"posthtml-include": "^1.7.4"
+	},
+	"browserslist": "> 0.5%, last 2 versions, not dead"
 }
