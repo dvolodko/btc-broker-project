@@ -6,3 +6,25 @@
 	padding-top: $L;
 	padding-bottom: $XXL;
 }
+
+.contacts-us-header {
+	margin-bottom: $L;
+}
+
+.contact-us-subtitle {
+	font-family: $secondaryFontFamily;
+	@include font(700, 1.25rem, 1.5rem, 0);
+	color: $neutralColor950;
+	margin-bottom: $M;
+}
+
+.contacts-us-address {
+	font-style: normal;
+	margin-bottom: $L;
+}
+
+.contact-us-creds-title {
+	font-family: $secondaryFontFamily;
+	@include font(600, 1rem, 1.5rem, 0);
+	color: $neutralColor950;
+}
