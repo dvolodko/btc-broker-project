@@ -1,56 +1,62 @@
 <section class="contact-us-section">
 	<div class="container contact-us-container">
-		<h3 class="superheader">Ми на зв'язку</h3>
-		<h2 class="section-header contacts-us-header">Точки контакту</h2>
-		<div class="contact-us-creds">
-			<h2 class="contact-us-subtitle">Контакти</h2>
-			<address class="contacts-us-address">
-				<ul class="contacts-us-creds-list">
-					<li class="contacts-us-creds-item">
-						<p class="contact-us-creds-title">Адреса:</p>
-						<p>
-							БЦ Іллінський. Україна, 04070, місто Київ, вул.Іллінська, будинок
-							8 (<a
+		<div class="contact-us-address-and-faq-pointer-wrapper">
+			<div class="contact-us-creds">
+				<h3 class="superheader">Ми на зв'язку</h3>
+				<h2 class="section-header contacts-us-header">Точки контакту</h2>
+				<h2 class="contact-us-subtitle">Контакти</h2>
+				<address class="contacts-us-address">
+					<ul class="contacts-us-creds-list">
+						<li class="contacts-us-creds-item">
+							<p class="contact-us-creds-title">Адреса:</p>
+							<p>
+								БЦ Іллінський. Україна, 04070, місто Київ, вул.Іллінська,
+								будинок 8 (<a
+									class="contact-us-address-link"
+									href="https://maps.app.goo.gl/KSZDhtJ6hKKH2ght7"
+									target="_blank"
+									rel="nofollow noreferrer noopener"
+									title="Адреса офіса БТС брокер на мапі гугл мапс"
+									>Позначка на мапі</a
+								>)
+							</p>
+						</li>
+						<li class="contacts-us-creds-item">
+							<p class="contact-us-creds-title">Телефон:</p>
+							<a class="contact-us-address-link" href="tel:+380947102606"
+								>+38 094 710 26 06</a
+							>
+						</li>
+						<li class="contacts-us-creds-item">
+							<p class="contact-us-creds-title">Бек-офіс:</p>
+							<a
 								class="contact-us-address-link"
-								href="https://maps.app.goo.gl/KSZDhtJ6hKKH2ght7"
-								target="_blank"
-								rel="nofollow noreferrer noopener"
-								title="Адреса офіса БТС брокер на мапі гугл мапс"
-								>Позначка на мапі</a
-							>)
-						</p>
-					</li>
-					<li class="contacts-us-creds-item">
-						<p class="contact-us-creds-title">Телефон:</p>
-						<a class="contact-us-address-link" href="tel:+380947102606"
-							>+38 094 710 26 06</a
+								href="mailto:info@btc-broker.com"
+								>info@btc-broker.com</a
+							>
+						</li>
+						<li class="contacts-us-creds-item">
+							<p class="contact-us-creds-title">Депозитарій:</p>
+							<a
+								class="contact-us-address-link"
+								href="mailto:info@btc-broker.com"
+								>info@btc-broker.com</a
+							>
+						</li>
+					</ul>
+				</address>
+				<div class="contact-us-faq-pointer">
+					<h2 class="contact-us-subtitle">Поширені запитання</h2>
+					<p>
+						На найбільш поширені запитання ми зібрали відповіді на сторінці
+						<a
+							class="contact-us-address-link"
+							href="/src/faq.html"
+							title="Покликання на сторінку FAQ"
+							>Поширених запитань</a
 						>
-					</li>
-					<li class="contacts-us-creds-item">
-						<p class="contact-us-creds-title">Бек-офіс:</p>
-						<a class="contact-us-address-link" href="mailto:info@btc-broker.com"
-							>info@btc-broker.com</a
-						>
-					</li>
-					<li class="contacts-us-creds-item">
-						<p class="contact-us-creds-title">Депозитарій:</p>
-						<a class="contact-us-address-link" href="mailto:info@btc-broker.com"
-							>info@btc-broker.com</a
-						>
-					</li>
-				</ul>
-			</address>
-			<div class="contact-us-faq-pointer">
-				<h2 class="contact-us-subtitle">Поширені питання</h2>
-				<p>
-					На найбільш поширені питання ми зібрали відповіді
-					<a
-						class="contact-us-address-link"
-						href="#"
-						title="Покликання на сторінку FAQ"
-						>тут</a
-					>
-				</p>
+					</p>
+				</div>
 			</div>
 			<form
 				class="form form-contact-us"
@@ -65,7 +71,7 @@
 					aria-labelledby="contact-us-inputs"
 				>
 					<h2 class="form-group-title" id="contact-us-inputs">
-						Залишились питання?
+						Залишились питання? Постав їх нам напряму
 					</h2>
 					<label for="firstname" class="form-label required">Ім'я</label
 					><input
@@ -91,7 +97,6 @@
 						maxlength="25"
 						required
 						autocomplete="family-name"
-						autofocus
 						pattern="[а-яА-ЯіїґєІЄҐЇ'`\- ]{2,25}"
 						placeholder="Шевченко"
 						title="Введіть прізвище українською"
@@ -132,14 +137,17 @@
 						id="feedback-message"
 						type="text"
 						name="feedback-message"
-						class="form-input"
-						minlength="10"
-						maxlength="20"
+						class="form-input contact-us-textarea"
+						minlength="4"
+						maxlength="1500"
 						required
 						placeholder="Введіть Ваше повідомлення"
 						title="Введіть Ваше повідомлення"
 					></textarea>
 				</div>
+				<button type="submit" class="button-primary form-submit-button">
+					Поставити питання
+				</button>
 			</form>
 		</div>
 	</div>

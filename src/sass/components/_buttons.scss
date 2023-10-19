@@ -57,3 +57,10 @@
 		color: $primaryColor100;
 	}
 }
+
+.form-submit-button {
+	margin: 0 auto;
+	@include mq(desktop) {
+		width: 256px;
+	}
+}

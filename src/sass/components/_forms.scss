@@ -1,7 +1,6 @@
 .form-group {
 	@include flex(flex, center, stretch);
 	flex-direction: column;
-	padding-top: $S;
 }
 
 .form-group:not(:last-child) {

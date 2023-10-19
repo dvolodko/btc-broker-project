@@ -1,4 +1,4 @@
-.form-section {
+.faq-global-section {
 	padding-top: 88px;
 	background-image: url("/src/images/svg/bg-shape-yellow-faq-390.svg"),
 		url("/src/images/svg/bg-shape-blue-faq-390.svg"),
@@ -40,7 +40,7 @@
 	}
 }
 
-.form-container {
+.faq-global-container {
 	padding-top: $L;
 	padding-bottom: $XXL;
 	@include mq(tablet-S) {
@@ -57,16 +57,12 @@
 	}
 }
 
-.form-subheader {
-	margin-bottom: $M;
+.faq-global-subheader {
+	margin-bottom: $L;
 }
 
-.form-survey {
-	@include flex(flex, center, stretch);
-	flex-direction: column;
-	gap: $L;
-	padding: $L $M;
-	border-radius: $S;
-	background-color: $neutralColor0Transparency600;
-	box-shadow: $shadowElevationMedium;
+.faq-global-contact-us-link {
+	color: $systemColorLink;
+	// font-weight: 700;
+	// text-decoration: underline;
 }
