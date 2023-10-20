@@ -26,11 +26,14 @@
 
 .accordion-panel {
 	padding: 16px $M;
-	// border: 1px solid $primaryColor900;
 	border-radius: $S;
-	// background-color: $neutralColor0;
 	background-color: $neutralColor0Transparency600;
 	box-shadow: $shadowElevationMedium;
+	& h3 {
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }
 
 .accordion h3 {
@@ -47,6 +50,7 @@
 	color: inherit;
 	text-align: left;
 	padding: 0;
+	cursor: inherit;
 }
 
 .accordion-icon-wrapper {
