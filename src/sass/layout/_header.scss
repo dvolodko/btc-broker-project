@@ -38,46 +38,31 @@
 	}
 }
 
-.header-nav-menu-item-services,
-.header-nav-menu-item-about-us,
-.header-nav-menu-item {
+.header-nav-menu-btn {
+	@include flex(flex, center, center);
+	@include font(400, 1rem, 1.5rem, 0);
+	color: $neutralColor950;
 	padding-top: 32px;
 	padding-bottom: 32px;
 	cursor: pointer;
-	& .header-nav-menu-btn {
-		color: $neutralColor950;
-	}
-}
-
-.header-nav-menu-item-services:hover,
-.header-nav-menu-item-services:focus,
-.header-nav-menu-item-about-us:hover,
-.header-nav-menu-item-about-us:focus,
-.header-nav-menu-item:hover,
-.header-nav-menu-item:focus {
-	& .header-nav-menu-btn {
+	border: none;
+	background-color: transparent;
+	text-decoration-color: transparent;
+	transition: color $mainTransitionDuration $mainTransitionTimingFunction,
+		text-decoration-color $mainTransitionDuration $mainTransitionTimingFunction;
+	&:hover,
+	&:focus {
 		color: $accentColor500;
 		text-decoration-line: underline;
 		text-decoration-style: solid;
 		text-decoration-color: $accentColor500;
 		text-decoration-thickness: 1px;
 		text-underline-offset: 2px;
+		& .header-nav-menu-icon {
+			stroke: $accentColor500;
+			rotate: -180deg;
+		}
 	}
-	& .header-nav-menu-icon {
-		stroke: $accentColor500;
-		rotate: -180deg;
-	}
-}
-
-.header-nav-menu-btn {
-	@include flex(flex, center, center);
-	@include font(400, 1rem, 1.5rem, 0);
-	cursor: inherit;
-	border: none;
-	background-color: transparent;
-	text-decoration-color: transparent;
-	transition: color $mainTransitionDuration $mainTransitionTimingFunction,
-		border $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
 .header-nav-menu-icon {

@@ -85,7 +85,9 @@
 
 .header-menu-submenu-link {
 	color: $neutralColor950;
-	transition: color $mainTransitionDuration $mainTransitionTimingFunction;
+	text-decoration-color: transparent;
+	transition: color $mainTransitionDuration $mainTransitionTimingFunction,
+		text-decoration-color $mainTransitionDuration $mainTransitionTimingFunction;
 	&:hover,
 	&:focus {
 		color: $accentColor500;
