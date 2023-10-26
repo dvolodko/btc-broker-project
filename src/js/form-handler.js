@@ -32,16 +32,16 @@ function onFormInput(e) {
 }
 
 function onFormSubmit(e) {
-	e.preventDefault();
+	// e.preventDefault();
 	for (const inputData of e.target) {
 		if (inputData.value) {
 			formData[inputData.name] = inputData.value;
 		}
 	}
-	for (const inputDataToLog in formData) {
-		console.log(inputDataToLog, ": ", formData[inputDataToLog]);
-	}
-	e.currentTarget.reset();
+	// for (const inputDataToLog in formData) {
+	// 	console.log(inputDataToLog, ": ", formData[inputDataToLog]);
+	// }
+	// e.currentTarget.reset();
 	remove(STORAGE_KEY);
 	for (const key in formData) {
 		delete formData[key];
