@@ -27,7 +27,10 @@ $primaryColor950Transparency600: rgba(
 );
 $systemColorError: #f04e02;
 $systemColorLink: #5484dd;
-$systemColorLinkTransparency000: #5484dd00;
+$systemColorLinkTransparency000: rgba(
+	$color: #5484dd,
+	$alpha: 0,
+);
 
 // Others variables
 
