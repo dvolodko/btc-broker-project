@@ -1,3 +1,14 @@
+// const form = document.querySelector(".form-survey");
+// const inputs = form.querySelectorAll("[name]");
+// const namesArray = [];
+// inputs.forEach(node => {
+// 	namesArray.push(node.name);
+// });
+// const filteredArrayNames = namesArray.filter(
+// 	(element, index, array) => array.indexOf(element) === index,
+// );
+// console.log(filteredArrayNames);
+
 // Прихований інпут про Політично значущу особу
 
 const PEPelement = document.querySelector('[aria-labelledby="isPEP"]');
@@ -180,6 +191,8 @@ citizenshipRadioGroup.addEventListener("click", e => {
 	citizenshipHiddenInputsWrapper.style.maxHeight =
 		citizenshipHiddenInputsWrapper.scrollHeight + "px";
 });
+
+// Утилітки
 
 function toShow(inputToShow) {
 	inputToShow.classList.remove("hidden");

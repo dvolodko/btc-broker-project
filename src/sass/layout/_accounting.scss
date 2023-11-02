@@ -15,13 +15,13 @@
 			url("/src/images/svg/bg-shape-yellow-faq-768.svg"),
 			url("/src/images/svg/bg-shape-blue-faq-768.svg");
 		background-position: calc(50% + 256px) calc(50% - 128px),
-			calc(50% - 160px) calc(50% - 64px), calc(50% - 512px) calc(50% + 512px),
-			calc(50% + 128px) calc(50% + 512px);
+			calc(50% - 384px) calc(50% - 128px), calc(50% - 480px) calc(50% + 320px),
+			calc(50% + 128px) calc(50% + 320px);
 	}
 	@include mq(desktop) {
-		background-position: calc(50% + 352px) calc(50% - 224px),
-			calc(50% - 256px) calc(50% - 64px), calc(50% - 736px) calc(50% + 512px),
-			calc(50% + 256px) calc(50% + 512px);
+		background-position: calc(50% + 480px) calc(50% - 224px),
+			calc(50% - 512px) calc(50% - 64px), calc(50% - 736px) calc(50% + 384px),
+			calc(50% + 0px) calc(50% + 320px);
 	}
 }
 
@@ -32,6 +32,10 @@
 
 .accounting-subheader {
 	margin-bottom: $L;
+}
+
+.tabs-content-wrapper {
+	@include flex(flex, space-between, flex-start);
 }
 
 .tabs-list {
@@ -73,10 +77,14 @@
 	font-weight: 600;
 	height: 0;
 	opacity: 0;
-	transition: opacity $doubleTransitionDuration $mainTransitionTimingFunction;
+	transform-origin: top left;
+	transform: translateX(-8px);
+	transition: opacity $doubleTransitionDuration $mainTransitionTimingFunction,
+		transform $doubleTransitionDuration $mainTransitionTimingFunction;
 }
 
 .accounting-pdf-files-list.visible {
+	transform: translateX(0);
 	height: auto;
 	opacity: 1;
 }
@@ -91,4 +99,20 @@
 	stroke-width: 0;
 	stroke: currentColor;
 	fill: currentColor;
+}
+
+.accounting-section-illustration {
+	display: none;
+	@include mq(tablet-S) {
+		display: block;
+		margin-top: 128px;
+		max-width: 352px;
+	}
+	@include mq(tablet-L) {
+		max-width: 384px;
+		margin-right: 64px;
+	}
+	@include mq(desktop) {
+		margin-right: 128px;
+	}
 }

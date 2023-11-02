@@ -6,11 +6,18 @@
 			Для того щоб стати клієнтом БТС Брокер, надайте будь ласка наступну
 			інформацію
 		</h4>
-		<form
+		<!-- <form
 			class="form form-survey"
 			name="register_form"
 			autocomplete="on"
 			action="btc_reg.php"
+			method="post"
+			enctype="multipart/form-data"
+		> -->
+		<form
+			class="form form-survey"
+			name="register_form"
+			autocomplete="on"
 			method="post"
 			enctype="multipart/form-data"
 		>
@@ -270,11 +277,11 @@
 					placeholder="8"
 					title="Введіть номер будинку проживання"
 				/>
-				<label for="appartment" class="form-label">Квартира</label>
+				<label for="apartment" class="form-label">Квартира</label>
 				<input
 					type="text"
-					id="appartment"
-					name="appartment"
+					id="apartment"
+					name="apartment"
 					class="form-input"
 					minlength="1"
 					maxlength="25"
