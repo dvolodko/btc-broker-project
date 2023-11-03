@@ -17,13 +17,17 @@ function switchTab(tabToActivate, activeTab) {
 			tabToActivate.classList.add("active");
 			tabsContent[0].classList.add("visible");
 			tabsContent[1].classList.remove("visible");
-			tabsContent[2].classList.remove("visible");
+			if (tabsContent[2]) {
+				tabsContent[2].classList.remove("visible");
+			}
 			break;
 		case "second":
 			tabToActivate.classList.add("active");
 			tabsContent[0].classList.remove("visible");
 			tabsContent[1].classList.add("visible");
-			tabsContent[2].classList.remove("visible");
+			if (tabsContent[2]) {
+				tabsContent[2].classList.remove("visible");
+			}
 			break;
 		case "third":
 			tabToActivate.classList.add("active");

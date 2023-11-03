@@ -59,6 +59,7 @@
 }
 
 .form-submit-button {
+	cursor: pointer;
 	margin: 0 auto;
 	@include mq(desktop) {
 		width: 256px;
