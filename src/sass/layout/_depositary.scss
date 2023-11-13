@@ -173,7 +173,7 @@
 	box-shadow: $shadowElevationMedium;
 	@include mq(tablet-S) {
 		position: sticky;
-		top: 216px;
+		top: calc(0% + 104px);
 		flex-basis: calc((80% - 1 * $L) / 2);
 	}
 }
