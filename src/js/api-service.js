@@ -1,39 +1,31 @@
-import axios from "axios";
-// const API_KEY = "ed6f703d0e9f91008dbdcbc89334b381";
+const url =
+	"https://personal-proxy-b5e6f7bc49eb.herokuapp.com/https://2btc.7buh.online/kw_api/custom/btc.mobile_datas";
+const url2 =
+	"https://personal-proxy-b5e6f7bc49eb.herokuapp.com/http://217.20.170.109:8469/kw_api/custom/btc.mobile_datas";
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append(
+	"Cookie",
+	"session_id=e49047a2b3b0af393df6ad8bbf55f4a962a8eaa3",
+);
 
-axios.defaults.baseURL = "https://2btc.7buh.online/kw_api/custom";
-axios.defaults.headers.common["Authorization"] = "";
+var raw = JSON.stringify({
+	apartment: "777",
+	firstname: "Denys",
+	lastname: "Volodko",
+	creditor_names: "Монобанк",
+	is_fop: true,
+	postal_code: "77777",
+});
 
-export const getTrendingMovies = async () => {
-	const trendingMovies = `/trending/movie/day?api_key=${API_KEY}`;
-	return get(trendingMovies);
+var requestOptions = {
+	method: "POST",
+	headers: myHeaders,
+	body: raw,
+	redirect: "follow",
 };
 
-export const postFormData = async formData => {
-	return post(formData);
-};
-
-const get = async query => {
-	try {
-		const { data } = await axios.get(query);
-		return data;
-	} catch (error) {
-		console.log(`Request to ${query} threw an error`);
-		console.log(`Error: `, error);
-	}
-};
-
-const post = async formDataObject => {
-	try {
-		const { data } = await axios.post("/btc.mobile_datas", formDataObject, {
-			headers: {
-				"Content-Type": "application/json",
-			},
-		});
-		console.log(data);
-		return data;
-	} catch (error) {
-		console.log(`Request to server threw an error`);
-		console.log(`Error: `, error);
-	}
-};
+fetch(url2, requestOptions)
+	.then(response => response.text())
+	.then(result => console.log(result))
+	.catch(error => console.log("error", error));
