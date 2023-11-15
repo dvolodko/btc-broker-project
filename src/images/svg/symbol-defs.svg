@@ -12,6 +12,16 @@
     <symbol id="icon-circle" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="4" />
     </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <rect width="16" height="2"
+        x="4" y="11" rx="1"
+        transform-origin="center"
+        transform="rotate(45)"/>
+      <rect width="16" height="2"
+        x="4" y="11" rx="1"
+        transform-origin="center"
+        transform="rotate(-45)"/>
+    </symbol>
     <symbol id="icon-warning" viewBox="0 0 24 24">
       <path d="M12 13.12V9.38" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M11.999 16.125C11.861 16.125 11.749 16.237 11.75 16.375C11.75 16.513 11.862 16.625 12 16.625C12.138 16.625 12.25 16.513 12.25 16.375C12.25 16.237 12.138 16.125 11.999 16.125" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
