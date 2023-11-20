@@ -4,6 +4,7 @@
 	"description": "",
 	"homepage": "https://dvolodko.github.io/btc-broker-project/",
 	"scripts": {
+		"cleanup": "rm -r .parcel-cache dist",
 		"start": "parcel src/*.html",
 		"build": "parcel build src/*.html --public-url /btc-broker-project/"
 	},
