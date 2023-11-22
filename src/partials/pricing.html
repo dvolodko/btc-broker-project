@@ -1,0 +1,39 @@
+<section class="pricing-section">
+	<div class="container pricing-container">
+		<h3 class="superheader">Ціни</h3>
+		<h2 class="section-header pricing-header">Тарифи на послуги</h2>
+	</div>
+	<div class="pdf-viewer-section">
+		<div class="pdf-viewer-header">
+			<span>Редакція тарифів БТС Брокер діюча</span>
+			<select name="pricing-date" id="pricing-date">
+				<option value="pricing-2023-09-01">з 2023-09-01</option>
+				<option value="pricing-2023-01-01">з 2023-01-01 по 2023-09-01</option>
+			</select>
+		</div>
+		<object
+			class="pricing-pdf-main"
+			id="pdf-main"
+			data="/src/upload/documents/pricing/pricing-2023-09-01.pdf"
+			type="application/pdf"
+		>
+			<embed
+				class="pricing-pdf-fallback"
+				id="pdf-fallback"
+				src="/src/upload/documents/pricing/pricing-2023-09-01.pdf"
+			/>
+		</object>
+		<p class="text-lorem">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut veritatis
+			libero enim rem ex minima pariatur molestias ab repellat maiores quae
+			deserunt eligendi, ea sit corporis laborum repudiandae dolor. Quidem
+			nostrum ea ex?
+		</p>
+		<iframe
+			class="pricing-pdf-main-mobile"
+			id="pdf-main-mobile"
+			src="/src/upload//documents/pricing/pricing-2023-09-01.pdf"
+			frameborder="0"
+		></iframe>
+	</div>
+</section>
