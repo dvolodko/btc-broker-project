@@ -2,8 +2,6 @@
 	<div class="container pricing-container">
 		<h3 class="superheader">Ціни</h3>
 		<h2 class="section-header pricing-header">Тарифи на послуги</h2>
-	</div>
-	<div class="pdf-viewer-section">
 		<div class="pdf-viewer-header">
 			<span>Редакція тарифів БТС Брокер діюча</span>
 			<select name="pricing-date" id="pricing-date">
@@ -11,29 +9,43 @@
 				<option value="pricing-2023-01-01">з 2023-01-01 по 2023-09-01</option>
 			</select>
 		</div>
+	</div>
+	<div class="pdf-viewer-section">
 		<object
 			class="pricing-pdf-main"
 			id="pdf-main"
-			data="/src/upload/documents/pricing/pricing-2023-09-01.pdf"
+			data="/src/upload/documents/pricing/2023/pricing-2023-09-01.pdf"
 			type="application/pdf"
 		>
-			<embed
+			<!-- <embed
 				class="pricing-pdf-fallback"
 				id="pdf-fallback"
 				src="/src/upload/documents/pricing/pricing-2023-09-01.pdf"
-			/>
+			/> -->
+			<iframe
+				class="pricing-pdf-main-mobile"
+				id="pdf-main-mobile"
+				src="https://new.btc-broker.com/web/viewer.html?file=https%3A%2F%2Fnew.btc-broker.com%2Fpricing-2023-09-01.d1e0bb9b.pdf"
+				frameborder="0"
+			></iframe>
 		</object>
-		<p class="text-lorem">
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut veritatis
-			libero enim rem ex minima pariatur molestias ab repellat maiores quae
-			deserunt eligendi, ea sit corporis laborum repudiandae dolor. Quidem
-			nostrum ea ex?
-		</p>
-		<iframe
-			class="pricing-pdf-main-mobile"
-			id="pdf-main-mobile"
-			src="https://new.btc-broker.com/web/viewer.html?file=https%3A%2F%2Fnew.btc-broker.com%2Fpricing-2023-09-01.d1e0bb9b.pdf"
-			frameborder="0"
-		></iframe>
+		<object
+			class="pricing-pdf-main"
+			id="pdf-main"
+			data="/src/upload/documents/pricing/2023/pricing-2023-01-01.pdf"
+			type="application/pdf"
+		>
+			<!-- <embed
+				class="pricing-pdf-fallback"
+				id="pdf-fallback"
+				src="/src/upload/documents/pricing/pricing-2023-09-01.pdf"
+			/> -->
+			<iframe
+				class="pricing-pdf-main-mobile"
+				id="pdf-main-mobile"
+				src="https://new.btc-broker.com/web/viewer.html?file=https%3A%2F%2Fnew.btc-broker.com%2Fpricing-2023-09-01.d1e0bb9b.pdf"
+				frameborder="0"
+			></iframe>
+		</object>
 	</div>
 </section>
