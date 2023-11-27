@@ -1,14 +1,26 @@
 const documentDateSelector = document.getElementById("pricing-date");
 const pdfViewerMain = document.getElementById("pdf-main");
-const pdfViewerFallback = document.getElementById("pdf-main-mobile");
+const pdfViewerMobile = document.getElementById("pdf-main-mobile");
+const pdfViewerFallback = document.getElementById("pdf-fallback");
+
+pdfViewerMain.setAttribute(
+	"data",
+	"/upload/documents/pricing/2023/pricing-2023-09-01.pdf",
+);
 
 const dateSelectorHandler = event => {
-	console.log(event.currentTarget.value);
 	pdfViewerMain.setAttribute(
 		"data",
 		`/upload/documents/pricing/2023/${event.currentTarget.value}.pdf`,
 	);
-	console.log(pdfViewerMain.data);
+	pdfViewerMobile.setAttribute(
+		"src",
+		`https://new.btc-broker.com/web/viewer.html?file=https%3A%2F%2Fnew.btc-broker.com%2Fupload%2Fdocuments%2Fpricing%2F2023%2F${event.currentTarget.value}.pdf`,
+	);
+	pdfViewerFallback.setAttribute(
+		"src",
+		`/upload/documents/pricing/2023/${event.currentTarget.value}.pdf`,
+	);
 };
 
 documentDateSelector.addEventListener("change", dateSelectorHandler);

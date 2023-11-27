@@ -45,9 +45,34 @@
 }
 
 .pricing-pdf-main,
-.pricing-pdf-fallback,
+.pricing-pdf-fallback {
+	@media (pointer: coarse) {
+		height: 0;
+		width: 0;
+		display: none;
+		visibility: hidden;
+	}
+	@media (pointer: fine), (pointer: none) {
+		display: block;
+		visibility: visible;
+		width: 100%;
+		height: 100%;
+		flex: 1;
+	}
+}
+
 .pricing-pdf-main-mobile {
-	width: 100%;
-	height: 100%;
-	flex: 1;
+	@media (pointer: coarse) {
+		display: block;
+		visibility: visible;
+		width: 100%;
+		height: 100%;
+		flex: 1;
+	}
+	@media (pointer: fine), (pointer: none) {
+		height: 0;
+		width: 0;
+		display: none;
+		visibility: hidden;
+	}
 }
