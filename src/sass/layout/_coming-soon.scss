@@ -1,4 +1,4 @@
-.documents-section {
+.coming-soon-section {
 	padding-top: 88px;
 	background-image: url("/src/images/svg/bg-shape-yellow-faq-390.svg"),
 		url("/src/images/svg/bg-shape-blue-faq-390.svg"),
@@ -25,16 +25,16 @@
 	}
 }
 
-.documents-container {
+.coming-soon-container {
 	padding-top: $L;
 	padding-bottom: $XXL;
 }
 
-.documents-subheader {
+.coming-soon-subheader {
 	margin-bottom: $L;
 }
 
-.documents-content-wrapper {
+.coming-soon-content-wrapper {
 	@include flex(flex, space-between, flex-start);
 	flex-direction: column;
 	gap: $S;
@@ -43,68 +43,10 @@
 	}
 }
 
-.documents-required-documents-wrapper {
+.coming-soon-section-illustration {
 	@include mq(tablet-S) {
-		flex-basis: calc((120% - 1 * $L) / 2);
-	}
-}
-
-.documents-group-title {
-	font-family: $secondaryFontFamily;
-	@include font(700, 1.25rem, 1.5rem, 0);
-	color: $neutralColor950;
-	margin-bottom: $M;
-}
-
-.documents-group-text {
-	margin-bottom: $M;
-}
-
-.documents-documents-requirements-list,
-.documents-documents-list {
-	@include flex(flex, center, flex-start);
-	gap: $S;
-	flex-direction: column;
-	overflow: hidden;
-	font-family: $secondaryFontFamily;
-	font-weight: 600;
-}
-
-.documents-list-done-check-icon {
-	stroke: $accentColor500;
-}
-
-.documents-documents-item {
-	@include flex(flex, center, flex-start);
-	gap: $XS;
-}
-
-.documents-documents-strong-text {
-	font-weight: 700;
-	color: $neutralColor950;
-}
-
-.documents-document-icon {
-	display: block;
-	stroke-width: 0;
-	stroke: currentColor;
-	fill: currentColor;
-}
-
-.documents-section-illustration {
-	display: none;
-	@include mq(tablet-S) {
-		display: block;
-		margin-top: 64px;
-		max-width: 288px;
-	}
-	@include mq(tablet-L) {
-		max-width: 384px;
-		margin-top: 16px;
-		margin-right: 32px;
-	}
-	@include mq(desktop) {
-		margin-top: 0;
-		margin-right: 32px;
+		max-width: 512px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
