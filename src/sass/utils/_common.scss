@@ -5,6 +5,9 @@
 // }
 
 body {
+	display: grid;
+	height: 100vh;
+	grid-template-rows: 1fr auto;
 	min-width: 365px;
 	color: $neutralColor600;
 	font-family: $mainFontFamily;
