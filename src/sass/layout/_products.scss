@@ -60,22 +60,18 @@
 	text-transform: uppercase;
 	@include font(800, 1rem, 1.5rem, 0);
 	border-radius: $S;
-	// border: 1px solid $primaryColor900;
 	border: none;
 	padding: $M 0;
-	// background-color: $neutralColor0;
 	background-color: $neutralColor0Transparency600;
 	box-shadow: $shadowElevationMedium;
 	transition: color $mainTransitionDuration $mainTransitionTimingFunction,
 		background-color $mainTransitionDuration $mainTransitionTimingFunction,
-		box-shadow $mainTransitionDuration $mainTransitionTimingFunction,
-		transform $mainTransitionDuration $mainTransitionTimingFunction;
+		box-shadow $mainTransitionDuration $mainTransitionTimingFunction;
 	&:hover,
 	&:focus {
 		cursor: pointer;
 		color: $primaryColor100;
 		background-color: $primaryColor950;
-		transform: scale(0.994);
 		box-shadow: $shadowElevationLow;
 	}
 	@include mq(tablet-S) {
@@ -84,17 +80,31 @@
 	@include mq(tablet-L) {
 		height: 100%;
 	}
-}
-
-.shares-button {
-	color: $primaryColor100;
-	background-color: $primaryColor950;
+	&.active {
+		color: $primaryColor100;
+		background-color: $primaryColor950;
+		& .shares-button-icon-layer1,
+		& .bonds-button-icon-layer2,
+		& .depositary-button-icon-layer1,
+		& .repo-button-icon-layer-accent {
+			fill: $primaryColor700;
+		}
+		& .shares-button-icon-layer3,
+		& .bonds-button-icon-layer1,
+		& .bonds-button-icon-vector1,
+		& .depositary-button-icon-vector9,
+		& .depositary-button-icon-layer5,
+		& .repo-button-icon-layer-neutral,
+		& .repo-button-icon-vector5 {
+			fill: $primaryColor100;
+		}
+	}
 }
 
 .shares-button-icon,
 .bonds-button-icon,
 .depositary-button-icon,
-.repositary-button-icon {
+.repo-button-icon {
 	margin: 0 auto $XS;
 }
 
@@ -104,48 +114,40 @@
 	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-// .shares-button-icon-layer1,
+.shares-button-icon-layer1,
 .bonds-button-icon-layer2,
 .depositary-button-icon-layer1,
-.repositary-button-icon-layer-accent {
+.repo-button-icon-layer-accent {
 	fill: $primaryColor400;
 	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-// .shares-button-icon-layer3,
+.shares-button-icon-layer3,
 .bonds-button-icon-vector1,
 .depositary-button-icon-vector9,
-.repositary-button-icon-layer-neutral {
+.repo-button-icon-layer-neutral {
 	fill: $neutralColor600;
 	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.repositary-button-icon-vector5 {
+.repo-button-icon-vector5 {
 	fill: $neutralColor500;
 	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.shares-button .shares-button-icon-layer1 {
-	fill: $primaryColor700;
-}
-
-.shares-button .shares-button-icon-layer3 {
-	fill: $primaryColor100;
-}
-
-// .shares-button:hover .shares-button-icon-layer1,
-// .shares-button:focus .shares-button-icon-layer1,
+.shares-button:hover .shares-button-icon-layer1,
+.shares-button:focus .shares-button-icon-layer1,
 .bonds-button:hover .bonds-button-icon-layer2,
 .bonds-button:focus .bonds-button-icon-layer2,
 .depositary-button:hover .depositary-button-icon-layer1,
 .depositary-button:focus .depositary-button-icon-layer1,
-.repositary-button:hover .repositary-button-icon-layer-accent,
-.repositary-button:focus.repositary-button-icon-layer-accent {
+.repo-button:hover .repo-button-icon-layer-accent,
+.repo-button:focus.repo-button-icon-layer-accent {
 	fill: $primaryColor700;
 }
 
-// .shares-button:hover .shares-button-icon-layer3,
-// .shares-button:focus .shares-button-icon-layer3,
+.shares-button:hover .shares-button-icon-layer3,
+.shares-button:focus .shares-button-icon-layer3,
 .bonds-button:hover .bonds-button-icon-vector1,
 .bonds-button:focus .bonds-button-icon-vector1,
 .bonds-button:hover .bonds-button-icon-layer1,
@@ -154,20 +156,32 @@
 .depositary-button:focus .depositary-button-icon-vector9,
 .depositary-button:hover .depositary-button-icon-layer5,
 .depositary-button:focus .depositary-button-icon-layer5,
-.repositary-button:hover .repositary-button-icon-layer-neutral,
-.repositary-button:focus .repositary-button-icon-layer-neutral,
-.repositary-button:hover .repositary-button-icon-vector5,
-.repositary-button:focus .repositary-button-icon-vector5 {
+.repo-button:hover .repo-button-icon-layer-neutral,
+.repo-button:focus .repo-button-icon-layer-neutral,
+.repo-button:hover .repo-button-icon-vector5,
+.repo-button:focus .repo-button-icon-vector5 {
 	fill: $primaryColor100;
 }
 
 .products-description-container {
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transform-origin: top left;
+	transform: translateX(-8px);
+	transition: opacity $doubleTransitionDuration $mainTransitionTimingFunction,
+		transform $doubleTransitionDuration $mainTransitionTimingFunction;
 	@include mq(tablet-S) {
 		max-width: 662px;
 	}
 	@include mq(tablet-L) {
 		flex-basis: calc((100% - 1 * $M) / 2);
 		padding-left: $M;
+	}
+	&.visible {
+		transform: translateX(0);
+		height: auto;
+		opacity: 1;
 	}
 }
 

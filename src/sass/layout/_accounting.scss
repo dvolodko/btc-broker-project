@@ -81,12 +81,11 @@
 	transform: translateX(-8px);
 	transition: opacity $doubleTransitionDuration $mainTransitionTimingFunction,
 		transform $doubleTransitionDuration $mainTransitionTimingFunction;
-}
-
-.accounting-pdf-files-list.visible {
-	transform: translateX(0);
-	height: auto;
-	opacity: 1;
+	&.visible {
+		transform: translateX(0);
+		height: auto;
+		opacity: 1;
+	}
 }
 
 .accounting-pdf-files-item {

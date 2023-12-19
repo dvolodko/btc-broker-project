@@ -15,7 +15,7 @@ const dateSelectorHandler = event => {
 	);
 	pdfViewerMobile.setAttribute(
 		"src",
-		`https://new.btc-broker.com/web/viewer.html?file=https%3A%2F%2Fnew.btc-broker.com%2Fupload%2Fdocuments%2Fpricing%2F2023%2F${event.currentTarget.value}.pdf`,
+		`https://btc-broker.com/web/viewer.html?file=https%3A%2F%2Fbtc-broker.com%2Fupload%2Fdocuments%2Fpricing%2F2023%2F${event.currentTarget.value}.pdf`,
 	);
 	pdfViewerFallback.setAttribute(
 		"src",

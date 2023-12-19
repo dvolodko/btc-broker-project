@@ -2,7 +2,11 @@
 	<div class="container products-container">
 		<ul class="products-buttons-list">
 			<li class="products-buttons-item">
-				<button class="products-button shares-button is-active" type="button">
+				<button
+					class="products-button shares-button"
+					data-option="shares"
+					type="button"
+				>
 					<svg
 						class="shares-button-icon"
 						width="93"
@@ -38,7 +42,11 @@
 				</button>
 			</li>
 			<li class="products-buttons-item">
-				<button class="products-button bonds-button" type="button">
+				<button
+					class="products-button bonds-button active"
+					data-option="bonds"
+					type="button"
+				>
 					<svg
 						class="bonds-button-icon"
 						width="81"
@@ -107,7 +115,11 @@
 				</button>
 			</li>
 			<li class="products-buttons-item">
-				<button class="products-button depositary-button" type="button">
+				<button
+					class="products-button depositary-button"
+					data-option="depositary"
+					type="button"
+				>
 					<svg
 						class="depositary-button-icon"
 						width="81"
@@ -168,9 +180,13 @@
 				</button>
 			</li>
 			<li class="products-buttons-item">
-				<button class="products-button repositary-button" type="button">
+				<button
+					class="products-button repo-button"
+					data-option="repo"
+					type="button"
+				>
 					<svg
-						class="repositary-button-icon"
+						class="repo-button-icon"
 						width="81"
 						height="80"
 						viewBox="0 0 81 80"
@@ -178,7 +194,7 @@
 						xmlns="http://www.w3.org/2000/svg"
 					>
 						<g id="Bar Chart_Line 1">
-							<g id="Layer 10" class="repositary-button-icon-layer-accent">
+							<g id="Layer 10" class="repo-button-icon-layer-accent">
 								<path
 									id="Vector"
 									d="M24.0681 38.5264H18.3081V59.728H24.0681V38.5264Z"
@@ -196,10 +212,10 @@
 									d="M65.273 27.9728H59.2666V59.728H65.273V27.9728Z"
 								/>
 							</g>
-							<g id="Layer 3" class="repositary-button-icon-layer-neutral">
+							<g id="Layer 3" class="repo-button-icon-layer-neutral">
 								<path
 									id="Vector_5"
-									class="repositary-button-icon-vector5"
+									class="repo-button-icon-vector5"
 									d="M72.3273 68.6736H12.6937C12.3967 68.6736 12.1118 68.5556 11.9018 68.3456C11.6917 68.1355 11.5737 67.8507 11.5737 67.5536V14.5056C11.5737 14.2086 11.6917 13.9237 11.9018 13.7137C12.1118 13.5036 12.3967 13.3856 12.6937 13.3856C12.9908 13.3856 13.2756 13.5036 13.4857 13.7137C13.6957 13.9237 13.8137 14.2086 13.8137 14.5056V66.4336H72.3273C72.6244 66.4336 72.9092 66.5516 73.1193 66.7617C73.3293 66.9717 73.4473 67.2566 73.4473 67.5536C73.4473 67.8507 73.3293 68.1355 73.1193 68.3456C72.9092 68.5556 72.6244 68.6736 72.3273 68.6736Z"
 								/>
 								<path
@@ -229,23 +245,83 @@
 				</button>
 			</li>
 		</ul>
-		<div class="products-description-container">
-			<h3 class="superheader">Актуально</h3>
-			<h2 class="section-header products-description-header">
-				ОВДП — військові облігації
-			</h2>
-			<h4 class="subheader products-description-subheader">
-				Інвестиційний інструмент підтримки державного бюджету, доступний для
-				громадян, бізнесу та іноземних інвесторів.
-			</h4>
-			<p class="products-description-text">
-				Кошти від облігацій, залучені в Державний бюджет України,
-				використовуються на безперебійне забезпечення фінансових потреб держави
-				в умовах воєнного стану – соціальні та оборонні.
-			</p>
-			<a href="/coming-soon" class="button-primary products-description-button"
-				>Детальніше</a
-			>
+		<div class="products-description-wrapper">
+			<div class="products-description-container">
+				<h3 class="superheader">Традиційно</h3>
+				<h2 class="section-header products-description-header">Акції</h2>
+				<h4 class="subheader products-description-subheader">
+					Акція це інвестиційний інструмент, який випускає акціонерне
+					товариство, тобто – компанія-емітент.
+				</h4>
+				<p class="products-description-text">
+					Усі інвестори, які купують акції, стають співвласниками компанії.
+					Акція є підтвердженням, що її власник володіє частиною компанії,
+					навіть якщо це досить мала частка. Акції є ризиковим інструментом,
+					оскільки їх ціна може змінюватись. Також, по деяким акціям
+					виплачуються дивіденди.
+				</p>
+				<a
+					href="/coming-soon"
+					class="button-primary products-description-button"
+					>Детальніше</a
+				>
+			</div>
+			<div class="products-description-container visible">
+				<h3 class="superheader">Актуально</h3>
+				<h2 class="section-header products-description-header">
+					ОВДП — військові облігації
+				</h2>
+				<h4 class="subheader products-description-subheader">
+					Інвестиційний інструмент підтримки державного бюджету, доступний для
+					громадян, бізнесу та іноземних інвесторів.
+				</h4>
+				<p class="products-description-text">
+					Кошти від облігацій, залучені в Державний бюджет України,
+					використовуються на безперебійне забезпечення фінансових потреб
+					держави в умовах воєнного стану – соціальні та оборонні.
+				</p>
+				<a
+					href="/coming-soon"
+					class="button-primary products-description-button"
+					>Детальніше</a
+				>
+			</div>
+			<div class="products-description-container">
+				<h3 class="superheader">Послуги</h3>
+				<h2 class="section-header products-description-header">
+					Депозитарна установа
+				</h2>
+				<h4 class="subheader products-description-subheader">
+					Депозитарна установа – професійний учасник ринку капіталів.
+				</h4>
+				<p class="products-description-text">
+					Надає послуги із зберігання та обліку цінних паперів, обліку і
+					обслуговування набуття, припинення та переходу прав на цінні папери.
+					Купуючи цінні папери, ви маєте зберігати їх в ліцензованій
+					депозитарній установі, такій як БТС Брокер.
+				</p>
+				<a href="/depositary" class="button-primary products-description-button"
+					>Детальніше</a
+				>
+			</div>
+			<div class="products-description-container">
+				<h3 class="superheader">Додатково</h3>
+				<h2 class="section-header products-description-header">Репо</h2>
+				<h4 class="subheader products-description-subheader">
+					Угода РЕПО це продаж цінних паперів із зобов'язанням зворотного
+					викупу, тобто операція репо насправді складається з двох операцій
+					купівлі-продажу.
+				</h4>
+				<p class="products-description-text">
+					За своєю економічною суттю операція РЕПО — це кредитна операція, в
+					якій цінні папери використовуються як забезпечення.
+				</p>
+				<a
+					href="/coming-soon"
+					class="button-primary products-description-button"
+					>Детальніше</a
+				>
+			</div>
 		</div>
 	</div>
 </section>
