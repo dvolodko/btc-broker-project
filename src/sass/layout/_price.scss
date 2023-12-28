@@ -38,6 +38,7 @@
 	flex-direction: column;
 	gap: $L;
 	padding-top: $L;
+	padding-bottom: $L;
 	@include mq(tablet-S) {
 		padding-top: $XL;
 		padding-bottom: $XL;

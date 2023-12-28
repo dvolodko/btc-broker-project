@@ -69,7 +69,6 @@ function scrollIntoViewHelper(element) {
 
 function isInViewport(element) {
 	const rect = element.getBoundingClientRect();
-	console.log(rect.top);
 	return rect.top <= 692;
 }
 

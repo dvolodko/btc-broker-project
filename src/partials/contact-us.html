@@ -53,6 +53,7 @@
 			</div>
 			<form
 				class="form form-contact-us"
+				id="contact-us-form"
 				name="contact-us-form"
 				autocomplete="on"
 				action="/btc_contact_us_form.php"
@@ -139,7 +140,13 @@
 						title="Введіть Ваше повідомлення"
 					></textarea>
 				</div>
-				<button type="submit" class="button-primary form-submit-button">
+				<button
+					type="submit"
+					class="button-primary form-submit-button g-recaptcha"
+					data-sitekey="6Lf87j0pAAAAANXp3uc317YwXomuR7zOpo7VZk5k"
+					data-callback="onSubmit"
+					data-action="submit"
+				>
 					Поставити питання
 				</button>
 			</form>
