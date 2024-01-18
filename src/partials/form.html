@@ -102,9 +102,9 @@
 					>Дата народження</label
 				>
 				<input
-					id="birth-date"
+					id="birthDate"
 					type="text"
-					name="birth-date"
+					name="birthDate"
 					class="form-input"
 					required
 					placeholder="yyyy-mm-dd"
@@ -115,9 +115,9 @@
 					>Місце народження</label
 				>
 				<input
-					id="birth-place"
+					id="birthPlace"
 					type="text"
-					name="birth-place"
+					name="birthPlace"
 					class="form-input"
 					maxlength="40"
 					required
@@ -187,8 +187,8 @@
 					>
 					<input
 						type="text"
-						id="PEP-info"
-						name="PEP-info"
+						id="PEPInfo"
+						name="PEPInfo"
 						class="form-input hidden"
 						minlength="2"
 						maxlength="100"
@@ -206,8 +206,8 @@
 				<label for="postal-code" class="form-label">Індекс</label
 				><input
 					type="text"
-					id="postal-code"
-					name="postal-code"
+					id="postalCode"
+					name="postalCode"
 					class="form-input"
 					maxlength="5"
 					autocomplete="postal-code"
@@ -338,7 +338,11 @@
 				<label for="citizenship-country" class="form-label required"
 					>Країна</label
 				>
-				<select class="form-input" name="country" id="citizenship-country">
+				<select
+					class="form-input"
+					name="citizenship-country"
+					id="citizenship-country"
+				>
 					<include src="./partials/countries.html"></include>
 				</select>
 				<div class="form-group-radio">
