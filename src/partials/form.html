@@ -335,13 +335,13 @@
 			</div>
 			<div class="form-group" role="group" aria-labelledby="citizenship">
 				<h2 class="form-group-title" id="citizenship">Громадянство</h2>
-				<label for="citizenship-country" class="form-label required"
+				<label for="citizenshipCountry" class="form-label required"
 					>Країна</label
 				>
 				<select
 					class="form-input"
-					name="citizenship-country"
-					id="citizenship-country"
+					name="citizenshipCountry"
+					id="citizenshipCountry"
 				>
 					<include src="./partials/countries.html"></include>
 				</select>
@@ -351,7 +351,7 @@
 						<input
 							id="is-passport-type-id-card"
 							type="radio"
-							name="passport-type"
+							name="passportType"
 							class="form-input-radio"
 							required
 							value="ID card"
@@ -365,7 +365,7 @@
 						<input
 							id="is-passport-type-passport"
 							type="radio"
-							name="passport-type"
+							name="passportType"
 							class="form-input-radio"
 							required
 							value="passport"
@@ -379,7 +379,7 @@
 						<input
 							id="is-passport-type-foreign-passport"
 							type="radio"
-							name="passport-type"
+							name="passportType"
 							class="form-input-radio"
 							required
 							value="foreign passport"
@@ -395,7 +395,7 @@
 						<input
 							id="is-passport-type-other"
 							type="radio"
-							name="passport-type"
+							name="passportType"
 							class="form-input-radio"
 							required
 							value="other"
@@ -408,13 +408,13 @@
 				</div>
 				<div class="hidden-inputs-wrapper">
 					<div class="passport-name-wrapper">
-						<label for="passport-name" class="form-label required hidden"
+						<label for="passportName" class="form-label required hidden"
 							>Назва документу</label
 						>
 						<input
 							type="text"
-							id="passport-name"
-							name="passport-name"
+							id="passportName"
+							name="passportName"
 							class="form-input hidden"
 							minlength="2"
 							maxlength="50"
@@ -424,13 +424,13 @@
 						/>
 					</div>
 					<div class="passport-code-wrapper">
-						<label for="passport-code" class="form-label required hidden"
+						<label for="passportCode" class="form-label required hidden"
 							>Серія</label
 						>
 						<input
 							type="text"
-							id="passport-code"
-							name="passport-code"
+							id="passportCode"
+							name="passportCode"
 							class="form-input hidden"
 							minlength="2"
 							maxlength="2"
@@ -439,13 +439,13 @@
 							title="Введіть серію документу"
 						/>
 					</div>
-					<label for="passport-number" class="form-label required hidden"
+					<label for="passportNumber" class="form-label required hidden"
 						>Номер</label
 					>
 					<input
 						type="text"
-						id="passport-number"
-						name="passport-number"
+						id="passportNumber"
+						name="passportNumber"
 						class="form-input hidden"
 						minlength="9"
 						maxlength="9"
@@ -454,13 +454,13 @@
 						placeholder="012345678"
 						title="Введіть номер ID картки. 9 цифр"
 					/>
-					<label for="passport-issued" class="form-label required hidden"
+					<label for="passportIssued" class="form-label required hidden"
 						>Ким видано</label
 					>
 					<input
 						type="text"
-						id="passport-issued"
-						name="passport-issued"
+						id="passportIssued"
+						name="passportIssued"
 						class="form-input hidden"
 						minlength="2"
 						maxlength="100"
@@ -468,13 +468,13 @@
 						placeholder="0123"
 						title="Вкажіть орган що видав документ"
 					/>
-					<label for="passport-date" class="form-label required hidden"
+					<label for="passportDate" class="form-label required hidden"
 						>Дата видачі</label
 					>
 					<input
 						type="text"
-						id="passport-date"
-						name="passport-date"
+						id="passportDate"
+						name="passportDate"
 						class="form-input hidden"
 						required
 						pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
@@ -482,12 +482,12 @@
 						title="Введіть дату видачі документу"
 					/>
 					<div class="passport-date-expired-wrapper">
-						<label for="passport-date-expired" class="form-label hidden"
+						<label for="passportDateExpired" class="form-label hidden"
 							>Термін дії (за наявності)</label
 						><input
 							type="text"
-							id="passport-date-expired"
-							name="passport-date-expired"
+							id="passportDateExpired"
+							name="passportDateExpired"
 							class="form-input hidden"
 							pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
 							placeholder="yyyy-mm-dd"
@@ -531,13 +531,13 @@
 				<h2 class="form-group-title" id="financial-status">
 					Інформація щодо фінансового стану фізичної особи та змісту діяльності:
 				</h2>
-				<label for="personal-assets" class="form-label required"
+				<label for="personalAssets" class="form-label required"
 					>Власні кошти, грн</label
 				>
 				<input
 					type="text"
-					id="personal-assets"
-					name="personal-assets"
+					id="personalAssets"
+					name="personalAssets"
 					class="form-input"
 					minlength="1"
 					maxlength="10"
@@ -546,14 +546,14 @@
 					placeholder="1000000"
 					title="Введіть сумарну кількість коштів, якими ви наразі володієте"
 				/>
-				<label for="entrepreneurship-income" class="form-label required"
+				<label for="entrepreneurshipIncome" class="form-label required"
 					>Дохід від підприємницької діяльності (за останні 6 місяців,
 					грн)</label
 				>
 				<input
 					type="text"
-					id="entrepreneurship-income"
-					name="entrepreneurship-income"
+					id="entrepreneurshipIncome"
+					name="entrepreneurshipIncome"
 					class="form-input"
 					minlength="1"
 					maxlength="10"
@@ -570,7 +570,7 @@
 						<input
 							id="is-half-annual-salary-zero"
 							type="radio"
-							name="half-annual-salary"
+							name="halfAnnualSalary"
 							class="form-input-radio"
 							required
 							value="zero"
@@ -584,7 +584,7 @@
 						<input
 							id="is-half-annual-salary-less-than-60000"
 							type="radio"
-							name="half-annual-salary"
+							name="halfAnnualSalary"
 							class="form-input-radio"
 							required
 							value="less-than-60000"
@@ -600,7 +600,7 @@
 						<input
 							id="is-half-annual-salary-more-than-60000"
 							type="radio"
-							name="half-annual-salary"
+							name="halfAnnualSalary"
 							class="form-input-radio"
 							required
 							value="more-than-60000"
@@ -616,7 +616,7 @@
 						<input
 							id="is-half-annual-salary-more-than-200000"
 							type="radio"
-							name="half-annual-salary"
+							name="halfAnnualSalary"
 							class="form-input-radio"
 							required
 							value="more-than-200000"
@@ -629,13 +629,13 @@
 						>
 					</div>
 				</div>
-				<label for="half-annual-gifts-income" class="form-label required"
+				<label for="halfAnnualGiftsIncome" class="form-label required"
 					>Дохід від дарування (за останні 6 місяців, грн)</label
 				>
 				<input
 					type="text"
-					id="half-annual-gifts-income"
-					name="half-annual-gifts-income"
+					id="halfAnnualGiftsIncome"
+					name="halfAnnualGiftsIncome"
 					class="form-input"
 					minlength="1"
 					maxlength="10"
@@ -653,7 +653,7 @@
 						<input
 							id="is-half-annual-deposit-interest-zero"
 							type="radio"
-							name="half-annual-deposit-interest"
+							name="halfAnnualDepositInterest"
 							class="form-input-radio"
 							required
 							value="zero"
@@ -669,7 +669,7 @@
 						<input
 							id="is-half-annual-deposit-interest-less-than-10000"
 							type="radio"
-							name="half-annual-deposit-interest"
+							name="halfAnnualDepositInterest"
 							class="form-input-radio"
 							required
 							value="less-than-10000"
@@ -685,7 +685,7 @@
 						<input
 							id="is-half-annual-deposit-interest-more-than-10000"
 							type="radio"
-							name="half-annual-deposit-interest"
+							name="halfAnnualDepositInterest"
 							class="form-input-radio"
 							required
 							value="more-than-10000"
@@ -698,14 +698,14 @@
 						>
 					</div>
 				</div>
-				<label for="half-annual-law-agree-income" class="form-label required"
+				<label for="halfAnnualLawAgreeIncome" class="form-label required"
 					>Дохід від цивільно-правових угод (наприклад купівля – продаж, оренда,
 					підряд, тощо) за останні 6 місяців, грн</label
 				>
 				<input
 					type="text"
-					id="half-annual-law-agree-income"
-					name="half-annual-law-agree-income"
+					id="halfAnnualLawAgreeIncome"
+					name="halfAnnualLawAgreeIncome"
 					class="form-input"
 					minlength="1"
 					maxlength="10"
@@ -714,16 +714,14 @@
 					placeholder="1000000"
 					title="Введіть кількість коштів, які Ви отримали в якості доходу від цивільно-правових угод за останні 6 місяців"
 				/>
-				<label
-					for="half-annual-court-decision-income"
-					class="form-label required"
+				<label for="halfAnnualCourtDecisionIncome" class="form-label required"
 					>Дохід від компенсаційних виплат та виплат за рішенням суду (за
 					останні 6 місяців)</label
 				>
 				<input
 					type="text"
-					id="half-annual-court-decision-income"
-					name="half-annual-court-decision-income"
+					id="halfAnnualCourtDecisionIncome"
+					name="halfAnnualCourtDecisionIncome"
 					class="form-input"
 					minlength="1"
 					maxlength="10"
@@ -732,13 +730,13 @@
 					placeholder="1000000"
 					title="Введіть кількість коштів, які Ви отримали в якості компенсаційних виплат та виплат за рішенням суду за останні 6 місяців"
 				/>
-				<label for="borrow-money-amount" class="form-label required"
+				<label for="borrowMoneyAmount" class="form-label required"
 					>Розмір запозичених коштів, грн</label
 				>
 				<input
 					type="text"
-					id="borrow-money-amount"
-					name="borrow-money-amount"
+					id="borrowMoneyAmount"
+					name="borrowMoneyAmount"
 					class="form-input"
 					minlength="1"
 					maxlength="10"
@@ -747,22 +745,22 @@
 					placeholder="1000"
 					title="Введіть кількість коштів, які Ви запозичили"
 				/>
-				<label for="creditor-names" class="form-label"
+				<label for="creditorNames" class="form-label"
 					>Найменування кредитора (кредиторів)</label
 				>
 				<input
 					type="text"
-					id="creditor-names"
-					name="creditor-names"
+					id="creditorNames"
+					name="creditorNames"
 					class="form-input"
 					placeholder="Перший національний банк"
 					title="Введіть найменування кредиторів, якщо такі є"
 				/>
-				<label for="other-income" class="form-label">Інші джерела</label>
+				<label for="otherIncome" class="form-label">Інші джерела</label>
 				<input
 					type="text"
-					id="other-income"
-					name="other-income"
+					id="otherIncome"
+					name="otherIncome"
 					class="form-input"
 					minlength="1"
 					maxlength="10"
@@ -777,75 +775,71 @@
 				</h2>
 				<div class="checkbox-wrapper">
 					<input
-						id="is-US-tax-residence"
+						id="isUSTaxResidence"
 						type="checkbox"
-						name="is-US-tax-residence"
+						name="isUSTaxResidence"
 						class="form-input-checkbox"
 						value="true"
 						title="Поставте позначку якщо Ви податковий резидент Сполучених Штатів Америки"
 					/>
-					<label for="is-US-tax-residence" class="form-label-checkbox"
+					<label for="isUSTaxResidence" class="form-label-checkbox"
 						>Чи є Ви податковим резидентом США? (Позначте, якщо так)</label
 					>
 				</div>
 				<div class="checkbox-wrapper above-hidden">
 					<input
-						id="is-nonUkraine-tax-residence"
+						id="isNonUkraineTaxResidence"
 						type="checkbox"
-						name="is-nonUkraine-tax-residence"
+						name="isNonUkraineTaxResidence"
 						class="form-input-checkbox"
 						value="true"
 						title="Поставте позначку якщо Ви податковий резидент іншої країни"
 					/>
-					<label for="is-nonUkraine-tax-residence" class="form-label-checkbox"
+					<label for="isNonUkraineTaxResidence" class="form-label-checkbox"
 						>Чи є Ви податковим резидентом іншої іноземної країни? (Позначте,
 						якщо так)</label
 					>
 				</div>
 				<div class="hidden-inputs-wrapper">
-					<label for="tax-residence-country" class="form-label hidden"
+					<label for="taxResidenceCountry" class="form-label hidden"
 						>Реквізити документів, що підтверджують податкове резидентство іншої
 						країни</label
 					>
 					<select
 						class="form-input hidden"
-						name="tax-residence-country"
-						id="tax-residence-country"
+						name="taxResidenceCountry"
+						id="taxResidenceCountry"
 					>
 						<include src="./partials/countries.html"></include>
 					</select>
 					<p>Підтверджуючій документ</p>
-					<label for="tax-document-name" class="form-label hidden">Назва</label>
+					<label for="taxDocumentName" class="form-label hidden">Назва</label>
 					<input
 						type="text"
-						id="tax-document-name"
-						name="tax-document-name"
+						id="taxDocumentName"
+						name="taxDocumentName"
 						class="form-input hidden"
 						minlength="2"
 						maxlength="25"
 						placeholder="Документ"
 						title="Введіть назву документу"
 					/>
-					<label for="tax-document-serial" class="form-label hidden"
-						>Серія</label
-					>
+					<label for="taxDocumentSerial" class="form-label hidden">Серія</label>
 					<input
 						type="text"
-						id="tax-document-serial"
-						name="tax-document-serial"
+						id="taxDocumentSerial"
+						name="taxDocumentSerial"
 						class="form-input hidden"
 						minlength="1"
 						maxlength="25"
 						placeholder="Серія"
 						title="Введіть серію документу"
 					/>
-					<label for="tax-document-number" class="form-label hidden"
-						>Номер</label
-					>
+					<label for="taxDocumentNumber" class="form-label hidden">Номер</label>
 					<input
 						type="text"
-						id="tax-document-number"
-						name="tax-document-number"
+						id="taxDocumentNumber"
+						name="taxDocumentNumber"
 						class="form-input hidden"
 						minlength="1"
 						maxlength="25"
@@ -1002,15 +996,15 @@
 				</h2>
 				<div class="checkbox-wrapper">
 					<input
-						id="depositary-service"
+						id="depositaryService"
 						type="checkbox"
-						name="depositary-service"
+						name="depositaryService"
 						class="form-input-checkbox"
 						checked
 						value="true"
 						title="Оберіть які послуги Вас цікавлять"
 					/>
-					<label for="depositary-service" class="form-label-checkbox"
+					<label for="depositaryService" class="form-label-checkbox"
 						>Депозитарні послуги</label
 					>
 				</div>

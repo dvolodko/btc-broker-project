@@ -138,7 +138,8 @@
 	display: block;
 }
 
-.form-label.hidden[for="PEP-info"] {
+.form-label.hidden[for="PEP-info"],
+.form-label.hidden[for="taxResidenceCountry"] {
 	padding-top: $M;
 }
 

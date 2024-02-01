@@ -67,9 +67,9 @@ const taxResidenceElement = document.querySelector(
 const taxResidenceHiddenInputsWrapper = taxResidenceElement.querySelector(
 	".hidden-inputs-wrapper",
 );
-const USTaxResidentInput = document.getElementById("is-US-tax-residence");
+const USTaxResidentInput = document.getElementById("isUSTaxResidence");
 const nonUkraineTaxResidentInput = document.getElementById(
-	"is-nonUkraine-tax-residence",
+	"isNonUkraineTaxResidence",
 );
 const countryUkraine = taxResidenceElement.querySelector('[value="UA"]');
 const countryUS = taxResidenceElement.querySelector('[value="US"]');
@@ -124,9 +124,9 @@ const passportCodeInputWrapper = citizenshipElement.querySelector(
 const passportDateExpiredInput = citizenshipElement.querySelector(
 	".passport-date-expired-wrapper",
 );
-const passportIssuedInput = document.getElementById("passport-issued");
-const passportNumberInput = document.getElementById("passport-number");
-const passportCodeInput = document.getElementById("passport-code");
+const passportIssuedInput = document.getElementById("passportIssued");
+const passportNumberInput = document.getElementById("passportNumber");
+const passportCodeInput = document.getElementById("passportCode");
 
 citizenshipRadioGroup.addEventListener("click", e => {
 	const checkedRadio = e.target.closest(".form-input-radio:checked");
