@@ -124,6 +124,17 @@
 	margin-bottom: $L;
 }
 
+.form-annotation {
+	font-size: 12px;
+	line-height: 1.4;
+	font-style: italic;
+	color: $neutralColor950;
+}
+
+.form-annotation-strong {
+	font-weight: 700;
+}
+
 .checkbox-wrapper.above-hidden {
 	margin-bottom: 0;
 }
