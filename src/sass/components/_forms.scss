@@ -122,6 +122,12 @@
 
 .form-group-radio {
 	margin-bottom: $L;
+	&.last-child {
+		margin-bottom: 0;
+	}
+	&.first-child {
+		margin-top: $L;
+	}
 }
 
 .form-annotation {
@@ -149,7 +155,6 @@
 	display: block;
 }
 
-.form-label.hidden[for="PEP-info"],
 .form-label.hidden[for="taxResidenceCountry"] {
 	padding-top: $M;
 }
