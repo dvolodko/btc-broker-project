@@ -57,6 +57,10 @@
 			color: $primaryColor950;
 		}
 	}
+	&.file {
+		width: 100%;
+		margin-bottom: $L;
+	}
 }
 
 .form-input:not(:last-child) {
