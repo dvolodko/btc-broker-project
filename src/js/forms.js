@@ -9,25 +9,25 @@
 // );
 // console.log(filteredArrayNames);
 
-// Прихований інпут про Політично значущу особу
+// Прихований блок інпутів про Політично значущу особу
 
 const PEPelement = document.querySelector('[aria-labelledby="isPEP"]');
 const PEPTrueElement = document.getElementById("isPEPtrue");
 const PEPHiddenInputWrapper = PEPelement.querySelector(
 	".hidden-inputs-wrapper",
 );
-const hiddenLabel = PEPHiddenInputWrapper.querySelector("label");
-const hiddenInput = PEPHiddenInputWrapper.querySelector("input");
+// const hiddenLabel = PEPHiddenInputWrapper.querySelector("label");
+// const hiddenInput = PEPHiddenInputWrapper.querySelector("input");
 
 if (PEPTrueElement.checked) {
-	toExpandArea(PEPHiddenInputWrapper, hiddenLabel, hiddenInput);
+	toExpandArea(PEPHiddenInputWrapper);
 }
 
 PEPelement.addEventListener("click", () => {
 	if (PEPTrueElement.checked) {
-		toExpandArea(PEPHiddenInputWrapper, hiddenLabel, hiddenInput);
+		toExpandArea(PEPHiddenInputWrapper);
 	} else {
-		toCollapseArea(PEPHiddenInputWrapper, hiddenLabel, hiddenInput);
+		toCollapseArea(PEPHiddenInputWrapper);
 	}
 });
 
@@ -264,12 +264,12 @@ function toChangeAttributes(
 
 function toExpandArea(areaToExpand, labelToExpand, inputToExpand) {
 	areaToExpand.style.maxHeight = areaToExpand.scrollHeight + "px";
-	labelToExpand.classList.add("required");
-	inputToExpand.setAttribute("required", true);
+	// labelToExpand.classList.add("required");
+	// inputToExpand.setAttribute("required", true);
 }
 
 function toCollapseArea(areaToCollapse, labelToCollapse, inputToCollapse) {
 	areaToCollapse.style.maxHeight = null;
-	labelToCollapse.classList.remove("required");
-	inputToCollapse.removeAttribute("required");
+	// labelToCollapse.classList.remove("required");
+	// inputToCollapse.removeAttribute("required");
 }

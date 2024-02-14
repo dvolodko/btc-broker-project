@@ -154,7 +154,7 @@
 
 .hidden-inputs-wrapper {
 	overflow: hidden;
-	// max-height: 0;
+	max-height: 0;
 	transition: max-height $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
