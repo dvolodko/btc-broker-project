@@ -16,20 +16,99 @@ const PEPTrueElement = document.getElementById("isPEPtrue");
 const PEPHiddenInputWrapper = PEPelement.querySelector(
 	".hidden-inputs-wrapper",
 );
-// const hiddenLabel = PEPHiddenInputWrapper.querySelector("label");
-// const hiddenInput = PEPHiddenInputWrapper.querySelector("input");
+const PEPLevelRadioGroup = document.querySelector(
+	'[data-expandable-area="PEPLevel"]',
+);
+const PEPNameAndCountryHiddenInputs = PEPelement.querySelector(
+	'[data-expandable-area="PEPNameAndCountry"]',
+);
+const PEPPositionAndTermsHiddenInputs = PEPelement.querySelector(
+	'[data-expandable-area="PEPPositionAndTerms"]',
+);
+const PEPFileHiddenInputs = PEPelement.querySelector(
+	'[data-expandable-area="PEPFile"]',
+);
+const PEPRelationsWithHiddenInputs = PEPelement.querySelector(
+	'[data-expandable-area="PEPRelationsWith"]',
+);
 
 if (PEPTrueElement.checked) {
-	toExpandArea(PEPHiddenInputWrapper);
+	toExpand(PEPHiddenInputWrapper);
 }
 
 PEPelement.addEventListener("click", () => {
 	if (PEPTrueElement.checked) {
-		toExpandArea(PEPHiddenInputWrapper);
+		toExpand(PEPHiddenInputWrapper);
 	} else {
-		toCollapseArea(PEPHiddenInputWrapper);
+		toCollapse(PEPHiddenInputWrapper);
+		toCollapse(PEPNameAndCountryHiddenInputs);
+		toCollapse(PEPPositionAndTermsHiddenInputs);
+		toCollapse(PEPFileHiddenInputs);
+		toCollapse(PEPRelationsWithHiddenInputs);
+		const PEPLevelRadioChecked = PEPLevelRadioGroup.querySelector(
+			".form-input-radio:checked",
+		);
+		if (!PEPLevelRadioChecked) {
+			return;
+		} else {
+			PEPLevelRadioChecked.checked = false;
+		}
 	}
 });
+
+// Динамічні поля в залежності від рівня спорідненності PEP
+
+const isPEPLevelPEPItIs = document.getElementById("isPEPItIs");
+const isPEPLevelPEPFamily = document.getElementById("isPEPFamily");
+const isPEPLevelRelatedToPEP = document.getElementById("isRelatedToPEP");
+
+if (isPEPLevelPEPItIs.checked) {
+	toExpand(PEPFileHiddenInputs);
+	toExpand(PEPPositionAndTermsHiddenInputs);
+}
+
+if (isPEPLevelPEPFamily.checked) {
+	toExpand(PEPNameAndCountryHiddenInputs);
+	toExpand(PEPPositionAndTermsHiddenInputs);
+}
+
+if (isPEPLevelRelatedToPEP.checked) {
+	toExpand(PEPNameAndCountryHiddenInputs);
+	toExpand(PEPRelationsWithHiddenInputs);
+	toExpand(PEPPositionAndTermsHiddenInputs);
+}
+
+PEPLevelRadioGroup.addEventListener("click", e => dynamicInputsForPEPLevel(e));
+
+function dynamicInputsForPEPLevel(e) {
+	{
+		const checkedRadio = e.target.closest(".form-input-radio:checked");
+		if (!checkedRadio) return;
+		switch (checkedRadio.value) {
+			case "I am PEP":
+				toExpand(PEPFileHiddenInputs);
+				toCollapse(PEPNameAndCountryHiddenInputs);
+				toCollapse(PEPRelationsWithHiddenInputs);
+				break;
+
+			case "member of family of PEP":
+				toExpand(PEPNameAndCountryHiddenInputs);
+				toCollapse(PEPFileHiddenInputs);
+				toCollapse(PEPRelationsWithHiddenInputs);
+				break;
+
+			case "other relation to PEP":
+				toExpand(PEPNameAndCountryHiddenInputs);
+				toExpand(PEPRelationsWithHiddenInputs);
+				toCollapse(PEPFileHiddenInputs);
+				break;
+
+			default:
+				return;
+		}
+		toExpand(PEPPositionAndTermsHiddenInputs);
+	}
+}
 
 // Дізейбл полів про ІПН у разі позначки про відмову від ІПН
 
@@ -187,10 +266,6 @@ function dynamicInputsForPassportType(e) {
 	}
 }
 
-function toExpand(area) {
-	area.style.maxHeight = area.scrollHeight + "px";
-}
-
 function toExpandIDCard() {
 	toShow(passportDateExpiredInput);
 	toHide(passportNameInput);
@@ -236,13 +311,13 @@ function toExpandOther() {
 
 function toShow(inputToShow) {
 	inputToShow.classList.remove("hidden");
-	inputToShow.style.maxHeight = inputToShow.scrollHeight + "px";
+	toExpand(inputToShow);
 }
 
 function toHide(inputToHide) {
 	inputToHide.classList.add("hidden");
 	inputToHide.children[1].removeAttribute("required");
-	inputToHide.style.maxHeight = null;
+	toCollapse(inputToHide);
 }
 
 function toChangeAttributes(
@@ -262,14 +337,10 @@ function toChangeAttributes(
 	inputToChange.setAttribute("placeholder", placeholder);
 }
 
-function toExpandArea(areaToExpand, labelToExpand, inputToExpand) {
-	areaToExpand.style.maxHeight = areaToExpand.scrollHeight + "px";
-	// labelToExpand.classList.add("required");
-	// inputToExpand.setAttribute("required", true);
+function toExpand(area) {
+	area.style.maxHeight = area.scrollHeight + "px";
 }
 
-function toCollapseArea(areaToCollapse, labelToCollapse, inputToCollapse) {
-	areaToCollapse.style.maxHeight = null;
-	// labelToCollapse.classList.remove("required");
-	// inputToCollapse.removeAttribute("required");
+function toCollapse(area) {
+	area.style.maxHeight = null;
 }

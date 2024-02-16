@@ -186,13 +186,16 @@
 					</div>
 				</div>
 				<div class="hidden-inputs-wrapper">
-					<div class="form-group-radio first-child" data-expandable-area>
+					<div
+						class="form-group-radio first-child"
+						data-expandable-area="PEPLevel"
+					>
 						<p class="radio-title required">Виберіть рівень спорідненості</p>
 						<div class="radio-wrapper">
 							<input
 								id="isPEPItIs"
 								type="radio"
-								name="PEPlevel"
+								name="PEPLevel"
 								class="form-input-radio"
 								required
 								value="I am PEP"
@@ -204,7 +207,7 @@
 							<input
 								id="isPEPFamily"
 								type="radio"
-								name="PEPlevel"
+								name="PEPLevel"
 								class="form-input-radio"
 								required
 								value="member of family of PEP"
@@ -218,7 +221,7 @@
 							<input
 								id="isRelatedToPEP"
 								type="radio"
-								name="PEPlevel"
+								name="PEPLevel"
 								class="form-input-radio"
 								required
 								value="other relation to PEP"
@@ -229,8 +232,11 @@
 							>
 						</div>
 					</div>
-					<div class="hidden-inputs-wrapper">
-						<label for="PEPFullName" class="form-label required hidden"
+					<div
+						class="hidden-inputs-wrapper"
+						data-expandable-area="PEPNameAndCountry"
+					>
+						<label for="PEPFullName" class="form-label hidden"
 							>Прізвище, Ім’я, По-Батькові політично-значущої особи</label
 						>
 						<input
@@ -240,11 +246,10 @@
 							class="form-input hidden"
 							minlength="2"
 							maxlength="50"
-							required
 							placeholder="Чорновіл В'ячеслав Максимович"
 							title="Введіть повне ім'я політично значущої особи"
 						/>
-						<label for="PEPResidenceCountry" class="form-label required hidden"
+						<label for="PEPResidenceCountry" class="form-label hidden"
 							>Країна постійного проживання політично-значущої особи</label
 						>
 						<input
@@ -254,13 +259,15 @@
 							class="form-input with-margin hidden"
 							minlength="2"
 							maxlength="50"
-							required
 							placeholder="Україна"
 							title="Введіть назву країни українською"
 						/>
 					</div>
-					<div class="hidden-inputs-wrapper">
-						<label for="PEPPosition" class="form-label required hidden"
+					<div
+						class="hidden-inputs-wrapper"
+						data-expandable-area="PEPPositionAndTerms"
+					>
+						<label for="PEPPosition" class="form-label hidden"
 							>Категорія посади</label
 						>
 						<input
@@ -270,11 +277,10 @@
 							class="form-input hidden"
 							minlength="2"
 							maxlength="50"
-							required
 							placeholder="Народний депутат України"
 							title="Введіть категорію посади"
 						/>
-						<label for="PEPPositionTerms" class="form-label required hidden"
+						<label for="PEPPositionTerms" class="form-label hidden"
 							>Строки перебування на посаді</label
 						>
 						<input
@@ -284,12 +290,11 @@
 							class="form-input with-margin hidden"
 							minlength="2"
 							maxlength="50"
-							required
 							placeholder="вересень 2008 - лютий 2016"
 							title="Вкажіть строки перебування на посаді. Вказується у вільному форматі"
 						/>
 					</div>
-					<div class="hidden-inputs-wrapper">
+					<div class="hidden-inputs-wrapper" data-expandable-area="PEPFile">
 						<label for="PEPFile" class="form-label"
 							>Додайте документ який підтверджує перебування на посаді</label
 						>
@@ -303,8 +308,11 @@
 							title="Натисніть на кнопку, щоб завантажити фото Вашого документу"
 						/>
 					</div>
-					<div class="hidden-inputs-wrapper">
-						<label for="PEPRelationsWith" class="form-label required hidden"
+					<div
+						class="hidden-inputs-wrapper"
+						data-expandable-area="PEPRelationsWith"
+					>
+						<label for="PEPRelationsWith" class="form-label hidden"
 							>Який вид ділових зв'язків ви маєте з політично-значущою
 							особою</label
 						>
@@ -315,7 +323,6 @@
 							class="form-input with-margin hidden"
 							minlength="2"
 							maxlength="50"
-							required
 							placeholder="КБВ, траст, тощо"
 							title="Вкажіть вид ділових зв'язків з PEP"
 						/>
@@ -432,8 +439,118 @@
 					</div>
 				</div>
 			</div>
-			<div class="form-group" role="group" aria-labelledby="address">
-				<h2 class="form-group-title" id="address">Адреса проживання</h2>
+			<div
+				class="form-group"
+				role="group"
+				aria-labelledby="RegistrationAddress"
+			>
+				<h2 class="form-group-title" id="address">Адреса реєстрації</h2>
+				<label for="country" class="form-label required">Країна</label>
+				<select class="form-input" name="country" id="country">
+					<include src="./partials/countries.html"></include>
+				</select>
+				<label for="postal-code" class="form-label">Індекс</label
+				><input
+					type="text"
+					id="postalCode"
+					name="postalCode"
+					class="form-input"
+					maxlength="5"
+					autocomplete="postal-code"
+					pattern="[0-9]{5}"
+					placeholder="04020"
+					title="5 цифр індексу"
+				/>
+				<label for="region" class="form-label required">Область</label>
+				<input
+					type="text"
+					id="region"
+					name="region"
+					class="form-input"
+					minlength="2"
+					maxlength="25"
+					required
+					autocomplete="address-level1"
+					placeholder="Київська"
+					title="Введіть область українською"
+				/>
+				<label for="area" class="form-label">Район</label>
+				<input
+					type="text"
+					id="area"
+					name="area"
+					class="form-input"
+					minlength="2"
+					maxlength="50"
+					placeholder="Район"
+					title="Введіть район українською (опціонально)"
+				/>
+				<label for="city" class="form-label required">Місто</label
+				><input
+					type="text"
+					id="city"
+					name="city"
+					class="form-input"
+					minlength="2"
+					maxlength="25"
+					required
+					autocomplete="address-level2"
+					placeholder="Київ"
+					title="Введіть місто проживання українською"
+				/>
+				<label for="street" class="form-label required">Вулиця</label>
+				<input
+					type="text"
+					id="street"
+					name="street"
+					class="form-input"
+					minlength="2"
+					maxlength="25"
+					required
+					autocomplete="address-level3"
+					placeholder="Іллінська"
+					title="Введіть вулицю проживання українською"
+				/>
+				<label for="building" class="form-label required">Будинок</label
+				><input
+					type="text"
+					id="building"
+					name="building"
+					class="form-input"
+					minlength="1"
+					maxlength="25"
+					required
+					placeholder="8"
+					title="Введіть номер будинку проживання"
+				/>
+				<label for="apartment" class="form-label">Квартира</label>
+				<input
+					type="text"
+					id="apartment"
+					name="apartment"
+					class="form-input"
+					minlength="1"
+					maxlength="25"
+					placeholder="Квартира"
+					title="Введіть номер квартири (опціонально)"
+				/>
+				<div class="checkbox-wrapper">
+					<input
+						id="liveAtAnotherAddress"
+						type="checkbox"
+						name="liveAtAnotherAddress"
+						class="form-input-checkbox"
+						value="true"
+						title="Поставте позначку якщо фактичне місце проживання відрізняється від місця реєстрації"
+					/>
+					<label for="liveAtAnotherAddress" class="form-label-checkbox"
+						>Фактичне місце проживання відрізняється від місця реєстрації.
+						(Позначте якщо так)</label
+					>
+				</div>
+			</div>
+			<div class="form-group" role="group" aria-labelledby="ActualAddress">
+				<h2 class="form-group-title" id="address">Фактичне місце проживання</h2>
 				<label for="country" class="form-label required">Країна</label>
 				<select class="form-input" name="country" id="country">
 					<include src="./partials/countries.html"></include>
