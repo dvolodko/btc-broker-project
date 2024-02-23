@@ -38,6 +38,20 @@ body {
 	@include font(400, 1.25rem, 2rem, 0);
 }
 
+.chapter-header {
+	font-family: $secondaryFontFamily;
+	color: $primaryColor950;
+	@include font(800, 1.25rem, 2rem, 0);
+	margin-bottom: $M;
+	@include mq(tablet-L) {
+		@include font(800, 1.5rem, 2.5rem, 0);
+	}
+}
+
+.strong-text {
+	color: $primaryColor950;
+}
+
 .text-link {
 	color: $systemColorLink;
 	text-decoration-line: underline;
