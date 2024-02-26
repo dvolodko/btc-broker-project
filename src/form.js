@@ -4,4 +4,3 @@ import "./js/header-menu";
 import "./js/header-shadow-after-scroll";
 import "./js/form-handler";
 import "./js/forms";
-import "./js/api-service";

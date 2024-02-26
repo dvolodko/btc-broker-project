@@ -98,7 +98,7 @@
 				/>
 			</div>
 			<div class="form-group" role="group">
-				<label for="birth-date" class="form-label required"
+				<label for="birthDate" class="form-label required"
 					>Дата народження</label
 				>
 				<input
@@ -111,7 +111,7 @@
 					pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
 					title="Введіть дату народження"
 				/>
-				<label for="birth-place" class="form-label required"
+				<label for="birthPlace" class="form-label required"
 					>Місце народження</label
 				>
 				<input
@@ -442,14 +442,14 @@
 			<div
 				class="form-group"
 				role="group"
-				aria-labelledby="RegistrationAddress"
+				aria-labelledby="registrationAddress"
 			>
 				<h2 class="form-group-title" id="address">Адреса реєстрації</h2>
 				<label for="country" class="form-label required">Країна</label>
 				<select class="form-input" name="country" id="country">
 					<include src="./partials/countries.html"></include>
 				</select>
-				<label for="postal-code" class="form-label">Індекс</label
+				<label for="postalCode" class="form-label">Індекс</label
 				><input
 					type="text"
 					id="postalCode"
@@ -549,17 +549,19 @@
 					>
 				</div>
 			</div>
-			<div class="form-group" role="group" aria-labelledby="ActualAddress">
-				<h2 class="form-group-title" id="address">Фактичне місце проживання</h2>
-				<label for="country" class="form-label required">Країна</label>
-				<select class="form-input" name="country" id="country">
+			<div class="form-group" role="group" aria-labelledby="livingAddress">
+				<h2 class="form-group-title" id="livingAddress">
+					Фактичне місце проживання
+				</h2>
+				<label for="livingCountry" class="form-label required">Країна</label>
+				<select class="form-input" name="livingCountry" id="livingCountry">
 					<include src="./partials/countries.html"></include>
 				</select>
-				<label for="postal-code" class="form-label">Індекс</label
+				<label for="livingPostalCode" class="form-label">Індекс</label
 				><input
 					type="text"
-					id="postalCode"
-					name="postalCode"
+					id="livingPostalCode"
+					name="livingPostalCode"
 					class="form-input"
 					maxlength="5"
 					autocomplete="postal-code"
@@ -567,11 +569,11 @@
 					placeholder="04020"
 					title="5 цифр індексу"
 				/>
-				<label for="region" class="form-label required">Область</label>
+				<label for="livingRegion" class="form-label required">Область</label>
 				<input
 					type="text"
-					id="region"
-					name="region"
+					id="livingRegion"
+					name="livingRegion"
 					class="form-input"
 					minlength="2"
 					maxlength="25"
@@ -580,22 +582,22 @@
 					placeholder="Київська"
 					title="Введіть область українською"
 				/>
-				<label for="area" class="form-label">Район</label>
+				<label for="livingArea" class="form-label">Район</label>
 				<input
 					type="text"
-					id="area"
-					name="area"
+					id="livingArea"
+					name="livingArea"
 					class="form-input"
 					minlength="2"
 					maxlength="50"
 					placeholder="Район"
 					title="Введіть район українською (опціонально)"
 				/>
-				<label for="city" class="form-label required">Місто</label
+				<label for="livingCity" class="form-label required">Місто</label
 				><input
 					type="text"
-					id="city"
-					name="city"
+					id="livingCity"
+					name="livingCity"
 					class="form-input"
 					minlength="2"
 					maxlength="25"
@@ -604,11 +606,11 @@
 					placeholder="Київ"
 					title="Введіть місто проживання українською"
 				/>
-				<label for="street" class="form-label required">Вулиця</label>
+				<label for="livingStreet" class="form-label required">Вулиця</label>
 				<input
 					type="text"
-					id="street"
-					name="street"
+					id="livingStreet"
+					name="livingStreet"
 					class="form-input"
 					minlength="2"
 					maxlength="25"
@@ -617,11 +619,11 @@
 					placeholder="Іллінська"
 					title="Введіть вулицю проживання українською"
 				/>
-				<label for="building" class="form-label required">Будинок</label
+				<label for="livingBuilding" class="form-label required">Будинок</label
 				><input
 					type="text"
-					id="building"
-					name="building"
+					id="livingBuilding"
+					name="livingBuilding"
 					class="form-input"
 					minlength="1"
 					maxlength="25"
@@ -629,11 +631,11 @@
 					placeholder="8"
 					title="Введіть номер будинку проживання"
 				/>
-				<label for="apartment" class="form-label">Квартира</label>
+				<label for="livingApartment" class="form-label">Квартира</label>
 				<input
 					type="text"
-					id="apartment"
-					name="apartment"
+					id="livingApartment"
+					name="livingApartment"
 					class="form-input"
 					minlength="1"
 					maxlength="25"
