@@ -152,6 +152,10 @@
 	margin-bottom: 0;
 }
 
+.checkbox-wrapper.beyond-hidden {
+	margin-top: $L;
+}
+
 .hidden-inputs-wrapper {
 	overflow: hidden;
 	max-height: 0;
@@ -169,6 +173,10 @@
 .form-input.hidden {
 	display: block;
 	width: 100%;
+}
+
+.livingAddressGroup {
+	margin-top: $L;
 }
 
 .passport-name-wrapper,

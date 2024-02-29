@@ -110,6 +110,61 @@ function dynamicInputsForPEPLevel(e) {
 	}
 }
 
+// Поведінка прихованих полів адреси фактичного місця проживання
+
+const livingAddressElement = document.querySelector(
+	'[aria-labelledby="livingAddress"]',
+);
+const liveAtAnotherAddressCheckbox = document.getElementById(
+	"liveAtAnotherAddress",
+);
+const livingCountryInput = document.getElementById("livingCountry");
+const livingPostalCodeInput = document.getElementById("livingPostalCode");
+const livingRegionLabel = livingAddressElement.querySelector(
+	'[for="livingRegion"]',
+);
+const livingRegionInput = document.getElementById("livingRegion");
+const livingAreaInput = document.getElementById("livingArea");
+const livingCityLabel =
+	livingAddressElement.querySelector('[for="livingCity"]');
+const livingCityInput = document.getElementById("livingCity");
+const livingStreetLabel = livingAddressElement.querySelector(
+	'[for="livingStreet"]',
+);
+const livingStreetInput = document.getElementById("livingStreet");
+const livingBuildingLabel = livingAddressElement.querySelector(
+	'[for="livingBuilding"]',
+);
+const livingBuildingInput = document.getElementById("livingBuilding");
+const livingApartmentInput = document.getElementById("livingApartment");
+
+livingAtAnotherAddressCheckboxHandler();
+
+liveAtAnotherAddressCheckbox.addEventListener(
+	"click",
+	livingAtAnotherAddressCheckboxHandler,
+);
+
+function livingAtAnotherAddressCheckboxHandler() {
+	if (liveAtAnotherAddressCheckbox.checked) {
+		toExpand(livingAddressElement);
+		toAddRequired(livingRegionLabel, livingRegionInput);
+		toAddRequired(livingCityLabel, livingCityInput);
+		toAddRequired(livingStreetLabel, livingStreetInput);
+		toAddRequired(livingBuildingLabel, livingBuildingInput);
+	} else {
+		toCollapse(livingAddressElement);
+		livingCountryInput.value = "UA";
+		livingPostalCodeInput.value = "";
+		toRemoveRequiredAndClean(livingRegionLabel, livingRegionInput);
+		livingAreaInput.value = "";
+		toRemoveRequiredAndClean(livingCityLabel, livingCityInput);
+		toRemoveRequiredAndClean(livingStreetLabel, livingStreetInput);
+		toRemoveRequiredAndClean(livingBuildingLabel, livingBuildingInput);
+		livingApartmentInput.value = "";
+	}
+}
+
 // Дізейбл полів про ІПН у разі позначки про відмову від ІПН
 
 const IPNElement = document.querySelector(".taxID-disable");
@@ -121,17 +176,13 @@ const nonIPNCheckbox = document.getElementById("nonIPN");
 
 nonIPNCheckbox.addEventListener("click", () => {
 	if (nonIPNCheckbox.checked) {
-		taxIDLabel.classList.remove("required");
-		IPNFileLabel.classList.remove("required");
-		taxIDInput.removeAttribute("required");
-		IPNFileInput.removeAttribute("required");
+		toRemoveRequired(taxIDLabel, taxIDInput);
+		toRemoveRequired(IPNFileLabel, IPNFileInput);
 		taxIDInput.setAttribute("disabled", true);
 		IPNFileInput.setAttribute("disabled", true);
 	} else {
-		taxIDLabel.classList.add("required");
-		IPNFileLabel.classList.add("required");
-		taxIDInput.setAttribute("required", true);
-		IPNFileInput.setAttribute("required", true);
+		toAddRequired(taxIDLabel, taxIDInput);
+		toAddRequired(IPNFileLabel, IPNFileInput);
 		taxIDInput.removeAttribute("disabled");
 		IPNFileInput.removeAttribute("disabled");
 	}
@@ -157,12 +208,11 @@ USTaxResidentInput.addEventListener("click", () => {
 	if (nonUkraineTaxResidentInput.checked) {
 		return;
 	} else if (USTaxResidentInput.checked) {
-		taxResidenceHiddenInputsWrapper.style.maxHeight =
-			taxResidenceHiddenInputsWrapper.scrollHeight + "px";
+		toExpand(taxResidenceHiddenInputsWrapper);
 		countryUkraine.removeAttribute("selected");
 		countryUS.setAttribute("selected", true);
 	} else {
-		taxResidenceHiddenInputsWrapper.style.maxHeight = null;
+		toCollapse(taxResidenceHiddenInputsWrapper);
 		countryUkraine.setAttribute("selected", true);
 		countryUS.removeAttribute("selected");
 	}
@@ -172,12 +222,11 @@ nonUkraineTaxResidentInput.addEventListener("click", () => {
 	if (USTaxResidentInput.checked) {
 		return;
 	} else if (nonUkraineTaxResidentInput.checked) {
-		taxResidenceHiddenInputsWrapper.style.maxHeight =
-			taxResidenceHiddenInputsWrapper.scrollHeight + "px";
+		toExpand(taxResidenceHiddenInputsWrapper);
 		countryUkraine.removeAttribute("selected");
 		countryDummy.setAttribute("selected", true);
 	} else {
-		taxResidenceHiddenInputsWrapper.style.maxHeight = null;
+		toCollapse(taxResidenceHiddenInputsWrapper);
 		countryUkraine.setAttribute("selected", true);
 		countryDummy.removeAttribute("selected");
 	}
@@ -343,4 +392,15 @@ function toExpand(area) {
 
 function toCollapse(area) {
 	area.style.maxHeight = null;
+}
+
+function toAddRequired(label, input) {
+	label.classList.add("required");
+	input.setAttribute("required", true);
+}
+
+function toRemoveRequiredAndClean(label, input) {
+	label.classList.remove("required");
+	input.removeAttribute("required");
+	input.value = "";
 }

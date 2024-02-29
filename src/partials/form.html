@@ -439,11 +439,7 @@
 					</div>
 				</div>
 			</div>
-			<div
-				class="form-group"
-				role="group"
-				aria-labelledby="registrationAddress"
-			>
+			<div class="form-group" role="group" aria-labelledby="address">
 				<h2 class="form-group-title" id="address">Адреса реєстрації</h2>
 				<label for="country" class="form-label required">Країна</label>
 				<select class="form-input" name="country" id="country">
@@ -534,7 +530,7 @@
 					placeholder="Квартира"
 					title="Введіть номер квартири (опціонально)"
 				/>
-				<div class="checkbox-wrapper">
+				<div class="checkbox-wrapper above-hidden">
 					<input
 						id="liveAtAnotherAddress"
 						type="checkbox"
@@ -548,99 +544,131 @@
 						(Позначте якщо так)</label
 					>
 				</div>
-			</div>
-			<div class="form-group" role="group" aria-labelledby="livingAddress">
-				<h2 class="form-group-title" id="livingAddress">
-					Фактичне місце проживання
-				</h2>
-				<label for="livingCountry" class="form-label required">Країна</label>
-				<select class="form-input" name="livingCountry" id="livingCountry">
-					<include src="./partials/countries.html"></include>
-				</select>
-				<label for="livingPostalCode" class="form-label">Індекс</label
-				><input
-					type="text"
-					id="livingPostalCode"
-					name="livingPostalCode"
-					class="form-input"
-					maxlength="5"
-					autocomplete="postal-code"
-					pattern="[0-9]{5}"
-					placeholder="04020"
-					title="5 цифр індексу"
-				/>
-				<label for="livingRegion" class="form-label required">Область</label>
+				<div class="hidden-inputs-wrapper" aria-labelledby="livingAddress">
+					<div class="form-group livingAddressGroup" role="group">
+						<h2 class="form-group-title" id="livingAddress">
+							Фактичне місце проживання
+						</h2>
+						<label for="livingCountry" class="form-label required"
+							>Країна</label
+						>
+						<select class="form-input" name="livingCountry" id="livingCountry">
+							<include src="./partials/countries.html"></include>
+						</select>
+						<label for="livingPostalCode" class="form-label">Індекс</label
+						><input
+							type="text"
+							id="livingPostalCode"
+							name="livingPostalCode"
+							class="form-input"
+							maxlength="5"
+							autocomplete="postal-code"
+							pattern="[0-9]{5}"
+							placeholder="04020"
+							title="5 цифр індексу"
+						/>
+						<label for="livingRegion" class="form-label required"
+							>Область</label
+						>
+						<input
+							type="text"
+							id="livingRegion"
+							name="livingRegion"
+							class="form-input"
+							minlength="2"
+							maxlength="25"
+							required
+							autocomplete="address-level1"
+							placeholder="Київська"
+							title="Введіть область українською"
+						/>
+						<label for="livingArea" class="form-label">Район</label>
+						<input
+							type="text"
+							id="livingArea"
+							name="livingArea"
+							class="form-input"
+							minlength="2"
+							maxlength="50"
+							placeholder="Район"
+							title="Введіть район українською (опціонально)"
+						/>
+						<label for="livingCity" class="form-label required">Місто</label
+						><input
+							type="text"
+							id="livingCity"
+							name="livingCity"
+							class="form-input"
+							minlength="2"
+							maxlength="25"
+							required
+							autocomplete="address-level2"
+							placeholder="Київ"
+							title="Введіть місто проживання українською"
+						/>
+						<label for="livingStreet" class="form-label required">Вулиця</label>
+						<input
+							type="text"
+							id="livingStreet"
+							name="livingStreet"
+							class="form-input"
+							minlength="2"
+							maxlength="25"
+							required
+							autocomplete="address-level3"
+							placeholder="Іллінська"
+							title="Введіть вулицю проживання українською"
+						/>
+						<label for="livingBuilding" class="form-label required"
+							>Будинок</label
+						><input
+							type="text"
+							id="livingBuilding"
+							name="livingBuilding"
+							class="form-input"
+							minlength="1"
+							maxlength="25"
+							required
+							placeholder="8"
+							title="Введіть номер будинку проживання"
+						/>
+						<label for="livingApartment" class="form-label">Квартира</label>
+						<input
+							type="text"
+							id="livingApartment"
+							name="livingApartment"
+							class="form-input"
+							minlength="1"
+							maxlength="25"
+							placeholder="Квартира"
+							title="Введіть номер квартири (опціонально)"
+						/>
+					</div>
+				</div>
+				<div class="checkbox-wrapper above-hidden beyond-hidden">
+					<input
+						id="isVPO"
+						type="checkbox"
+						name="isVPO"
+						class="form-input-checkbox"
+						value="true"
+						title="Поставте позначку якщо ви є внутрішньо переміщенною особою"
+					/>
+					<label for="isVPO" class="form-label-checkbox"
+						>Чи є Ви ВПО? (Позначте якщо так)</label
+					>
+				</div>
+				<label for="IPN-file" class="form-label IPN-file-label required"
+					>Завантажити фото ІПН</label
+				>
 				<input
-					type="text"
-					id="livingRegion"
-					name="livingRegion"
-					class="form-input"
-					minlength="2"
-					maxlength="25"
+					id="IPN-file"
+					type="file"
+					name="IPN-file"
+					class="form-input IPN-file-input"
 					required
-					autocomplete="address-level1"
-					placeholder="Київська"
-					title="Введіть область українською"
-				/>
-				<label for="livingArea" class="form-label">Район</label>
-				<input
-					type="text"
-					id="livingArea"
-					name="livingArea"
-					class="form-input"
-					minlength="2"
-					maxlength="50"
-					placeholder="Район"
-					title="Введіть район українською (опціонально)"
-				/>
-				<label for="livingCity" class="form-label required">Місто</label
-				><input
-					type="text"
-					id="livingCity"
-					name="livingCity"
-					class="form-input"
-					minlength="2"
-					maxlength="25"
-					required
-					autocomplete="address-level2"
-					placeholder="Київ"
-					title="Введіть місто проживання українською"
-				/>
-				<label for="livingStreet" class="form-label required">Вулиця</label>
-				<input
-					type="text"
-					id="livingStreet"
-					name="livingStreet"
-					class="form-input"
-					minlength="2"
-					maxlength="25"
-					required
-					autocomplete="address-level3"
-					placeholder="Іллінська"
-					title="Введіть вулицю проживання українською"
-				/>
-				<label for="livingBuilding" class="form-label required">Будинок</label
-				><input
-					type="text"
-					id="livingBuilding"
-					name="livingBuilding"
-					class="form-input"
-					minlength="1"
-					maxlength="25"
-					required
-					placeholder="8"
-					title="Введіть номер будинку проживання"
-				/>
-				<label for="livingApartment" class="form-label">Квартира</label>
-				<input
-					type="text"
-					id="livingApartment"
-					name="livingApartment"
-					class="form-input"
-					minlength="1"
-					maxlength="25"
-					placeholder="Квартира"
-					title="Введіть номер квартири (опціонально)"
+					accept="image/*,.pdf"
+					title="Натисніть на кнопку, щоб завантажити фото Вашого ІПН"
 				/>
 			</div>
 			<div class="form-group taxID-disable" role="group">
