@@ -165,6 +165,29 @@ function livingAtAnotherAddressCheckboxHandler() {
 	}
 }
 
+// Прихований інпут для завантаження файлу якщо клієнт ВПО
+
+const VPOFileHiddenInputs = document.querySelector(
+	'[data-expandable-area="VPOFile"]',
+);
+const isVPOCheckbox = document.getElementById("isVPO");
+const VPOFileLabel = VPOFileHiddenInputs.querySelector('[for="VPOFile"]');
+const VPOFileInput = document.getElementById("VPOFile");
+
+isVPOHandler();
+
+isVPOCheckbox.addEventListener("click", isVPOHandler);
+
+function isVPOHandler() {
+	if (isVPOCheckbox.checked) {
+		toExpand(VPOFileHiddenInputs);
+		toAddRequired(VPOFileLabel, VPOFileInput);
+	} else {
+		toCollapse(VPOFileHiddenInputs);
+		toRemoveRequiredAndClean(VPOFileLabel, VPOFileInput);
+	}
+}
+
 // Дізейбл полів про ІПН у разі позначки про відмову від ІПН
 
 const IPNElement = document.querySelector(".taxID-disable");
@@ -176,8 +199,8 @@ const nonIPNCheckbox = document.getElementById("nonIPN");
 
 nonIPNCheckbox.addEventListener("click", () => {
 	if (nonIPNCheckbox.checked) {
-		toRemoveRequired(taxIDLabel, taxIDInput);
-		toRemoveRequired(IPNFileLabel, IPNFileInput);
+		toRemoveRequiredAndClean(taxIDLabel, taxIDInput);
+		toRemoveRequiredAndClean(IPNFileLabel, IPNFileInput);
 		taxIDInput.setAttribute("disabled", true);
 		IPNFileInput.setAttribute("disabled", true);
 	} else {

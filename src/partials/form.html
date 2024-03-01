@@ -658,18 +658,24 @@
 						>Чи є Ви ВПО? (Позначте якщо так)</label
 					>
 				</div>
-				<label for="IPN-file" class="form-label IPN-file-label required"
-					>Завантажити фото ІПН</label
-				>
-				<input
-					id="IPN-file"
-					type="file"
-					name="IPN-file"
-					class="form-input IPN-file-input"
-					required
-					accept="image/*,.pdf"
-					title="Натисніть на кнопку, щоб завантажити фото Вашого ІПН"
-				/>
+				<div class="hidden-inputs-wrapper" data-expandable-area="VPOFile">
+					<div class="VPOFile-wrapper">
+						<label for="VPOFile" class="form-label required"
+							>Завантажити фото довідки ВПО або скріншот довідки переселенця з
+							застосунку Дія</label
+						>
+						<input
+							id="VPOFile"
+							type="file"
+							name="VPOFile"
+							class="form-input"
+							required
+							accept="image/*,.pdf"
+							title="Натисніть на кнопку, щоб завантажити фото довідки ВПО або скріншот довідки переселенця з
+						застосунку Дія"
+						/>
+					</div>
+				</div>
 			</div>
 			<div class="form-group taxID-disable" role="group">
 				<label for="taxID" class="form-label taxID-label required"
@@ -783,8 +789,12 @@
 							value="other"
 							title="Виберіть тип документу поміж запропонованих варіантів"
 						/>
-						<label for="is-passport-type-other" class="form-label-radio"
-							>Інше</label
+						<label
+							for="is-passport-type-other"
+							class="form-label-radio is-passport-type-other"
+							>Інше (будь який документ, що посвідчує особу та відповідно до
+							законодавства України може бути використаним на території України
+							для укладення правочинів)</label
 						>
 					</div>
 				</div>
@@ -872,6 +882,21 @@
 							name="passportDateExpired"
 							class="form-input hidden"
 							pattern="((?:19|20)[0-9][0-9])-(0?[1-9]|1[012])-(0?[1-9]|[12][0-9]|3[01])"
+							placeholder="yyyy-mm-dd"
+							title="Введіть термін дії документу"
+						/>
+					</div>
+					<div class="passport-UNZR-wrapper">
+						<label for="passportUNZR" class="form-label hidden"
+							>Унікальний номер запису в Єдиному державному демографічному
+							реєстрі(знаходиться на титульній стороні ID-картки з правого боку
+							знизу (над номером паспорта))</label
+						><input
+							type="text"
+							id="passportUNZR"
+							name="passportUNZR"
+							class="form-input hidden"
+							pattern=""
 							placeholder="yyyy-mm-dd"
 							title="Введіть термін дії документу"
 						/>
