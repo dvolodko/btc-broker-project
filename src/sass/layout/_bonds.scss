@@ -5,29 +5,29 @@
 		url("/src/images/svg/bg-shape-yellow-faq-390.svg"),
 		url("/src/images/svg/bg-shape-blue-faq-390.svg");
 	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-	background-position: calc(50% + 0px) calc(50% - 0px),
-		calc(50% + 64px) calc(50% - 256px), calc(50% - 0px) calc(75% + 416px),
-		calc(50% - 256px) calc(75% + 300px);
+	background-position: calc(50% - 64px) calc(50% - 960px),
+		calc(50% - 256px) calc(50% - 512px), calc(50% - 0px) calc(75% - 416px),
+		calc(50% - 256px) calc(75% + 192px);
 	background-size: auto, auto, auto, auto;
 	@include mq(tablet-S) {
 		background-image: url("/src/images/svg/bg-shape-yellow-faq-768.svg"),
 			url("/src/images/svg/bg-shape-blue-faq-768.svg"),
 			url("/src/images/svg/bg-shape-yellow-faq-768.svg"),
 			url("/src/images/svg/bg-shape-blue-faq-768.svg");
-		background-position: calc(50% + 256px) calc(50% - 128px),
-			calc(50% - 160px) calc(50% - 64px), calc(50% - 512px) calc(50% + 512px),
-			calc(50% + 128px) calc(50% + 512px);
+		background-position: calc(50% + 192px) calc(50% - 512px),
+			calc(50% - 320px) calc(50% - 256px), calc(50% + 320px) calc(50% + 256px),
+			calc(50% - 512px) calc(50% + 128px);
 	}
 	@include mq(desktop) {
-		background-position: calc(50% + 352px) calc(50% - 224px),
-			calc(50% - 256px) calc(50% - 64px), calc(50% - 736px) calc(50% + 512px),
-			calc(50% + 256px) calc(50% + 512px);
+		background-position: calc(50% + 352px) calc(50% - 416px),
+			calc(50% - 512px) calc(50% - 64px), calc(50% + 512px) calc(50% + 320px),
+			calc(50% - 512px) calc(50% + 320px);
 	}
 }
 
 .bonds-container {
 	padding-top: $L;
-	padding-bottom: $XXL;
+	padding-bottom: $XL;
 	@include mq(tablet-S) {
 		padding-left: 76px;
 		padding-right: 76px;
@@ -66,53 +66,60 @@
 	stroke: $accentColor500;
 }
 
-.bonds-bond-ua-container {
-	background-image: url("/src/images/iphone-hero.webp"),
+.bonds-bond-ua-section {
+	background-image: url("/src/images/iphone-bonds-bond-ua.webp"),
 		url("/src/images/svg/bg-ellipse-yellow-hero-390.svg"),
 		url("/src/images/svg/bg-ellipse-blue-hero-390.svg");
 	background-repeat: no-repeat, no-repeat, no-repeat;
-	background-position: calc(50% + 120px) calc(50% - 64px),
-		calc(50% - 64px) calc(50% + 160px), calc(50% + 128px) calc(50% - 64px);
+	background-position: calc(50% + 120px) calc(50% + 189px),
+		calc(50% - 64px) calc(50% + 160px), calc(50% + 96px) calc(50% + 160px);
 	background-size: 352px, auto auto, 640px;
 	@include mq(tablet-S) {
-		background-image: url("/src/images/iphone-hero-side-768.webp"),
-			url("/src/images/iphone-hero-front-768.webp"),
+		background-image: url("/src/images/iphone-bonds-bond-ua.webp"),
 			url("/src/images/svg/bg-shape-yellow-hero-768.svg"),
 			url("/src/images/svg/bg-ellipse-blue-hero-768.svg");
-		background-position: calc(50% + 304px) calc(50% - 176px),
-			calc(50% + 128px) calc(50% - 232px), calc(50% - 64px) calc(50% + 88px),
-			calc(50% + 272px) calc(50% - 128px);
-		background-size: 340px, 328px, 634px, 528px;
+		background-position: calc(50% + 192px) calc(50% + 84px),
+			calc(50% - 256px) calc(50% + 192px), calc(50% + 192px) calc(50% + 50px);
+		background-size: 356px, 634px, 576px;
+		padding-top: 128px;
+		margin-top: -128px;
 	}
 	@include mq(tablet-L) {
-		background-position: calc(50% + 392px) calc(50% - 64px),
-			calc(50% + 180px) calc(50% - 112px), calc(50% - 256px) calc(50% + 80px),
-			calc(50% + 368px) calc(50% - 48px);
-		background-size: 408px, 394px, 768px, 576px;
+		background-position: calc(50% + 208px) calc(50% + 86px),
+			calc(50% - 288px) calc(50% + 256px), calc(50% + 208px) calc(50% + 50px);
+		background-size: 364px, 640px, 576px;
 	}
 	@include mq(desktop) {
-		background-image: url("/src/images/iphone-hero-side-768.webp"),
-			url("/src/images/iphone-hero-front-768.webp"),
-			url("/src/images/svg/bg-shape-yellow-hero-768.svg"),
-			url("/src/images/svg/bg-ellipse-blue-hero-desktop.svg");
-		background-position: calc(50% + 196px) calc(50% - 88px),
-			calc(50% + 398px) calc(50% - 80px), calc(50% + 320px) calc(50% + 32px),
-			calc(50% + 96px) calc(50% + 64px);
-		background-size: 340px, 328px, 768px, 1152px;
+		background-position: calc(50% + 224px) calc(50% + 86px),
+			calc(50% - 352px) calc(50% + 256px), calc(50% + 224px) calc(50% + 50px);
+		background-size: 364px, 640px, 576px;
 	}
+}
+
+.bonds-bond-ua-container {
 	@include flex(flex, flex-start, center);
 	padding-top: $M;
 	padding-bottom: $M;
 	@include mq(tablet-S) {
 		padding-top: $L;
 		padding-bottom: $XL;
+		padding-left: 76px;
+		padding-right: 76px;
+	}
+	@include mq(tablet-L) {
+		padding-left: 96px;
+		padding-right: 96px;
+	}
+	@include mq(desktop) {
+		padding-left: 150px;
+		padding-right: 150px;
 	}
 }
 
 .bonds-bond-ua-description-container {
 	@include flex(flex, center, flex-start);
 	flex-direction: column;
-	padding-bottom: 116px;
+	padding-bottom: 256px;
 	@include mq(tablet-S) {
 		flex-basis: calc((100% - 1 * $M) / 2);
 		padding-bottom: 0;
