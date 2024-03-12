@@ -83,20 +83,30 @@
 	&.active {
 		color: $primaryColor100;
 		background-color: $primaryColor950;
-		& .shares-button-icon-layer1,
-		& .bonds-button-icon-layer2,
-		& .depositary-button-icon-layer1,
-		& .repo-button-icon-layer-accent {
+		& .shares-button-icon-accent,
+		& .bonds-button-icon-accent,
+		& .repo-button-icon-accent {
 			fill: $primaryColor700;
 		}
-		& .shares-button-icon-layer3,
-		& .bonds-button-icon-layer1,
-		& .bonds-button-icon-vector1,
-		& .depositary-button-icon-vector9,
-		& .depositary-button-icon-layer5,
-		& .repo-button-icon-layer-neutral,
-		& .repo-button-icon-vector5 {
+		& .shares-button-icon-neutral,
+		& .shares-button-icon-base,
+		& .bonds-button-icon-lines,
+		& .bonds-button-icon-seal-decoration,
+		& .bonds-button-icon-paper,
+		& .repo-button-icon-displayed-charts,
+		& .repo-button-icon-computers {
 			fill: $primaryColor100;
+		}
+		& .depositary-button-icon-base,
+		& .depositary-button-icon-columns {
+			stroke: $primaryColor100;
+		}
+		& .depositary-button-icon-accent-stroke {
+			stroke: $primaryColor700;
+		}
+		& .depositary-button-icon-accent-fill-stroke {
+			fill: $primaryColor700;
+			stroke: $primaryColor700;
 		}
 	}
 }
@@ -108,59 +118,105 @@
 	margin: 0 auto $XS;
 }
 
-.bonds-button-icon-layer1,
-.depositary-button-icon-layer5 {
+.shares-button-icon-base,
+.bonds-button-icon-lines,
+.bonds-button-icon-seal-decoration,
+.repo-button-icon-displayed-charts {
 	fill: $neutralColor500;
 	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.shares-button-icon-layer1,
-.bonds-button-icon-layer2,
-.depositary-button-icon-layer1,
-.repo-button-icon-layer-accent {
+.shares-button-icon-accent,
+.bonds-button-icon-accent,
+.repo-button-icon-accent {
 	fill: $primaryColor400;
 	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.shares-button-icon-layer3,
-.bonds-button-icon-vector1,
-.depositary-button-icon-vector9,
-.repo-button-icon-layer-neutral {
+.shares-button-icon-neutral,
+.bonds-button-icon-paper,
+.repo-button-icon-computers {
 	fill: $neutralColor600;
 	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.repo-button-icon-vector5 {
-	fill: $neutralColor500;
-	transition: fill $mainTransitionDuration $mainTransitionTimingFunction;
+.depositary-button-icon-columns {
+	stroke: $neutralColor500;
+	transition: stroke $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.shares-button:hover .shares-button-icon-layer1,
-.shares-button:focus .shares-button-icon-layer1,
-.bonds-button:hover .bonds-button-icon-layer2,
-.bonds-button:focus .bonds-button-icon-layer2,
-.depositary-button:hover .depositary-button-icon-layer1,
-.depositary-button:focus .depositary-button-icon-layer1,
-.repo-button:hover .repo-button-icon-layer-accent,
-.repo-button:focus.repo-button-icon-layer-accent {
-	fill: $primaryColor700;
+.depositary-button-icon-base {
+	stroke: $neutralColor600;
+	transition: stroke $mainTransitionDuration $mainTransitionTimingFunction;
 }
 
-.shares-button:hover .shares-button-icon-layer3,
-.shares-button:focus .shares-button-icon-layer3,
-.bonds-button:hover .bonds-button-icon-vector1,
-.bonds-button:focus .bonds-button-icon-vector1,
-.bonds-button:hover .bonds-button-icon-layer1,
-.bonds-button:focus .bonds-button-icon-layer1,
-.depositary-button:hover .depositary-button-icon-vector9,
-.depositary-button:focus .depositary-button-icon-vector9,
-.depositary-button:hover .depositary-button-icon-layer5,
-.depositary-button:focus .depositary-button-icon-layer5,
-.repo-button:hover .repo-button-icon-layer-neutral,
-.repo-button:focus .repo-button-icon-layer-neutral,
-.repo-button:hover .repo-button-icon-vector5,
-.repo-button:focus .repo-button-icon-vector5 {
-	fill: $primaryColor100;
+.depositary-button-icon-accent-stroke {
+	stroke: $primaryColor400;
+	transition: stroke $mainTransitionDuration $mainTransitionTimingFunction;
+}
+
+.depositary-button-icon-accent-fill-stroke {
+	fill: $primaryColor400;
+	stroke: $primaryColor400;
+	transition: fill $mainTransitionDuration $mainTransitionTimingFunction,
+		stroke $mainTransitionDuration $mainTransitionTimingFunction;
+}
+
+.shares-button {
+	&:hover,
+	&:focus {
+		& .shares-button-icon-base,
+		& .shares-button-icon-neutral {
+			fill: $primaryColor100;
+		}
+		& .shares-button-icon-accent {
+			fill: $primaryColor700;
+		}
+	}
+}
+
+.bonds-button {
+	&:hover,
+	&:focus {
+		& .bonds-button-icon-lines,
+		& .bonds-button-icon-seal-decoration,
+		& .bonds-button-icon-paper {
+			fill: $primaryColor100;
+		}
+		& .bonds-button-icon-accent {
+			fill: $primaryColor700;
+		}
+	}
+}
+
+.depositary-button {
+	&:hover,
+	&:focus {
+		& .depositary-button-icon-base,
+		& .depositary-button-icon-columns {
+			stroke: $primaryColor100;
+		}
+		& .depositary-button-icon-accent-stroke {
+			stroke: $primaryColor700;
+		}
+		& .depositary-button-icon-accent-fill-stroke {
+			fill: $primaryColor700;
+			stroke: $primaryColor700;
+		}
+	}
+}
+
+.repo-button {
+	&:hover,
+	&:focus {
+		& .repo-button-icon-displayed-charts,
+		& .repo-button-icon-computers {
+			fill: $primaryColor100;
+		}
+		& .repo-button-icon-accent {
+			fill: $primaryColor700;
+		}
+	}
 }
 
 .products-description-container {
