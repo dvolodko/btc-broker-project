@@ -60,7 +60,7 @@
 }
 
 .partners-cards-item {
-	@include flex(flex, flex-start, stretch);
+	@include flex(flex, space-between, stretch);
 	flex-direction: column;
 	min-height: 480px;
 	border-radius: $S;
@@ -69,7 +69,6 @@
 	overflow: hidden;
 	@include mq(tablet-S) {
 		flex-basis: calc((100% - 1 * $M) / 2);
-		min-height: 0;
 	}
 	@include mq(tablet-L) {
 		flex-basis: calc((100% - 2 * $M) / 3);
@@ -79,16 +78,16 @@
 .partners-cards-image-wrapper {
 	@include flex(flex, center, center);
 	flex: 1;
-	padding: $M;
+	padding: $XL $M;
 }
 
 .partners-cards-logo {
-	height: 150px;
+	max-height: 128px;
 }
 
 .partners-cards-description-wrapper {
 	@include flex(flex, center, center);
-	min-height: 232px;
+	height: 224px;
 	border-top: 1px solid $neutralColor300;
 	padding: $M;
 }
