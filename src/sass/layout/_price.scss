@@ -115,9 +115,7 @@
 // Стилі для 2, 4 картки, тощо
 
 .price-card:nth-child(even) {
-	// background-color: $neutralColor0;
 	background-color: $neutralColor0Transparency600;
-	// border: 1px solid $primaryColor950;
 	box-shadow: $shadowElevationMedium;
 }
 
