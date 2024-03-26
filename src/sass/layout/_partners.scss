@@ -60,19 +60,34 @@
 }
 
 .partners-cards-item {
-	@include flex(flex, space-between, stretch);
-	flex-direction: column;
 	min-height: 480px;
 	border-radius: $S;
 	background-color: $neutralColor0Transparency600;
 	box-shadow: $shadowElevationMedium;
 	overflow: hidden;
+	transform: scale(1);
+	transition: transform $mainTransitionDuration $mainTransitionTimingFunction,
+		background-color $mainTransitionDuration $mainTransitionTimingFunction,
+		box-shadow $mainTransitionDuration $mainTransitionTimingFunction;
+	&:hover,
+	&:focus {
+		transform: scale(0.99);
+		background-color: $primaryColor100;
+		box-shadow: $shadowElevationLow;
+	}
 	@include mq(tablet-S) {
 		flex-basis: calc((100% - 1 * $M) / 2);
 	}
 	@include mq(tablet-L) {
 		flex-basis: calc((100% - 2 * $M) / 3);
 	}
+}
+
+.partners-cards-link {
+	@include flex(flex, space-between, stretch);
+	flex-direction: column;
+	height: 100%;
+	min-height: 480px;
 }
 
 .partners-cards-image-wrapper {
@@ -87,7 +102,7 @@
 
 .partners-cards-description-wrapper {
 	@include flex(flex, center, center);
-	height: 224px;
+	min-height: 224px;
 	border-top: 1px solid $neutralColor300;
 	padding: $M;
 }
