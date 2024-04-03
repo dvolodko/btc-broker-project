@@ -42,19 +42,52 @@
 	}
 }
 
+.banking-details-paragraph {
+	margin-bottom: $M;
+}
+
 .banking-details-description-content-wrapper {
 	@include mq(tablet-S) {
 		@include flex(flex, center, center);
 	}
 }
 
+.banking-details-list {
+	@include flex(flex, center, stretch);
+	flex-direction: column;
+	gap: $M;
+}
+
+.banking-details-item {
+	padding: 16px $M;
+	border-radius: $S;
+	background-color: $neutralColor0Transparency600;
+	box-shadow: $shadowElevationMedium;
+}
+
+.banking-details-item-title {
+	font-family: $secondaryFontFamily;
+	@include font(700, 1.25rem, 1.5rem, 0);
+	color: $neutralColor950;
+	margin-bottom: $M;
+}
+
+.banking-details-item-strong-text {
+	font-weight: 700;
+	color: $neutralColor950;
+	cursor: pointer;
+}
+
+.banking-details-item-light-text {
+	font-size: 10px;
+	font-weight: 400;
+	font-style: italic;
+}
+
 .banking-details-section-illustration {
 	display: none;
-	@include mq(tablet-S) {
-		display: block;
-		max-width: 296px;
-	}
 	@include mq(tablet-L) {
+		display: block;
 		max-width: 320px;
 		margin-right: 64px;
 	}
