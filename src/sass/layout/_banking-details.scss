@@ -5,22 +5,22 @@
 		url("/src/images/svg/bg-shape-yellow-faq-390.svg"),
 		url("/src/images/svg/bg-shape-blue-faq-390.svg");
 	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-	background-position: calc(50% + 0px) calc(50% - 0px),
-		calc(50% + 64px) calc(50% - 256px), calc(50% - 0px) calc(75% + 416px),
-		calc(50% - 256px) calc(75% + 300px);
+	background-position: calc(50% + 0px) calc(0% - 160px),
+		calc(50% - 160px) calc(25% - 0px), calc(50% - 256px) calc(50% + 640px),
+		calc(50% + 128px) calc(75% + 0px);
 	background-size: auto, auto, auto, auto;
 	@include mq(tablet-S) {
 		background-image: url("/src/images/svg/bg-shape-yellow-faq-768.svg"),
 			url("/src/images/svg/bg-shape-blue-faq-768.svg"),
 			url("/src/images/svg/bg-shape-yellow-faq-768.svg"),
 			url("/src/images/svg/bg-shape-blue-faq-768.svg");
-		background-position: calc(50% + 256px) calc(50% - 128px),
-			calc(50% - 160px) calc(50% - 64px), calc(50% - 512px) calc(50% + 512px),
-			calc(50% + 128px) calc(50% + 512px);
+		background-position: calc(50% + 224px) calc(0% - 640px),
+			calc(50% - 512px) calc(25% - 256px), calc(50% - 512px) calc(50% + 512px),
+			calc(50% + 128px) calc(75% + 512px);
 	}
 	@include mq(desktop) {
-		background-position: calc(50% + 352px) calc(50% - 224px),
-			calc(50% - 256px) calc(50% - 64px), calc(50% - 736px) calc(50% + 512px),
+		background-position: calc(50% + 352px) calc(50% - 256px),
+			calc(50% - 512px) calc(50% - 64px), calc(50% - 736px) calc(50% + 512px),
 			calc(50% + 256px) calc(50% + 512px);
 	}
 }
@@ -47,8 +47,15 @@
 }
 
 .banking-details-description-content-wrapper {
-	@include mq(tablet-S) {
+	@include mq(tablet-L) {
 		@include flex(flex, center, center);
+		gap: $M;
+	}
+}
+
+.banking-details-description-wrapper {
+	@include mq(tablet-L) {
+		flex-basis: calc((130% - 1 * $L) / 2);
 	}
 }
 
@@ -88,11 +95,10 @@
 	display: none;
 	@include mq(tablet-L) {
 		display: block;
-		max-width: 320px;
-		margin-right: 64px;
+		max-width: 308px;
 	}
 	@include mq(desktop) {
+		display: block;
 		max-width: 352px;
-		margin-right: 128px;
 	}
 }
