@@ -1,0 +1,123 @@
+.bonds-quote-section {
+	padding-top: 88px;
+	background-image: url("/src/images/svg/bg-shape-yellow-faq-390.svg"),
+		url("/src/images/svg/bg-shape-blue-faq-390.svg"),
+		url("/src/images/svg/bg-shape-yellow-faq-390.svg"),
+		url("/src/images/svg/bg-shape-blue-faq-390.svg");
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	background-position: calc(50% - 64px) calc(50% - 960px),
+		calc(50% - 256px) calc(50% - 512px), calc(50% - 0px) calc(75% - 416px),
+		calc(50% - 256px) calc(75% + 192px);
+	background-size: auto, auto, auto, auto;
+	@include mq(tablet-S) {
+		background-image: url("/src/images/svg/bg-shape-yellow-faq-768.svg"),
+			url("/src/images/svg/bg-shape-blue-faq-768.svg"),
+			url("/src/images/svg/bg-shape-yellow-faq-768.svg"),
+			url("/src/images/svg/bg-shape-blue-faq-768.svg");
+		background-position: calc(50% + 192px) calc(50% - 512px),
+			calc(50% - 320px) calc(50% - 256px), calc(50% + 320px) calc(50% + 256px),
+			calc(50% - 512px) calc(50% + 128px);
+	}
+	@include mq(desktop) {
+		background-position: calc(50% + 352px) calc(50% - 416px),
+			calc(50% - 512px) calc(50% - 64px), calc(50% + 512px) calc(50% + 320px),
+			calc(50% - 512px) calc(50% + 320px);
+	}
+}
+
+.bonds-quote-container {
+	padding-top: $L;
+	padding-bottom: $XL;
+	@include mq(tablet-S) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	@include mq(tablet-L) {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+}
+
+.bonds-quote-header {
+	margin-bottom: $XL;
+}
+
+.bonds-quote-bonds-header-list {
+	display: none;
+	@include mq(tablet-L) {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		margin-bottom: $M;
+		font-weight: 700;
+	}
+}
+
+.bonds-quote-bonds-header-item {
+	@include mq(tablet-L) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.bonds-quote-bonds-list {
+	margin-bottom: $XL;
+	&.low-margin {
+		margin-bottom: $M;
+	}
+}
+
+.bonds-quote-item {
+	display: flex;
+	flex-direction: column;
+	border-radius: $S;
+	background-color: $neutralColor0Transparency600;
+	box-shadow: $shadowElevationMedium;
+	&:not(:last-child) {
+		margin-bottom: $M;
+	}
+	@include mq(tablet-L) {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		&:not(:last-child) {
+			margin-bottom: $S;
+		}
+	}
+}
+
+.bonds-quote-element {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: $XS $S;
+	@include mq(tablet-L) {
+		padding: $M $S;
+	}
+}
+
+.bonds-quote-element:nth-child(even) {
+	background-color: $primaryColor100;
+}
+
+.bonds-quote-element-header {
+	color: $neutralColor950;
+	font-weight: 700;
+	margin-right: auto;
+	@include mq(tablet-L) {
+		display: none;
+	}
+}
+
+.asterix {
+	color: $primaryColor400;
+	font-weight: 700;
+}
+
+.warning {
+	color: $systemColorError;
+	font-weight: 700;
+}
+
+.warning-text {
+	margin-bottom: $L;
+}
