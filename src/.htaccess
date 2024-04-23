@@ -8,3 +8,4 @@ RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
 RewriteRule (.*)$ /$1/ [R=301,L]
 Redirect /pryklady-dohovoriv/ /brokerage-service
 Redirect /taryfy-na-posluhy/ /pricing
+Redirect /yak-kupyty-viyskovi-oblihatsii/ /bonds
