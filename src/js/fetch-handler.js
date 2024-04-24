@@ -30,7 +30,7 @@ async function renderEurobondsQuotesTable() {
 		return;
 	}
 	bondsQuotesHeader.classList.remove("hidden");
-	const markup = markupCreator(bondsQuotes);
+	const markup = markupCreatorEurobonds(bondsQuotes);
 	bondsQuotesContainer.innerHTML = markup;
 }
 
@@ -54,7 +54,9 @@ async function getBondsQuotes(assetType) {
 			svgColor: "#3757be",
 			backgroundColor: "#5978a399",
 		});
-		const response = await axios.get(`${BASE_URL}${assetType}`);
+		const response = await axios.get(`${BASE_URL}${assetType}`, {
+			timeout: 3000,
+		});
 		Loading.remove();
 		if (response.data.results.length === 0) {
 			return false;
@@ -111,6 +113,46 @@ function markupCreator(quotesArray) {
 				</div>
 				<div class="bonds-quote-element">
 					<span class="bonds-quote-element-header">Дохідність</span>
+					<p class="bonds-quote-element-text">${quote.annual_rate}%</p>
+				</div>
+				<div class="bonds-quote-element">
+					<span class="bonds-quote-element-header">Продаж (UAH)</span>
+					<p class="bonds-quote-element-text">${quote.price}</p>
+				</div>
+				<div class="bonds-quote-element">
+					<span class="bonds-quote-element-header">Купівля (UAH)</span>
+					<p class="bonds-quote-element-text">${quote.sell_price}</p>
+				</div>
+			</li>`;
+		})
+		.join("");
+	return markup;
+}
+
+function markupCreatorEurobonds(quotesArray) {
+	const markup = quotesArray
+		.map(quote => {
+			const title = replaceBondsTitle(quote.title);
+			const maturity_date = formatDate(quote.maturity_date);
+			return `<li class="bonds-quote-item">
+				<div class="bonds-quote-element">
+					<span class="bonds-quote-element-header">Назва</span>
+					<p class="bonds-quote-element-text">${title}</p>
+				</div>
+				<div class="bonds-quote-element">
+					<span class="bonds-quote-element-header">ISIN</span>
+					<p class="bonds-quote-element-text">${quote.isin}</p>
+				</div>
+				<div class="bonds-quote-element">
+					<span class="bonds-quote-element-header">Валюта емісії</span>
+					<p class="bonds-quote-element-text">${quote.currency_detail}</p>
+				</div>
+				<div class="bonds-quote-element">
+					<span class="bonds-quote-element-header">Дата погашення</span>
+					<p class="bonds-quote-element-text">${maturity_date}</p>
+				</div>
+				<div class="bonds-quote-element">
+					<span class="bonds-quote-element-header">Дохідність <span class="asterix">**</span></span>
 					<p class="bonds-quote-element-text">${quote.annual_rate}%</p>
 				</div>
 				<div class="bonds-quote-element">

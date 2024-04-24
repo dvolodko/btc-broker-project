@@ -43,7 +43,13 @@
 }
 
 .banking-details-paragraph {
+	font-weight: 700;
 	margin-bottom: $M;
+}
+
+.blue-attention-text {
+	color: $systemColorLink;
+	font-size: 18px;
 }
 
 .banking-details-description-content-wrapper {
