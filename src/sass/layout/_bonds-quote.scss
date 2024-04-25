@@ -50,14 +50,19 @@
 }
 
 .bonds-quote-header {
-	margin-bottom: $XL;
+	margin-bottom: $S;
+}
+
+.bonds-quote-paragraph {
+	margin-bottom: $L;
 }
 
 .bonds-quote-bonds-header-list {
 	display: none;
 	@include mq(tablet-L) {
 		display: grid;
-		grid-template-columns: repeat(7, 1fr);
+		// grid-template-columns: repeat(7, 1fr);
+		grid-template-columns: 1.2fr 1.2fr 0.7fr 1fr 0.6fr 0.8fr 0.8fr;
 		margin-bottom: $M;
 		font-weight: 700;
 	}
@@ -89,7 +94,8 @@
 	}
 	@include mq(tablet-L) {
 		display: grid;
-		grid-template-columns: repeat(7, 1fr);
+		// grid-template-columns: repeat(7, 1fr);
+		grid-template-columns: 1.2fr 1.2fr 0.7fr 1fr 0.6fr 0.8fr 0.8fr;
 		&:not(:last-child) {
 			margin-bottom: $S;
 		}
