@@ -152,6 +152,13 @@
 	padding: $M;
 }
 
+.bonds-quote-group-title {
+	font-family: $secondaryFontFamily;
+	@include font(700, 1.25rem, 1.5rem, 0);
+	color: $neutralColor950;
+	margin-bottom: $M;
+}
+
 .hidden {
 	display: none;
 }

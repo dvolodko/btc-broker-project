@@ -171,7 +171,7 @@ function markupCreatorEurobonds(quotesArray) {
 
 function thereIsNoQuotesMessage() {
 	const markup = `<li class="no-quotes-message">
-				<h3 class="chapter-header">На даний момент котирувань немає</h3>
+				<h4 class="bonds-quote-group-title">На даний момент котирувань немає</h4>
 			</li>`;
 	return markup;
 }
