@@ -5,13 +5,13 @@ const pdfViewerFallback = document.getElementById("pdf-fallback");
 
 pdfViewerMain.setAttribute(
 	"data",
-	"/upload/documents/pricing/2023/pricing-2023-09-01.pdf",
+	"https://btc-broker.com/upload/documents/pricing/2023/pricing-2023-09-01.pdf",
 );
 
 const dateSelectorHandler = event => {
 	pdfViewerMain.setAttribute(
 		"data",
-		`/upload/documents/pricing/2023/${event.currentTarget.value}.pdf`,
+		`https://btc-broker.com/upload/documents/pricing/2023/${event.currentTarget.value}.pdf`,
 	);
 	pdfViewerMobile.setAttribute(
 		"src",
@@ -19,7 +19,7 @@ const dateSelectorHandler = event => {
 	);
 	pdfViewerFallback.setAttribute(
 		"src",
-		`/upload/documents/pricing/2023/${event.currentTarget.value}.pdf`,
+		`https://btc-broker.com/upload/documents/pricing/2023/${event.currentTarget.value}.pdf`,
 	);
 };
 
