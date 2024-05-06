@@ -33,5 +33,8 @@
 		"parcel-reporter-clean-dist": "^1.0.4",
 		"posthtml-include": "^2.0.1"
 	},
+	"optionalDependencies": {
+		"@parcel/watcher-win32-x64": "^2.11.0"
+	},
 	"browserslist": "> 0.5%, last 2 versions, not dead"
 }
